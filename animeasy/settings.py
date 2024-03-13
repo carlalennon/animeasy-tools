@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3#&46548&(k=01+=k(15we18e8%+==tdb%h__gumxg4#7s9sbi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = ['8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu110.gitpod.io', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu109.gitpod.io']
 
 
 # Application definition
@@ -82,6 +82,16 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
 
 
 WSGI_APPLICATION = 'animeasy.wsgi.application'
