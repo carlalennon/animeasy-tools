@@ -12,7 +12,15 @@
             {% for product in products %}
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="{{ product.image.url }}" class="img card-img-top img-fluid" alt='{{product.description}}'>
+                        {% if product.image %}
+                        <a href="">
+                            <img src="{{ product.image.url }}" class="img card-img-top img-fluid" alt='{{product.description}}'>
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img src="{{ MEDIA_URL }}noimage.png" class="img card-img-top img-fluid" alt='{{product.description}}'>
+                        </a>
+                        {% endif %}
                         <div class="card-body">
                             <h4 class="card-title">{{product.name}}</h4>
                         <p class="card-text">{{product.description}}</p>
