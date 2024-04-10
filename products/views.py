@@ -23,7 +23,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                message.error(request, 'Please enter a keyword, name or software')
+                messages.error(request, 'Please enter a keyword, name or software')
                 return redirect(reverse('products'))
                 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
