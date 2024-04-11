@@ -1,8 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<style>
+    .badge-category {
+        background-color: black;
+        color: white;
+        border-radius: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .badge-category:hover {
+        background-color: white;
+        color: black;
+    }
+    </style>
+{% endblock %}
+    
+
 {% block page_header %}
 {% endblock %}
+
+
 
 {% block content %}
   <body>
@@ -20,8 +39,39 @@
                 <button class="btn btn-outline-secondary d-none" type="submit" id="submit-btn">Go</button>
             </div>
         </form>
+<!-- From Boutique Ado walkthrough -->
+        <div class="d-flex justify-content-end">
+            <select id="sort-selector" class="dropdown rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+            </select>
+        </div>
     </div>
-    
+
+    <!-- Search entry displayed back to user -->
+    <div class="container mt-3">
+        {% if search_term or current_categories or current_sorting != 'None_none' %}
+            <span><a class="nav-link" href="{% url 'products' %}">Clear all</a></span>
+        {% endif %}
+        {{ products|length }} products {% if search_term %} found for "{{ search_term}}"{% endif %}
+
+    <!-- Catgory badges -->
+    <div class="container">
+    {% for c in current_categories %}
+        <a href="{% url 'products' %}?category={{ c.name }}">
+            <span class="badge badge-category fs-4 mb-4 mt-3">{{ c.friendly_name }}</span>
+        </a>
+    {% endfor %}
+    </div>
+
+
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
