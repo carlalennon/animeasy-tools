@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <h1>Shopping Bag</h1>
+        {% if bag_items %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add your shopping bag items here -->
+                <tr>
+                    <td>Product 1</td>
+                    <td>$10.00</td>
+                    <td>2</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td>Product 2</td>
+                    <td>$15.00</td>
+                    <td>1</td>
+                    <td>$15.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right">
+            <h4>Total: $35.00</h4>
+            <button class="btn btn-primary">Checkout</button>
+        </div>
+    </div>
+    {% else %}
+    <p class="text-center">Your bag is empty</p>
+    {% endif %}
+</body>
+
+{% endblock %}
