@@ -5,30 +5,37 @@
     <div class="container">
         <h1>Shopping Bag</h1>
         {% if bag_items %}
-        {{ bag_items}}
         <table class="table">
             <thead>
                 <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
+                    <th class="text-center">Product</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Total</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Add your shopping bag items here -->
-                <tr>
-                    <td>Product 1</td>
-                    <td>$10.00</td>
-                    <td>2</td>
-                    <td>$20.00</td>
-                </tr>
-                <tr>
-                    <td>Product 2</td>
-                    <td>$15.00</td>
-                    <td>1</td>
-                    <td>$15.00</td>
-                </tr>
+                {% for item in bag_items %}
+                    <tr>
+                        <td class="text-center">
+                            <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{item.name}}" style="height: 200px; object-fit: cover;">
+                            <p>{{ item.product.name }}</p>
+                        </td>
+                        <td>
+                            <p class="text-center align-middle"><strong>€{{ item.product.price }}</strong></p>
+                        </td>
+                        <td>
+                            <p class="text-center align-middle"><strong>{{ item.quantity }}</strong></p>
+                        </td>
+                        <td>
+                            <p class="text-center align-middle"><strong>€{{ total|floatformat:2 }}</strong></p>
+                        </td>
+                    </tr>
+                    <tr> 
+
+                    </tr>
+                {% endfor %}
             </tbody>
         </table>
         <div class="text-right">
