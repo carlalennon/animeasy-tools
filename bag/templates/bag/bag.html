@@ -26,7 +26,31 @@
                             <p class="text-center align-middle"><strong>€{{ item.product.price }}</strong></p>
                         </td>
                         <td>
-                            <p class="text-center align-middle"><strong>{{ item.quantity }}</strong></p>
+                            <form class="form update-form" method="POST" action=""> 
+                                {% csrf_token %}
+                                <div class="mb-3 ">
+                                    <label for="quantity"><strong>Quantity:</stong></label>
+                                      <div class="input-group">
+                                        <div class="input-group-prepend">
+                                          <button type="button" 
+                                          class="btn btn-light qty_minus" 
+                                          data-item_id="{{item.item_id}}" 
+                                          id="id_qty_minus_{{item.item_id}}">
+                                          -
+                                          </button>
+                                        </div>
+                                        <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}"  data-item_id="{{item.item_id}}" id="id_qty_{{item.item_id}}" >
+                                        <div class="input-group-append">
+                                          <button type="button" 
+                                          class="btn btn-light qty_plus" 
+                                          data-item_id="{{item.item_id}}" 
+                                          id="id_qty_plus_{{item.item_id}}">
+                                          +
+                                          </button>
+                                        </div>
+                                      </div>
+                                  </div>
+                            </form>
                         </td>
                         <td>
                             <p class="text-center align-middle"><strong>€{{ total|floatformat:2 }}</strong></p>
