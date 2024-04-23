@@ -57,18 +57,20 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-between">
-                                    <a class="text-decoration-none text-dark update-link" 
-                                        href="" 
-                                        id="remove_{{ item.item_id}}">
-                                        Update
-                                    </a>
-                                    <a class="text-decoration-none text-danger remove-link" href="">
-                                        Remove
-                                    </a>
-                                </div>
                                 </div>
                             </form>
+                                <a class="text-decoration-none text-dark update-link" 
+                                    href="" 
+                                    id="remove_{{ item.item_id}}">
+                                    Update
+                                </a>
+                                <a class="text-decoration-none text-danger remove-link" href="">
+                                    Remove
+                                </a>
+
+                        </td>
+                        <td>
+                            <p class="text-center align-middle"><strong>€{{ total|floatformat:2 }}</strong></p>
                         </td>
                         <td>
                             <p class="text-center align-middle"><strong>€{{ total|floatformat:2 }}</strong></p>
@@ -99,12 +101,15 @@
 <script type="text/javascript">
     //Update quatity link
     $('.update-link').click(function(e) {
+        e.preventDefault();
         var form = $(this).prev('.update-form');
+        console.log(form);  
         form.submit();
     })
 
     // Remove item link
     $('.remove-link').click(function(e) {
+        e.preventDefault(); 
         var crsfToken = '{{ csrf_token }}';
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;

@@ -26,6 +26,8 @@ def adjust_bag(request, item_id):
     """ Adjust quantity of product from bag.html """
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
+    
+    print("Made it to views!")  # This will print the updated bag to the console
 
     if quantity > 0:
         bag[item_id] = quantity
