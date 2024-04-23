@@ -43,9 +43,7 @@ def remove_from_bag(request, item_id):
     try:
         bag = request.session.get('bag', {})
 
-        if quantity > 0:
-            bag[item_id] = quantity
-        else:
+        if item_id in bag:
             bag.pop(item_id)
             
         request.session['bag'] = bag

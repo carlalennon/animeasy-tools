@@ -61,10 +61,12 @@
                             </form>
                                 <a class="text-decoration-none text-dark update-link" 
                                     href="" 
-                                    id="remove_{{ item.item_id}}">
+                                    id="remove_{{item.item_id}}">
                                     Update
                                 </a>
-                                <a class="text-decoration-none text-danger remove-link" href="">
+                                <a class="text-decoration-none text-danger remove-link float-right" 
+                                href=""
+                                id="remove_{{ item.item_id }}">
                                     Remove
                                 </a>
 
@@ -112,6 +114,7 @@
         e.preventDefault(); 
         var crsfToken = '{{ csrf_token }}';
         var itemId = $(this).attr('id').split('remove_')[1];
+        console.log(itemId);  // Print itemId to the console
         var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': crsfToken};    
 
