@@ -74,13 +74,12 @@
 
                         </td>
                         <td>
-                            <p class="text-center align-middle"><strong>€{{ total|floatformat:2 }}</strong></p>
+                            <p class="text-center"><strong>€{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
                         </td>
                         <td>
-                            <p class="text-center align-middle"><strong>€{{ total|floatformat:2 }}</strong></p>
                         </td>
                         <td>
-                            <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+
                     </tr>
                     <tr> 
 
