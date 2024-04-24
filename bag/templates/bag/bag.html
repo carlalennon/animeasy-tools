@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load bag_tools %}
 
 {% block content %}
 <body>
@@ -77,6 +79,8 @@
                         <td>
                             <p class="text-center align-middle"><strong>€{{ total|floatformat:2 }}</strong></p>
                         </td>
+                        <td>
+                            <p>€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                     </tr>
                     <tr> 
 
