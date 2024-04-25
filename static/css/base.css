@@ -3,9 +3,16 @@ html {
 }
 
 body {
-    background: url('/media/animeasy-temp-logo.png') no-repeat center center fixed;
+    background: url('/animeasy-temp-logo.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 106px);
     color: #555;
     font-family: "Lato";
+}
+
+.message-container {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
 }

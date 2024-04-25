@@ -13,7 +13,7 @@
     <title>Animeasy {% block title %}{% endblock %}</title>
     {% block corejs %}
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     {% endblock %}
     {% block extra_js %}
     {% endblock %}
@@ -22,15 +22,28 @@
     {% endblock %}
     {% block extra_css %}
     {% endblock %}
-  </head>
-
-  <body>
-
+    </head>
+    
+    <body>
+    
     {% include 'includes/navbar.html' %}
-
-
+    
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+      {% for message in messages %}
+        {% with message.level as level %}
+          {% if level == 40 %}
+            {% include 'includes/toasts/toast_error.html' %}
+          {% elif level == 30 %}
+            {% include 'includes/toasts/toast_warning.html' %}
+          {% elif level == 25 %}
+            {% include 'includes/toasts/toast_success.html' %}
+          {% else %}
+            {% include 'includes/toasts/toast_info.html' %}
+          {% endif %}
+        {% endwith %}
+      {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -40,7 +53,12 @@
     {% endblock %}
 
     {% block postloadjs %}
-    {% endblock %}
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.toast').toast('show');
+      });
+    </script> 
+  {% endblock %}
   </body>
 
   <script src="https://kit.fontawesome.com/881b1c7cd9.js" crossorigin="anonymous"></script>
