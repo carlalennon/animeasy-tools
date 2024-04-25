@@ -19,6 +19,12 @@
                     Cart
                   </a>
                   <div class="dropdown-menu dropdown" aria-labelledby="cartDropdown">
+                    {% if total %}
+                    €{{ total}}
+                    {{ bag_items}}
+                    <button class="btn btn-danger" href="">Checkout</button>
+                    {% else %}
+                    {% endif %}
                     {% for item in cart.items %}
                       <a class="dropdown-item" href="#">{{ item.name }}</a>
                     {% endfor %}
