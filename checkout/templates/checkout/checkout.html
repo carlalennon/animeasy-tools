@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bag_tools %}
+
 
 {% block extra_css%}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -13,7 +15,56 @@
     <div>
         <div>
             Please fill out the form below to complete your order.
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="fieldset-label">
+                        Details
+                    </legend>
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.streetaddress1 | as_crispy_field }}
+                    {{ order_form.streetaddress2 | as_crispy_field }}
+                    {{ order_form.country | as_crispy_field }}
+                    {% if user.is_authenticated %}
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label" for="id-save-info">Save details for next time?</label>
+                        <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                        <label class="form-check-label" for="id-save-info">
+                            <a class="text-info" href="{% url 'account_signup' %}">Create account<a> or
+                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this info
+                        </label>    
+                        {% endif %}  
+                    </div>             
+                </fieldset>
+                <fieldset>
+                    <legend class="fieldset-label">Payment</legend>
+                    <div class="" id="card-element"><div>
+                    <div class="text-danger" id="card-errors" role="alert"></div>
+
+                    <div class="submit-button text-right">
+                        <a href="{% url 'view_bag' %}" class="btn btn-outline-black">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                        </a>
+                        <button id="submit-button" class="btn btn-black">
+                            <span>Complete Order</span>
+                        </button>
+                        <p>
+                            <span>Your card will be charged <strong>{{ total | floatformat:2 }}</strong></span>
+                        </p>
+
+                </fieldset>
+            </form> 
         </div>
+
+        <!-- Add an order summary section -->
 </body>
 
 {% endblock %}
