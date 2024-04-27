@@ -89,7 +89,7 @@
         </table>
         <div class="text-right">
             <h4>Total: €{{ total|floatformat:2}} </h4>
-            <button class="btn btn-primary">Checkout</button>
+            <a href="{% url 'checkout' %}" class="btn btn-danger">Checkout</a> 
         </div>
     </div>
     {% else %}
@@ -115,11 +115,11 @@
     // Remove item link
     $('.remove-link').click(function(e) {
         e.preventDefault(); 
-        var crsfToken = '{{ csrf_token }}';
+        var csrfToken = '{{ csrf_token }}';
         var itemId = $(this).attr('id').split('remove_')[1];
         console.log(itemId);  // Print itemId to the console
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': crsfToken};    
+        var data = {'csrfmiddlewaretoken': csrfToken};    
 
         $.post(url, data)
         .done(function() {

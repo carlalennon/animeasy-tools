@@ -22,7 +22,7 @@
                     {% if total %}
                     €{{ total}}
                     {{ bag_items}}
-                    <button class="btn btn-danger" href="">Checkout</button>
+                    <button class="btn btn-danger" href="{% url 'checkout' %}">Checkout</button>
                     {% else %}
                     {% endif %}
                     {% for item in cart.items %}
