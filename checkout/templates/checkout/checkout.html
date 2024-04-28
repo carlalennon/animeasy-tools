@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 {% block extra_js%}
+<script src="https://js.stripe.com/v3/"></script>
 {% endblock %}
 {% block content %}
 <body>
@@ -42,10 +43,21 @@
                         {% endif %}  
                     </div>             
                 </fieldset>
-                <fieldset>
-                    <legend class="fieldset-label">Payment</legend>
-                    <div class="" id="card-element"><div>
-                    <div class="text-danger" id="card-errors" role="alert"></div>
+                <fieldset class="px-3">
+                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <!-- A Stripe card element will go here -->
+                    
+
+                    <div id="checkout">
+                        <div id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
+
+                    </div>
+
+                    <!-- Used to display form errors -->
+                    <div id="card-errors" role="alert"></div>
+                </fieldset>
+
 
                     <div class="submit-button text-right">
                         <a href="{% url 'view_bag' %}" class="btn btn-outline-black">
