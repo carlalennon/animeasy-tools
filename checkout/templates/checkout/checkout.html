@@ -14,6 +14,11 @@
     <div class="container">
         <h1>Shopping Bag</h1>
     <div>
+        <div id="loading-overlay">
+            <h1 class="text-light logo-font loading-spinner">
+                <span class="icon">
+                    <i class="fas fa-3x fa-spinner fa-spin"></i>
+            </h1>
         <div>
             Please fill out the form below to complete your order.
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
