@@ -55,15 +55,12 @@
 
                     <div id="checkout">
                         <div id="card-element">
-                            <!-- A Stripe Element will be inserted here. -->
-
-                    </div>
-
+                            <!-- A Stripe Element will be inserted here. -->       
+                    </div> 
                     <!-- Used to display form errors -->
                     <div id="card-errors" role="alert"></div>
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">          
                 </fieldset>
-
-
                     <div class="submit-button text-right">
                         <a href="{% url 'view_bag' %}" class="btn btn-outline-black">
                             <span class="icon">
@@ -76,7 +73,6 @@
                         <p>
                             <span>Your card will be charged <strong>{{ total | floatformat:2 }}</strong></span>
                         </p>
-
                 </fieldset>
             </form> 
         </div>
