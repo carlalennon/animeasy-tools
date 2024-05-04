@@ -80,8 +80,46 @@
                 </fieldset>
             </form> 
         </div>
+        <hr>
 
-        <!-- Add an order summary section -->
+        <div class="display-5 mb-4">
+            Order summary:
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-center">Product</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in bag_items %}
+                    <tr>
+                        <td class="text-center">
+                            <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{item.name}}" style="height: 200px; object-fit: cover;">
+                            <p>{{ item.product.name }}</p>
+                        </td>
+                        <td>
+                            <p class="text-center align-middle"><strong>€{{ item.product.price }}</strong></p>
+                        </td>
+                        <td>
+                            <p class="text-center"><strong>€{{ item.product.quantity }}</strong></p>
+                        </td>
+                        <td>
+                            <p class="text-center"><strong>€{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+
+                    </tr>
+                    <tr> 
+                    </tr>
+            </tbody>
+            {% endfor %}
+        </table>
 </body>
 <!-- Spinner -->
 <div id="loading-overlay">
