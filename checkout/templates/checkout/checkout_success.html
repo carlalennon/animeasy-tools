@@ -12,23 +12,25 @@
 
 {% block page_header %}
 <h2> Thank you! </h2>
-<p> Your order has been successfully processed. An order confiramtion will be sent to {{ order.email}} </p>
 {% endblock %}
+
+
 
 
 {% block content %}
 <body>
-        <div> 
-<!--Wrap optional fields in if statements -->          
-<p> What you ordered (Add order Info, Order details, Billing info.   ) </p>
-        </div>
-        <div> For help with installation check <a>here</a> 
-        </div>
+        <div class="container mt-4">
+        <p> Your order has been successfully processed. An order confirmation will be sent to {{ order.email}} </p>
         
-
-       
+        For installation help, check <a href="#">here</a>
+                <br>
+                <br>
+        To leave a review, or check out other's reviews, click <a href="#">here</a>
+                <br>
+        </p>
+        <a href="{% url 'products' %}" class="btn btn-danger mt-5">Continue Shopping</a>
+        </div> 
 </body>
-
 {% endblock %}
 
 {% block postloadjs %}
