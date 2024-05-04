@@ -61,6 +61,10 @@
     transform: translate(-50%, -50%);
 }
 
+.fa-circle-notch {
+    animation: spin 2s ease-in-out infinite;
+}
+
 select,
 select option {
     color: #000;
