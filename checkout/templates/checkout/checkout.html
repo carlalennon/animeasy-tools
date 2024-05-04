@@ -52,7 +52,7 @@
                     </div>             
                 </fieldset>
                 <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                    <legend class="fieldset-label small text-black px-2 w-auto pt-6">Payment</legend>
                     <!-- A Stripe card element will go here -->
                     
 
@@ -68,13 +68,14 @@
                         <a href="{% url 'view_bag' %}" class="btn btn-outline-black">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
+                                <i class="fa-solid fa-cart-shopping"></i>
                             </span>
                         </a>
-                        <button id="submit-button" class="btn btn-black">
-                            <span>Complete Order</span>
+                        <button id="submit-button" class="btn btn-danger mt-2">
+                            <span>Secure Payment</span>
                         </button>
-                        <p>
-                            <span>Your card will be charged <strong>{{ total | floatformat:2 }}</strong></span>
+                        <p class="mt-4 mb-5">
+                            <span>Your card will be charged <strong>€{{ total | floatformat:2 }}</strong></span>
                         </p>
                 </fieldset>
             </form> 
