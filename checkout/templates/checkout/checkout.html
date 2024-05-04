@@ -9,22 +9,25 @@
 {% block extra_js%}
 <script src="https://js.stripe.com/v3/"></script>
 {% endblock %}
+
+
+{% block page_header %}
+    Checkout
+{% endblock %}
 {% block content %}
+
 <body>
-    <div class="container">
-        <h1>Shopping Bag</h1>
+
+
+
+
+    <div class="container mt-4">
     <div>
-        <div id="loading-overlay">
-            <h1 class="text-light logo-font loading-spinner">
-                <span class="icon">
-                    <i class="fas fa-3x fa-spinner fa-spin"></i>
-            </h1>
-        <div>
-            Please fill out the form below to complete your order.
+            <p class="mb-7">Please fill out the form below to complete your order.</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset>
-                    <legend class="fieldset-label">
+                    <legend class="fieldset-label mb-2">
                         Details
                     </legend>
                     {{ order_form.full_name | as_crispy_field }}
@@ -79,6 +82,14 @@
 
         <!-- Add an order summary section -->
 </body>
+<!-- Spinner -->
+<div id="loading-overlay">
+    <h1 class="text-light logo-font loading-spinner">
+        <span class="icon">
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+        </span>
+    </h1>
+</div>
 
 {% endblock %}
 
