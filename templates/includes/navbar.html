@@ -9,10 +9,8 @@
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end">
           <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="{% url 'products' %}" class="nav-link px-2 text-white">Products</a></li>
             <li><a href="#" class="nav-link px-2 text-white">About</a></li>
             <li><a href="#" class="nav-link px-2 text-white">Support</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
             <li class="nav-item dropdown">
                   <a href="{% url 'view_bag' %}" class="nav-link px-2 dropdown-toggle text-white" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     Cart
@@ -46,6 +44,16 @@
             </li>
             <li><a href="#" class="nav-link px-2 text-white"><i class="fa-brands fa-light fa-facebook-f"></i></a></li>
             <li><a href="#" class="nav-link px-2 text-white"><i class="fa-brands fa-light fa-linkedin-in"></i></a></li>
+            {% if user.is_authenticated %}
+               {% if request.user.is_superuser %}
+            <li><a href="{% url 'admin:index' %}" class="nav-link px-2 text-white">Admin</a></li>
+                {% endif %}
+            <li><a href="{% url 'profile' %}" class="nav-link px-2 text-white">Profile</a></li>
+            <li><a href="{% url 'account_logout' %}" class="nav-link px-2 text-white">Sign Out</a></li>
+            {% else %}
+            <li><a href="{% url 'account_login' %}" class="nav-link px-2 text-white">Sign In</a></li>
+            <li><a href="{% url 'account_signup'%}" class="nav-link px-2 text-white">Sign Up</a></li>
+            {% endif %}
           </ul>
   
           </div>
