@@ -8,68 +8,47 @@
 {% block extra_js%}
 <script src="https://js.stripe.com/v3/"></script>
 {% endblock %}
+{% block page_header %}
+My Profile
+{% endblock %}
 {% block content %}
+
 <body>
-    {% block page_header %}
-    My profile
-    {% endblock %}
-        <div id="loading-overlay">
-            <h1 class="text-light logo-font loading-spinner">
-                <span class="icon">
-                    <i class="fas fa-3x fa-spinner fa-spin"></i>
-            </h1>
-        <div>
-            Please fill out the form below to complete your order.
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-                {% csrf_token %}
-                <fieldset>
-                    <legend class="fieldset-label">
-                        Details
-                    </legend>
-
-                    {% if user.is_authenticated %}
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label" for="id-save-info">Save details for next time?</label>
-                        <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
-                        {% else %}
-                        <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create account<a> or
-                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this info
-                        </label>    
-                        {% endif %}  
-                    </div>             
-                </fieldset>
-                <fieldset class="px-3">
-                    <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                    <!-- A Stripe card element will go here -->
-                    
-
-                    <div id="checkout">
-                        <div id="card-element">
-                            <!-- A Stripe Element will be inserted here. -->       
-                    </div> 
-                    <!-- Used to display form errors -->
-                    <div id="card-errors" role="alert"></div>
-                    <input type="hidden" value="{{ client_secret }}" name="client_secret">          
-                </fieldset>
-                    <div class="submit-button text-right">
-                        <a href="{% url 'view_bag' %}" class="btn btn-outline-black">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                        </a>
-                        <button id="submit-button" class="btn btn-black">
-                            <span>Complete Order</span>
-                        </button>
-                        <p>
-                            <span>Your card will be charged <strong>{{ total | floatformat:2 }}</strong></span>
-                        </p>
-                </fieldset>
-            </form> 
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">User Profile</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Full Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" readonly class="form-control-plaintext" id="fullName" value="John Doe">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" readonly class="form-control-plaintext" id="email" value="john.doe@example.com">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Profile Picture</label>
+                                <div class="col-sm-10">
+                                    <img src="profile.jpg" alt="Profile Picture" class="img-thumbnail">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Add an order summary section -->
+    </div>
 </body>
+
 
 {% endblock %}
 
