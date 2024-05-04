@@ -20,3 +20,10 @@ body {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
+
+
+/* Hide labels on forms */
+
+.allauth-form-inner-content label:not([for=id_remember]) {
+    display: none;
+}
