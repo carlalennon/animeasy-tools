@@ -13,23 +13,27 @@
             <li><a href="#" class="nav-link px-2 text-white">About</a></li>
             <li><a href="#" class="nav-link px-2 text-white">Support</a></li>
             <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
-            <li>
-                <div class="dropdown">
-                  <a href="{% url 'view_bag' %}" class="nav-link px-2 text-white dropdown-toggle" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item dropdown">
+                  <a href="{% url 'view_bag' %}" class="nav-link px-2 dropdown-toggle text-white" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     Cart
                   </a>
-                  <div class="dropdown-menu dropdown" aria-labelledby="cartDropdown">
+                  <ul class="dropdown-menu" aria-labelledby="cartDropdown">
+                    {% for item in bag_items %}
+                    {{item.name}}
+                    <li class="dropdown-item">
+                      <a href="{% url 'product_detail' item.product.id %}">{{ item.product.name }}
+                      <img class="thumbnail" width="50" height="50" src="{{item.product.image.url}}">
+                    </a>
+                    </li>
+                    {% endfor %}
+                  
                     {% if total %}
                     €{{ total}}
-                    {{ bag_items}}
                     <a class="btn btn-danger" href="{% url 'checkout' %}">Checkout</a>
                     {% else %}
+                    <p>Your cart is empty</p>
                     {% endif %}
-                    {% for item in cart.items %}
-                      <a class="dropdown-item" href="#">{{ item.name }}</a>
-                    {% endfor %}
-                  </div>
-                </div>                         
+                  </ul>                     
             </li>
             <li><a href="#" class="nav-link px-2 text-white"><i class="fa-brands fa-light fa-facebook-f"></i></a></li>
             <li><a href="#" class="nav-link px-2 text-white"><i class="fa-brands fa-light fa-linkedin-in"></i></a></li>
