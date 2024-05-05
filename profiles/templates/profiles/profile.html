@@ -17,32 +17,79 @@ My Profile
     <div class="container py-5">
         <div class="row">
             <div class="col-md-10 mx-auto">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">User Profile</h4>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4 class="card-title">{{request.user.username}}</h4>
+                        </button>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <table>
+                                    <tr>
+                                        <th>Name:</th>
+                                        <td>{{request.user.full_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email:</th>
+                                        <td>{{request.user.email}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phone:</th>
+                                        <th>{{request.user.phone_number}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Country:</th>
+                                        <th>{{request.user.country}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Postcode:</th>
+                                        <th>{{request.user.postcode}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Town/City:</th>
+                                        <th>{{request.user.town_or_city}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Street Address 1:</th>
+                                        <th>{{request.user.street_address1}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Street Address 2:</th>
+                                        <th>{{request.user.street_address2}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>County:</th>
+                                        <th>{{request.user.county}}</th>
+                                    </tr>
+                                </table>
+                        </div>
+                      </div>
                     </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Full Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="fullName" value="John Doe">
-                                    {{ profile }}
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Email</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="email" value="john.doe@example.com">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Profile Picture</label>
-                                <div class="col-sm-10">
-                                    <img src="profile.jpg" alt="Profile Picture" class="img-thumbnail">
-                                </div>
-                            </div>
-                        </form>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h5>Edit Your Information<i class="fa-solid fa-user-pen"></i></h5>
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form action="{% url 'profile'%}" method="POST" id="profile-update-form">
+                                        {%  csrf_token %}
+                                        {{ form|crispy }}
+                                        <button class="btn btn-danger mt-4">Update Profile</button>
+                                    </form>
+                        </div>
+                        </div>
+                      </div>
+                    
+
+
+                
+                    </div>
+                    <div>
+                        {{ orders }}
                     </div>
                 </div>
             </div>
