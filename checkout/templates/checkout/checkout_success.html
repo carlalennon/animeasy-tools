@@ -21,7 +21,81 @@
 <body>
         <div class="container mt-4">
         <p> Your order has been successfully processed. An order confirmation will be sent to {{ order.email}} </p>
-        
+        <hr class="mt-5 mb-5"> 
+        <div>
+        <h3> Order Details </h3>
+        <table class="table">
+                <tbody>
+                        <tr>
+                                <th> Order Number </th>
+                                <td> {{ order.order_number }} </td>
+                        </tr>
+                        <tr>
+                                <th> Date </th>
+                                <td> {{ order.date }} </td>
+                        </tr>
+                </tbody>
+        </table>
+        <hr class="mt-5 mb-5">
+        <table class="table">
+                <thead>
+                        <tr>
+                                <th> Product </th>
+                                <th> Quantity </th>
+                                <th> Price </th>
+                        </tr>
+                </thead>
+                <tbody>
+                        {% for item in order.lineitems.all %}
+                        <tr>
+                                <td> {{ item.product.name }} </td>
+                                <td> {{ item.quantity }} </td>
+                                <td> €{{ item.product.price }} </td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                                <th>Total:</th>
+                                <td></td>
+                                <td> €{{ order.grand_total }} </td>
+                </tbody>
+        </table>
+        <hr class="mt-5 mb-5"> 
+        <h3> Your Details </h3>
+        <table class="table">
+                <tbody>
+                        <tr>
+                                <th> Email </th>
+                                <td> {{ order.email }} </td>
+                        </tr>
+                        <tr>
+                                <th> Phone Number </th>
+                                <td> {{ order.phone_number }} </td>
+                        </tr>
+                        <tr>
+                                <th> Country </th>
+                                <td> {{ order.country }} </td>
+                        </tr>
+                        <tr>
+                                <th> Postcode </th>
+                                <td> {{ order.postcode }} </td>
+                        </tr>
+                        <tr>
+                                <th> Town/City </th>
+                                <td> {{ order.town_or_city }} </td>
+                        </tr>
+                        <tr>
+                                <th> Street Address 1 </th>
+                                <td> {{ order.street_address1 }} </td>
+                        </tr>
+                        <tr>
+                                <th> Street Address 2 </th>
+                                <td> {{ order.street_address2 }} </td>
+                        </tr>
+                </tbody>
+        </table>
+
+        </div>
+        <div class="container mt-5 mb-5">
         For installation help, check <a href="#">here</a>
                 <br>
                 <br>
@@ -29,6 +103,9 @@
                 <br>
         </p>
         <a href="{% url 'products' %}" class="btn btn-danger mt-5">Continue Shopping</a>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'profile' %}" class="btn btn-dark mt-5">My Profile</a>
+        {% endif %}
         </div> 
 </body>
 {% endblock %}
