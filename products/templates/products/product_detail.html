@@ -49,6 +49,10 @@
     </div>
   </div>
 
+  {% if request.user.is_superuser %}
+  <a href="{% url 'edit_product' product.id %}" class="btn btn-dark mt-3">Edit Product</a>
+  {% endif %}
+
   <div class="row mt-5">
     <div class="col">
         <!--- Just in case could add these in later -->

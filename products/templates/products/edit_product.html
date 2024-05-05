@@ -7,7 +7,7 @@
 
 
 {% block page_header %}
-    Add product
+    Edot Product
 {% endblock %}
 {% block content %}
 
@@ -20,13 +20,13 @@
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-header">
-                    <h4>Add Product</h4>
+                    <h4>Edit Product</h4>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data" action="{% url 'add_product' %}">
+                    <form method="POST" enctype="multipart/form-data" action="{% url 'edit_product' product.id %}">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <button type="submit" class="btn btn-danger mt-3">Add Product</button>
+                        <button type="submit" class="btn btn-danger mt-3">Edit Product</button>
                         <a class="btn btn-dark mt-3 " href="{% url 'products' %}">Back</a>
                     </form>
                 </div>
