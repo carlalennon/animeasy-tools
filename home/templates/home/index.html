@@ -10,7 +10,7 @@
     </div>
 {% endblock %}
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
 {% block content %}
 
@@ -33,22 +33,14 @@
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
 
-  <form class="newsletter">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="content">
-                            <h2>Subscribe to Animeasy newsletter:</h2>
-                            <form method="POST" class="input-group">
-                              {% csrf_token %}
-                              {{ form | crispy }}
-                              <input type="submit" value="Subscribe" class="btn btn-danger mt-2 float-end">
-                          </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-  </form>
+  <div class="newsletter container">
+    <h2>Subscribe to Animeasy newsletter:</h2>
+    <form method="POST" action="{% url 'home' %}" class="form-inline">
+      {% csrf_token %}
+      {{ form | crispy }}
+        <input class="btn btn-danger mt-2 float-end" type="submit" value="Subscribe" name=>
+    </form>
+  </div>
 
   <hr class="featurette-divider mt-5">
 <div class="container">
