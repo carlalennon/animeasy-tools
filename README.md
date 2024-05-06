@@ -1,39 +1,66 @@
-# animeasy-tools
 
-## User Stories 
+# Animeasy Tools E-commerce Site
 
-As a potential customer, I want a clean and attractive site that's easy to navigate so I can browse the product suite. 
+## Overview
+This README provides an overview of the ecommerce app, including its purpose, features, installation instructions, usage guidelines, and contact information.
 
-As a freelance animator, I want to easily find a tool on the site that solves a pain point in my workflow, so I can work faster and make better profit. 
+## Purpose
+The purpose of the ecommerce app is to provide users with a platform to browse, purchase, and manage digital products online. It aims to streamline the shopping experience for customers and simplify product management for sellers.
+Animation is a costly and time consuming business. With the advent of digital animation it is largely created using computer programmes. This means that professionals can browse the web for plugins that may help them. 
+In my animation career, I starte out using plugins purchased or developed by the studio, but over time I started to develop my own for more specific uses. 
 
-As a working professional, I want the site to provide detailed descriptions and tutorials for each tool in the suite so that I can understand their functionality and decide if the tools suits my needs.
+## Features
+### User authentication: Allow users to register, login, and manage their accounts.
+### Product browsing: Enable users to search, filter, and view products.
+### Shopping cart: Allow users to add and remove items from their cart.
+### Checkout process: Guide users through a secure checkout process.
+### Order management: Enable users to track their orders and view order history.
+### Seller dashboard: Provide sellers with tools to manage products, orders, and inventory.
+### Admin panel: Allow administrators to manage users, products, and system settings.
 
-As an animator working on tight deadlines, I need the ecommerce site to offer secure and efficient payment processing so that I can quickly purchase the tools I need.
+## Installation
 
-As a small animation studio owner, I want the site to provide licensing information for use of the tool within the studio, and have the option for multiple copies of the tool to place on my machines.
+To install and run the app locally, follow these steps:
 
-As a potential customer, I want the site to have a contact form so I can ask questions about the product, submit feedback or suggest future improvements.
+- Clone the repository: git clone [repository-url]
+- Navigate to the project directory: cd ecommerce-app
+- Install dependencies: npm install or yarn install
+- Set up environment variables: Create a .env file and add necessary configuration variables.
+- Run the app: npm start or yarn start
 
-As a customer interested in staying updated with the latest advancements in animation technology, I expect the site to regularly feature new releases and updates for the animation tool suite.
+### Usage
+Once the app is running, users can access it through a web browser. They can perform the following actions:
 
-As a customer, I would like the site to feature user reviews and testimonials to help me make informed purchasing decisions and to trust that I am buying a good product.
+- Register a new account or login with existing credentials.
+- Browse products by category or search for specific items.
+- Add products to the shopping cart and proceed to checkout.
+- View and manage orders in the user account dashboard.
+- Sellers can log in to the seller dashboard to manage products and orders.
+- Administrators can access the admin panel to manage users and system settings.
 
-As a mobile user, I need the ecommerce site to be mobile-friendly and responsive so that I can easily access and purchase the animation tools from my smartphone or tablet device.
+## Agile method
+###  User Stories 
 
-As an animator working in a digital pipeline, I want the ecommerce site to offer digital downloads of the animation tools instead of physical copies, elimiating shipping times and making use easier.
+- As a potential customer, I want a clean and attractive site that's easy to navigate so I can browse the product suite. 
+- As a freelance animator, I want to easily find a tool on the site that solves a pain point in my workflow, so I can work faster and make better profit. 
+- As a working professional, I want the site to provide detailed descriptions and tutorials for each tool in the suite so that I can understand their functionality and decide if the tools suits my needs.
+- As an animator working on tight deadlines, I need the ecommerce site to offer secure and efficient payment processing so that I can quickly purchase the tools I need.
+- As a small animation studio owner, I want the site to provide licensing information for use of the tool within the studio, and have the option for multiple copies of the tool to place on my machines.
+- As a potential customer, I want the site to have a contact form so I can ask questions about the product, submit feedback or suggest future improvements.
+- As a customer interested in staying updated with the latest advancements in animation technology, I expect the site to regularly feature new releases and updates for the animation tool suite.
+- As a customer, I would like the site to feature user reviews and testimonials to help me make informed purchasing decisions and to trust that I am buying a good product.
+- As a mobile user, I need the ecommerce site to be mobile-friendly and responsive so that I can easily access and purchase the animation tools from my smartphone or tablet device.
+- As an animator working in a digital pipeline, I want the ecommerce site to offer digital downloads of the animation tools instead of physical copies, elimiating shipping times and making use easier.
+- As a loyal customer of the Animeasy, I want the ecommerce site to provide a user-friendly account dashboard where I can manage my purchases, access product updates, and receive exclusive offers and discounts as a token of appreciation for my continued support.
+- As an admin, I can add, update and delete products.
 
-As a loyal customer of the Animeasy, I want the ecommerce site to provide a user-friendly account dashboard where I can manage my purchases, access product updates, and receive exclusive offers and discounts as a token of appreciation for my continued support.
+### Kanban Board 
 
-As an admin, I can add, update and delete products.
+## Deployment 
 
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome,
-
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Contact
+For any questions, feedback, or support issues, please contact our team at email adresss.
 
 ## Codeanywhere Reminders
 
