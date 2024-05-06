@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3#&46548&(k=01+=k(15we18e8%+==tdb%h__gumxg4#7s9sbi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu110.gitpod.io', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu109.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['*.herokuapp.com', '127.0.0.1', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu110.gitpod.io', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu109.gitpod.io', 'localhost']
 
 
 # Application definition
@@ -125,19 +125,17 @@ WSGI_APPLICATION = 'animeasy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
-
-DATABASES = {
-'default': {
-    'ENGINE' : 'django.db.backends.sqlite3',
-    'NAME' : os.path.join(BASE_DIR, 'db.sqlite3'),
-}
-}
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+    'default': {
+        'ENGINE' : 'django.db.backends.sqlite3',
+        'NAME' : os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
