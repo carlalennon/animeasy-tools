@@ -1,0 +1,9 @@
+.form-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-inline .btn {
+    margin-left: 10px;
+}

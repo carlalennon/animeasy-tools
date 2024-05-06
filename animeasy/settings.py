@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'django.contrib.sites',
 
     'allauth',
@@ -56,6 +55,8 @@ INSTALLED_APPS = [
     
     'crispy_forms',
     'storages',
+    'sorl.thumbnail',
+    'newsletter.apps.NewsletterConfig',
 ]
 
 MIDDLEWARE = [

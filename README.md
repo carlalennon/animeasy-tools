@@ -62,6 +62,9 @@ Once the app is running, users can access it through a web browser. They can per
 ## Contact
 For any questions, feedback, or support issues, please contact our team at email adresss.
 
+## Sources: 
+https://www.youtube.com/watch?v=hWtlskOaFNI newsletter
+
 ## Codeanywhere Reminders
 
 To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
