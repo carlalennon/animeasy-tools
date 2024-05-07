@@ -49,29 +49,38 @@ def newsletter_create(request):
     }
     return render(request, template, context)
         
-        
+@login_required      
 def newsletter_success(request):
     """
     A view on creation of new newsletter to show the content 
     """
-    subscribers = Subscriber.objects.all()
-    latest_newsletter = Newsletter.objects.latest('date_created')
-    context = {
-        'subscribers': subscribers,
-        'latest_newsletter': latest_newsletter,
-    }
-    return render(request, 'newsletter/newsletter_success.html', context)
+    if request.user.is_superuser:
+        subscribers = Subscriber.objects.all()
+        latest_newsletter = Newsletter.objects.latest('date_created')
+        context = {
+            'subscribers': subscribers,
+            'latest_newsletter': latest_newsletter,
+        }
+        return render(request, 'newsletter/newsletter_success.html', context)
+    else: 
+        messages.error(request, 'You do not have permission to view this page')
+        return redirect('home')
 
+@login_required
 def newsletter_archive(request):
     """
     A view to show all newsletters that have been created
     """
-    newsletters = Newsletter.objects.all()
-    context = {
-        'newsletters': newsletters,
-    }
+    if request.user.is_superuser:
+        newsletters = Newsletter.objects.all()
+        context = {
+            'newsletters': newsletters,
+        }
 
-    return render(request, 'newsletter/newsletter_archive.html', context)
+        return render(request, 'newsletter/newsletter_archive.html', context)
+    else:
+        messages.error(request, 'You do not have permission to view this page')
+        return redirect('home')
 
 def newsletter_unsubscribe(request):
     if request.method == 'POST':
