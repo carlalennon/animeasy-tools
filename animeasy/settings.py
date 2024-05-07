@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
-#DEBUG = True
+#DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['animeasy-40dca18e887f.herokuapp.com', '127.0.0.1', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu110.gitpod.io', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu109.gitpod.io', 'localhost']
 
