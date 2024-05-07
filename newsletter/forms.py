@@ -1,5 +1,6 @@
 from django import forms
 from .models import Subscriber, Newsletter
+from django.core.exceptions import ValidationError
 
 class SubscriberForm(forms.ModelForm):
     class Meta:
@@ -14,6 +15,12 @@ class SubscriberForm(forms.ModelForm):
             'class' : 'form-control',
         })
         self.fields['email'].label = False
+    # Check if email already exists
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if Subscriber.objects.filter(email=email).exists():
+            raise ValidationError("Email already exists")
+        return email
         
 class NewsletterForm(forms.ModelForm):
     class Meta:
@@ -31,6 +38,6 @@ class NewsletterForm(forms.ModelForm):
         self.fields['content'].widget.attrs.update({
             'placeholder': 'Content',
             'autocomplete': 'off',
-            'class' : 'form-control my-2',
+            'class' : 'form-control m',
         })
         self.fields['content'].label = False

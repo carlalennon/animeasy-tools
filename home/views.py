@@ -15,7 +15,11 @@ def index(request):
             form.save()
             messages.success(request, 'Thank you for subscribing!')
             return redirect('/')
+        elif form.errors:
+            print(form.errors)
+            messages.error(request, 'Email already exists')
         else:
+
             form = SubscriberForm()
     context = {
         'form': form,

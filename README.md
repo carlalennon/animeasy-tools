@@ -64,6 +64,7 @@ For any questions, feedback, or support issues, please contact our team at email
 
 ## Sources: 
 https://www.youtube.com/watch?v=hWtlskOaFNI newsletter
+https://www.grokcode.com/819/one-click-unsubscribes-for-django-apps/ Unsubscribe
 
 ## Codeanywhere Reminders
 

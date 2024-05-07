@@ -5,4 +5,5 @@ urlpatterns = [
     path('create/', views.newsletter_create, name='create_newsletter'),
     path('success/', views.newsletter_success, name='newsletter_success'),
     path('archive/', views.newsletter_archive, name='newsletter_archive'),
+    path('unsubscribe/', views.newsletter_unsubscribe, name='newsletter_unsubscribe'),
 ]
