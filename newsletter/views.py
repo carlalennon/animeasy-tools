@@ -76,9 +76,12 @@ def newsletter_archive(request):
 def newsletter_unsubscribe(request):
     if request.method == 'POST':
         email = request.POST.get('email')
-        subscriber = Subscriber.objects.get(email=email)
-        subscriber.delete()
-        messages.success(request, 'You have been unsubscribed')
+        try:
+            subscriber = Subscriber.objects.get(email=email)
+            subscriber.delete()
+            messages.success(request, 'You have been unsubscribed')
+        except Subscriber.DoesNotExist:
+            messages.error(request, 'You are not subscribed')
         return redirect('home')
     else: 
         return render(request, 'newsletter/newsletter_unsubscribe.html')
