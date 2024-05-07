@@ -58,8 +58,6 @@
         </a>
     {% endfor %}
     </div>
-
-
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -85,6 +83,9 @@
                             </div>
                         <h3>€{{product.price}}</h3>
                         </div>
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'edit_product' product.id %}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                        {% endif %}
                         </div>
                     </div>
                 </div>
@@ -96,6 +97,7 @@
         </a>	
     </div>
 </body>
+
 {% endblock %}
 
 {% block postloadjs %}
@@ -136,6 +138,7 @@
         }
     })
 </script>
+
 {% endblock %}
 
 
