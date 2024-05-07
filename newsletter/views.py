@@ -6,7 +6,6 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django_pandas.io import read_frame
 from django.contrib.auth.decorators import login_required   
-from django.core.signing import TimestampSigner, BadSignature, SignatureExpired
 
 
 

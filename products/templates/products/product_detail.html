@@ -18,10 +18,9 @@
     </div>
     <div class="col-lg-8">
       <h2 class="mb-4">{{ product.name }} </h2>
-      <p class="lead">{{ product.description }}</p>
         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
           {% csrf_token %}
-          <div class="mb-3">
+          <div class="my-5 ">
             <label for="quantity"><strong>Quantity:</stong></label>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -43,7 +42,7 @@
                 </div>
               </div>
           </div>
-          <button type="submit" class="btn btn-danger btn-lg btn-block mb-3"><i class="fas fa-cart-plus mr-2"></i> Add to Cart</button>
+          <button type="submit" class="btn btn-danger btn-lg btn-block mb-3 float-end"><i class="fas fa-cart-plus mr-2"></i> Add to Cart</button>
           <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </form>
     </div>
@@ -56,13 +55,18 @@
   <div class="row mt-5">
     <div class="col">
         <!--- Just in case could add these in later -->
-      <h3>Product Details</h3>
-      <ul>
-        <li>Software?</li>
-        <li>System Reqs? </li>
-        <li>Something</li>
-        <li>Something else</li>
-      </ul>
+      <h3 class="mb-5">Product Details</h3>
+      <hr>
+      <h4>Product Description:</h4>
+      <p class="my-5">{{ product.description }}</p>
+      <hr>
+      <h4>Software Requirements:</h4>
+      <p class="my-5">
+        <ul>
+          {{ product.category.friendly_name }}
+        </ul>
+        </p>
+
     </div>
   </div>
 
