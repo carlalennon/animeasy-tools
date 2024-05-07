@@ -14,3 +14,23 @@ class SubscriberForm(forms.ModelForm):
             'class' : 'form-control',
         })
         self.fields['email'].label = False
+        
+class NewsletterForm(forms.ModelForm):
+    class Meta:
+        model = Newsletter
+        fields = ['title', 'content', ]
+        
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['title'].widget.attrs.update({
+            'placeholder': 'Title',
+            'autocomplete': 'off',
+            'class' : 'form-control',
+        })
+        self.fields['title'].label = False
+        self.fields['content'].widget.attrs.update({
+            'placeholder': 'Content',
+            'autocomplete': 'off',
+            'class' : 'form-control',
+        })
+        self.fields['content'].label = False

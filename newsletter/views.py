@@ -3,11 +3,7 @@ from .models import Subscriber, Newsletter
 from .forms import SubscriberForm, NewsletterForm
 
 
-def newsletter_success(request):
-    context = {
-        
-    }
-    return render(request, 'newsletter/newsletter_success.html', context)
+
 
 def newsletter_unsubscribe(request):
     context = {
@@ -30,6 +26,16 @@ def newsletter_create(request):
         if form.is_valid():
             form.save()
             return redirect('newsletter_success')
+        
+        
+def newsletter_success(request):
+    """
+    A view on creation of new nesletter to show the content 
+    """
+    context = {
+        
+    }
+    return render(request, 'newsletter/newsletter_success.html', context)
 
 
 
