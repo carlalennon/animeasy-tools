@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+Newsletter Sent! 
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+
+        <div class=" p-3 mt-3">
+            <h2>Last Sent Newsletter</h2>
+            <h3>{{ latest_newsletter.title }}</h3>
+            <p>{{ latest_newsletter.content }}</p>
+        </div>
+    </div>
+
+<a href="{% url 'newsletter_archive' %}"> View a list of all newsletters in the archive</a>
+
+    <div class=" p-3 mt-3">
+        <h2>Subscribers</h2>
+        <div class="scrollable-list">
+            <ul>
+                {% for subscriber in subscribers %}
+                    <li>{{ subscriber }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+{% endblock %}

@@ -31,6 +31,6 @@ class NewsletterForm(forms.ModelForm):
         self.fields['content'].widget.attrs.update({
             'placeholder': 'Content',
             'autocomplete': 'off',
-            'class' : 'form-control',
+            'class' : 'form-control my-2',
         })
         self.fields['content'].label = False
