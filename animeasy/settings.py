@@ -29,7 +29,12 @@ SECRET_KEY = 'fake_secret_key'
 #DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-ALLOWED_HOSTS = ['animeasy-40dca18e887f.herokuapp.com', '127.0.0.1', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu110.gitpod.io', '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu109.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['animeasy-40dca18e887f.herokuapp.com', 
+'127.0.0.1',
+ '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu110.gitpod.io',
+  '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu109.gitpod.io',
+   'localhost',
+   '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu111.gitpod.io',]
 
 
 # Application definition
