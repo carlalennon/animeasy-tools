@@ -1,0 +1,8 @@
+
+<ul>
+    {% for ticket in tickets %}
+    <a href="{% url 'contact_ticket' ticket.id %}">
+    <li>{{ ticket.title }}</li>
+</a>
+    {% endfor %}
+</ul>
