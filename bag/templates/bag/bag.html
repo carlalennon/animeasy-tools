@@ -61,17 +61,19 @@
                                     </div>
                                 </div>
                             </form>
+                            <div class="float-end"> 
                                 <a class="text-decoration-none text-dark update-link" 
                                     href="" 
                                     id="remove_{{item.item_id}}">
                                     Update
                                 </a>
+                                |
                                 <a class="text-decoration-none text-danger remove-link float-right" 
                                 href=""
                                 id="remove_{{ item.item_id }}">
                                     Remove
                                 </a>
-
+                            </div>
                         </td>
                         <td>
                             <p class="text-center"><strong>€{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
@@ -87,9 +89,9 @@
                 {% endfor %}
             </tbody>
         </table>
-        <div class="text-right">
+        <div class="text-right mt-5">
             <h4>Total: €{{ total|floatformat:2}} </h4>
-            <a href="{% url 'checkout' %}" class="btn btn-danger">Checkout</a> 
+            <a href="{% url 'checkout' %}" class="btn btn-danger btn-lg mt-2">Checkout</a> 
         </div>
     </div>
     {% else %}
