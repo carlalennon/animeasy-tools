@@ -3,7 +3,6 @@
 
 
 {% block extra_css%}
-<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 {% block extra_js%}
 <script src="https://js.stripe.com/v3/"></script>
@@ -27,7 +26,7 @@ My Profile
                                 <table>
                                     <tr>
                                         <th>Name:</th>
-                                        <td>{{request.user.full_name}}</td>
+                                        <td>{{profile.default_full_name}}</td>
                                     </tr>
                                     <tr>
                                         <th>Email:</th>
@@ -35,31 +34,31 @@ My Profile
                                     </tr>
                                     <tr>
                                         <th>Phone:</th>
-                                        <th>{{request.user.phone_number}}</th>
+                                        <th>{{profile.default_phone_number}}</th>
                                     </tr>
                                     <tr>
                                         <th>Country:</th>
-                                        <th>{{request.user.country}}</th>
+                                        <th>{{profile.default_country}}</th>
                                     </tr>
                                     <tr>
                                         <th>Postcode:</th>
-                                        <th>{{request.user.postcode}}</th>
+                                        <th>{{profile.default_postcode}}</th>
                                     </tr>
                                     <tr>
                                         <th>Town/City:</th>
-                                        <th>{{request.user.town_or_city}}</th>
+                                        <th>{{profile.default_town_or_city}}</th>
                                     </tr>
                                     <tr>
                                         <th>Street Address 1:</th>
-                                        <th>{{request.user.street_address1}}</th>
+                                        <th>{{profile.default_street_address1}}</th>
                                     </tr>
                                     <tr>
                                         <th>Street Address 2:</th>
-                                        <th>{{request.user.street_address2}}</th>
+                                        <th>{{profile.default_street_address2}}</th>
                                     </tr>
                                     <tr>
                                         <th>County:</th>
-                                        <th>{{request.user.county}}</th>
+                                        <th>{{profile.default_postcode}}</th>
                                     </tr>
                                 </table>
                             </div>
