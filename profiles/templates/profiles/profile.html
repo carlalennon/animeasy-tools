@@ -16,49 +16,48 @@ My Profile
     <div class="container py-5">
         <div class="row">
             <div class="col-md-10 mx-auto">
-                <div class="accordion" id="accordionExample">
+                <div class="accordion" id="accordionProfile">
                     <div class="accordion-item">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <h4 class="card-title">{{request.user.username}}</h4>
                         </button>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionProfile">
                             <div class="accordion-body">
+                                <div class="card-title">
+                                    Your billing details:
+                                </div>
                                 <table>
                                     <tr>
-                                        <th>Name:</th>
-                                        <td>{{profile.default_full_name}}</td>
-                                    </tr>
-                                    <tr>
                                         <th>Email:</th>
-                                        <td>{{request.user.email}}</td>
+                                        <td class="float-end">{{request.user.email}}</td>
                                     </tr>
                                     <tr>
                                         <th>Phone:</th>
-                                        <th>{{profile.default_phone_number}}</th>
+                                        <td class="float-end">{{profile.default_phone_number}}</td>
                                     </tr>
                                     <tr>
                                         <th>Country:</th>
-                                        <th>{{profile.default_country}}</th>
+                                        <td class="float-end">{{profile.default_country}}</td>
                                     </tr>
                                     <tr>
                                         <th>Postcode:</th>
-                                        <th>{{profile.default_postcode}}</th>
+                                        <td class="float-end">{{profile.default_postcode}}</td>
                                     </tr>
                                     <tr>
                                         <th>Town/City:</th>
-                                        <th>{{profile.default_town_or_city}}</th>
+                                        <td class="float-end">{{profile.default_town_or_city}}</td>
                                     </tr>
                                     <tr>
                                         <th>Street Address 1:</th>
-                                        <th>{{profile.default_street_address1}}</th>
+                                        <td class="float-end">{{profile.default_street_address1}}</td>
                                     </tr>
                                     <tr>
                                         <th>Street Address 2:</th>
-                                        <th>{{profile.default_street_address2}}</th>
+                                        <td class="float-end">{{profile.default_street_address2}}</td>
                                     </tr>
                                     <tr>
                                         <th>County:</th>
-                                        <th>{{profile.default_postcode}}</th>
+                                        <td class="float-end">{{profile.default_postcode}}</td>
                                     </tr>
                                 </table>
                             </div>
@@ -70,7 +69,7 @@ My Profile
                             <h5>Edit Your Information  <i class="fa-solid fa-user-pen"></i></h5>
                           </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionProfile">
                           <div class="accordion-body">
                             <div class="card">
                                 <div class="card-body">
@@ -83,7 +82,8 @@ My Profile
                             </div>
                         </div>     
                     </div>
-                    <div class="display-6">
+                </div>
+                    <div class="display-6 mt-5">
                         Order History
                     </div>
                     <div class="order-history table-responsive">
@@ -118,7 +118,7 @@ My Profile
                             </tbody>
                         </table>                        
                         
-                    </div>
+
                 </div>
             </div>
         </div>
