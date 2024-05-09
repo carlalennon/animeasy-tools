@@ -60,7 +60,11 @@ Once the app is running, users can access it through a web browser. They can per
 
 ## GDPR 
 
-## 
+## Put these back in the footer
+            <!--<li class="nav-item"><a href="{% url 'about' %}" class="nav-link px-2 text-body-secondary">About</a></li>-->
+            <!--<li class="nav-item"><a href="{% url 'faq' %}" class="nav-link px-2 text-body-secondary">FAQs</a></li>-->
+                        <!--<li class="nav-item"><a href="{% url 'privacy_policy' %}" class="nav-link px-2 text-body-secondary">Privacy Policy</a></li>-->
+
 
 ## Deployment 
 

@@ -7,7 +7,7 @@ Contact Us
 {% block content %}
     <div class="container">
         <div class="card p-3">
-    <form method="POST" action="{% url 'create_newsletter' %}">
+    <form method="POST" action="{% url 'contact' %}">
         {% csrf_token %}
         
         {{ form | crispy }}
