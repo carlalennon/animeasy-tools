@@ -91,5 +91,6 @@ def ticket_detail(request, ticket_id):
     return render(request, 'contact/contact_detail.html', context)
 
 
-
-
+def privacy_policy(request):
+    template = 'contact/privacy_policy.html'
+    return render(request, template)
