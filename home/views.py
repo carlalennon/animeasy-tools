@@ -28,3 +28,7 @@ def index(request):
 
 def about(request):
     return render(request, 'home/about.html')
+
+
+def install_guide(request):
+    return render(request, 'home/install_guide.html')

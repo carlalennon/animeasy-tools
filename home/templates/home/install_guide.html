@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+Install Guide
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div>
+        <h5 class="h7">
+            Jump to:
+        </h5>
+        <ul>
+            <li>
+                <a href="#afterEffects">After Effects</a>
+            </li>
+            <li>
+                <a href="#tvPaint">TV Paint</a>
+            </li>
+        </ul>
+    <div class="mb-5" id="afterEffects">
+        <h2>Install Guide: Running ScriptUI Panels in After Effects</h2>
+        <ol>
+            <li><strong>Download the Script Files:</strong> 
+                <p>
+                    First, download the ScriptUI panel script file (.jsx or .jsxbin) from the source where you obtained it. Make sure to choose the version compatible with your After Effects software.
+                </p>
+                </li>
+            
+            <li><strong>Locate After Effects Scripts Folder:</strong>
+                <p>
+                     Open your file explorer (Finder on macOS or File Explorer on Windows) and navigate to the After 
+                     Effects scripts folder. The location of this folder may vary depending on your operating system and
+                      After Effects version. Typically, you can find it at:
+                <ul>
+                    <li><strong>Windows:</strong> <code>C:\Program Files\Adobe\Adobe After Effects [version]\Support Files\Scripts</code></li>
+                    <li><strong>macOS:</strong> <code>/Applications/Adobe After Effects [version]/Scripts</code></li>
+                </ul>
+            </p>
+            </li>
+            
+            <li><strong>Copy Script Files to Scripts Folder:</strong> 
+                <p>
+                    Copy the downloaded ScriptUI panel script file into the After Effects scripts folder that you located in the previous step. Paste it directly into this folder.</p></li>
+            
+            <li><strong>Restart After Effects:</strong><p> If After Effects is currently running, close and restart it to ensure that the newly added script is recognized.</p></li>
+            
+            <li><strong>Open ScriptUI Panel:</strong><p>
+                 After Effects should now be able to detect the newly added ScriptUI panel. To open it, go to the <code>Window</code> menu in After Effects and choose the name of the script panel you installed. It should appear as an option in the list of panels.</p>
+                </li>
+            
+            <li><strong>Authorize and Run:</strong><p>
+                 When you open the ScriptUI panel, you may be prompted to authorize the script or provide any necessary permissions. Follow the on-screen instructions to do so. Once authorized, you should be able to run the script and access its features.</p>
+                </li>
+        </ol>
+    </div>
+
+        <div class="mt-5" id="tvPaint">
+            <h2 div>Install Guide: Running TVPX or George in TVPaint</h2>
+            <ol>
+                <li><strong>Download the Script Files:</strong><p>
+                     First, download the panel script file (.tvpx or .grg) from the Animeasy. 
+                     Make sure to choose the version compatible with your TVPaint software.</p></li>
+                
+                <li><strong>Locate TVPaint Scripts Folder:</strong><p>
+                    .grg files can be installed anywhere on your computer, as they are simple ASCII files. However, it's recommended that
+                    you install them in the below folders, as any panels that call for a George script will look here.
+                     Open your file explorer (Finder on macOS or File Explorer on Windows) and navigate to
+                      the TVPaint scripts folder. You can find it at:
+                    <ul>
+                        <li><strong>Windows:</strong> <code>C:\Program Files (x86)\TVPaint Developpement\TVPaint Animation [version]\Scripts</code></li>
+                        <li><strong>macOS:</strong> <code>/Applications/TVPaint Animation [version]/Scripts</code></li>
+                    </ul>
+                </li>
+                
+                <li><strong>Copy Script Files to Scripts Folder:</strong><p>
+                     Copy the downloaded ScriptUI panel script file into the TVPaint scripts
+                      folder that you located in the previous step. Paste it directly into this folder.</p></li>
+                
+                <li><strong>Restart TVPaint:</strong><p>
+                     If TVPaint is currently running, close and restart it to ensure that the newly added script is recognized.</p></li>
+                
+                <li><strong>Go to Panel > Install Custom Panel:</strong><p>
+                     TVPaint should now be able to detect the newly added panel. To open it, 
+                     go to the <code>Panel</code> menu in TVPaint and choose the name of the script panel you installed.
+                      It should appear as a file in the folder you copied it into.</p></li>
+                
+                <li><strong>Authorize and Run:</strong> <p>
+                    When you open the TVPX panel, you will see a splash screen with the copyright information and a 
+                    set of instructions on how to use the panel. Follow the on-screen instructions to do so. Once authorized, you should be able to run 
+                    the script and access its features.</p></li>
+
+                <li><strong>Support:</strong> <p>
+                    For additional information, please check our <a href="">FAQ section.</a> Additional support can be found on the 
+                <a href="">TV Paint Forums</a>. Alternatively, you can <a href="">contact us here.</a></p></li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
