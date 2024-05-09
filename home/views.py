@@ -25,3 +25,6 @@ def index(request):
         'form': form,
     }    
     return render(request, 'home/index.html', context)
+
+def about(request):
+    return render(request, 'home/about.html')
