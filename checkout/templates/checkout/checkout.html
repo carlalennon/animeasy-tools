@@ -54,28 +54,23 @@
                 </fieldset>
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto pt-6">Payment</legend>
-                    <!-- A Stripe card element will go here -->
-                    
-
                     <div id="checkout">
-                        <div id="card-element">
-                            <!-- A Stripe Element will be inserted here. -->       
+                        <div id="card-element">       
                     </div> 
-                    <!-- Used to display form errors -->
                     <div id="card-errors" role="alert"></div>
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">          
                 </fieldset>
-                    <div class="submit-button text-right">
-                        <a href="{% url 'view_bag' %}" class="btn btn-outline-black">
+                    <div class="submit-button text-right mt-4">
+                        <a href="{% url 'view_bag' %}" class="btn btn-dark btn-lg">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </span>
                         </a>
-                        <button id="submit-button" class="btn btn-danger mt-2">
+                        <button id="submit-button" class="btn btn-danger btn-lg float-end">
                             <span>Secure Payment</span>
                         </button>
-                        <p class="mt-4 mb-5">
+                        <p class="mt-4 mb-5 h5">
                             <span>Your card will be charged <strong>€{{ total | floatformat:2 }}</strong></span>
                         </p>
                 </fieldset>
@@ -91,8 +86,12 @@
                 <tr>
                     <th class="text-center">Product</th>
                     <th class="text-center">Price</th>
-                    <th class="text-center">Quantity</th>
-                    <th class="text-center">Total</th>
+                    <th class="text-center">Subtotal</th>
+                    <th class="text-center">
+                        <div class="float-end">
+                            Total
+                        </div>
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -106,20 +105,28 @@
                             <p class="text-center align-middle"><strong>€{{ item.product.price }}</strong></p>
                         </td>
                         <td>
-                            <p class="text-center"><strong>€{{ item.product.quantity }}</strong></p>
-                        </td>
-                        <td>
                             <p class="text-center"><strong>€{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
                         </td>
                         <td>
                         </td>
-                        <td>
-
                     </tr>
+                    {% endfor %}
                     <tr> 
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td class="text-center">
+                            <div class="float-end">
+                                <strong>€{{ total }}</strong>
+                            </div>
+                        </td>
                     </tr>
+
             </tbody>
-            {% endfor %}
+
         </table>
 </body>
 <!-- Spinner -->
