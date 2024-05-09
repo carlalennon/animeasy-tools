@@ -75,7 +75,7 @@ def contact_tickets(request):
             'tickets': tickets,
         }
 
-        return render(request, 'contact/contact_archive.html', context)
+        return render(request, 'contact/contact_tickets.html', context)
     else:
         messages.error(request, 'You do not have permission to view this page')
         return redirect('home')
