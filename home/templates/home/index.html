@@ -37,8 +37,12 @@
     <h2>Subscribe to Animeasy newsletter:</h2>
     <form method="POST" action="{% url 'home' %}" class="form-inline">
       {% csrf_token %}
+      <div class="col-10">
       {{ form | crispy }}
-        <input class="btn btn-danger mt-2 float-end" type="submit" value="Subscribe" name=>
+      </div>
+      <div class="col-3">
+        <input class="btn btn-danger" type="submit" value="Subscribe" name=>
+      </div>
     </form>
   </div>
 
