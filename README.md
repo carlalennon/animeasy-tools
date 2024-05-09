@@ -68,8 +68,35 @@ Once the app is running, users can access it through a web browser. They can per
 
 ## Marketing 
 ### Email marketing 
+
+For my marketing strategy I chose email. 
+
+Because of my past experience with social media marketing, I know that the social media I would typically run a successful campaign on (Instagram and Tiktok) will not have the market I'm targeting. Animeasy is designed as a B2B business, where the desired customers would be animation studios and freelance professionals looking to speed up their workflow. 
+
+For professionals, the better strategy is to target email inboxes. Professionals in animation cannot afford not to check their inboxes for both current client correspondence and potential offers, so this is where Animeasy would be most likely to grab their attention. The value proposition of Animeasy is also not something that would "pop" in a social media setting. Marketing in the animation field generally consists of behind-the-scenes or sizzle reels. The tedious animation process is left out. Animeasy needs to target professionals who know the real problems they may face in the animation pipeline, not the fans of the product. 
+
 ### Facebook Page 
-https://www.facebook.com/profile.php?id=61559552969497
+
+I created a Facebook page for Animeasy. It's a business page.
+
+To keep the page appealing, I added a cover photo of an animation desk. 
+
+![Cover of page](readme-images/readme-facebook-cover.png)
+
+I created a custom thumbnail logo to go in the profile picture spot.
+
+![Profile picture](readme-images/readme-facebook-thumb.png)
+
+I added links to the website and some contact details. 
+
+![About section](readme-images/readme-facebook-contact.png)
+
+Finally I added a sample post, advertising the product and adding a call to action for the user to visit the site. 
+
+![Sample post](readme-images/readme-facebook-post.png)
+
+The page can be found [here](https://www.facebook.com/profile.php?id=61559552969497)
+
 ## Deployment 
 
 

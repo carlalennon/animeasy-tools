@@ -31,10 +31,14 @@
                       </div>
                   </li>
                     {% endfor %}
-                  
                     {% if total %}
-                    €{{ total}}
+                    <div class="container h6 col offset-1 mb-2">
+                    Total: €{{ total}}
+                    </div>
+                    <div class="container ml-1 my-2">
+                    <a class="btn btn-dark" href="{% url 'view_bag' %}">View Bag</a>
                     <a class="btn btn-danger" href="{% url 'checkout' %}">Checkout</a>
+                    </div>
                     {% else %}
                     <div class="container m-2">
                     <p class="mt-2">Your cart is empty</p>
