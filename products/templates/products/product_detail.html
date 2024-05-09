@@ -61,7 +61,6 @@
 
   <div class="row mt-5">
     <div class="col">
-        <!--- Just in case could add these in later -->
       <h3 class="mb-5">Product Details</h3>
       <hr>
       <h4>Product Description:</h4>
@@ -73,8 +72,14 @@
           {{ product.category.friendly_name }}
         </ul>
         </p>
-
     </div>
+    {% if product.category == after_effects %}
+    <p class="mt-5 "><href="{% url 'products' %}?category=after_effects" class="text-decoration-none">See more After Effects products > </a></p>
+    {% elif product.category == tv_paint %}
+    <p class="mt-5 "><href="{% url 'products' %}?category=tv_paint" class="text-decoration-none">See more TV Paint products > </a></p>
+    {% endif %}
+
+
   </div>
 
   <div class="row mt-5">
