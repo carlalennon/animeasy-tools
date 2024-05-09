@@ -32,3 +32,6 @@ def about(request):
 
 def install_guide(request):
     return render(request, 'home/install_guide.html')
+
+def faq(request):
+    return render(request, 'home/faq.html')
