@@ -17,6 +17,7 @@ In my animation career, I starte out using plugins purchased or developed by the
 ### Order management: Enable users to track their orders and view order history.
 ### Seller dashboard: Provide sellers with tools to manage products, orders, and inventory.
 ### Admin panel: Allow administrators to manage users, products, and system settings.
+### Contact form: Allows customers to send complaints and tracks them in an admin panel 
 
 ## Installation
 
@@ -65,7 +66,10 @@ Once the app is running, users can access it through a web browser. They can per
             <!--<li class="nav-item"><a href="{% url 'faq' %}" class="nav-link px-2 text-body-secondary">FAQs</a></li>-->
                         <!--<li class="nav-item"><a href="{% url 'privacy_policy' %}" class="nav-link px-2 text-body-secondary">Privacy Policy</a></li>-->
 
-
+## Marketing 
+### Email marketing 
+### Facebook Page 
+https://www.facebook.com/profile.php?id=61559552969497
 ## Deployment 
 
 
