@@ -2,6 +2,8 @@
 # Animeasy Tools E-commerce Site
 
 ## Overview
+
+Animeasy is an e-commerce store that provides small software plugins for animation production. 
 This README provides an overview of the ecommerce app, including its purpose, features, installation instructions, usage guidelines, and contact information.
 
 ## Purpose
@@ -11,12 +13,51 @@ In my animation career, I starte out using plugins purchased or developed by the
 
 ## Features
 ### User authentication: Allow users to register, login, and manage their accounts.
+
+- Users can make purchases without making an account, but they can make an account if they want to
+- Returning users can log into their account 
+- Users can reset their password to recover their account if they forget 
+- Users can delete their account 
+
+### Profiles 
+- Users can view their information from their profile page 
+- Users can change their information from their profile page 
+- User's order history is saved at the bottom of their profile 
+- User's support tickets and the replies can be accessed from the profile page 
+
 ### Product browsing: Enable users to search, filter, and view products.
+
+- Users can see all products in Animeasy store in one place 
+- Users can sort products by category, depending on which software they're looking for 
+- Users can search for products by title or key word 
+- Users can quickly add a product to their bag from the search results page 
+- A product detail page is available for each product 
+- The product detail page displays a product description, the software category and any user reviews 
+- Users can add multiples of a product to their bag from the product detail page 
+
 ### Shopping cart: Allow users to add and remove items from their cart.
+- The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
+- If there's more that 5 items in their bag, the list will be truncated and an " ... & more" will be displayed
+- Users can view their bag and see the items inside 
+- Users can add or remove items from their bag from the cart view 
+- If there's more than one of an item in the cart, users can see the subtotal of that item
+- Users can see the total of their bag 
+- Users can proceed to the checkout form from the bag view 
+
 ### Checkout process: Guide users through a secure checkout process.
+- Users can securely checkout  items in their bag 
+- Billing information is collected 
+- Registered users can choose to save their details from next time 
+- A secure checkout using Stripe 
+- On comfirmation of order, users are directed to a success page, showing them their details, charge and what they ordered
+
 ### Order management: Enable users to track their orders and view order history.
-### Seller dashboard: Provide sellers with tools to manage products, orders, and inventory.
+- From their profile, users can see their order history 
+- Clicking on the order number brings them to the original checkout success page, with a message saying that this is an old order they are viewing 
+- Non registered users can access this information from their order confirmation email in their inbox 
+
 ### Admin panel: Allow administrators to manage users, products, and system settings.
+- If the logged in user is a superuser, the admin panel will appear in the navigation bar
 ### Contact form: Allows customers to send complaints and tracks them in an admin panel 
 
 ## Installation
