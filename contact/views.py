@@ -68,10 +68,35 @@ def contact_success(request, ticket_id):
 @login_required
 def contact_tickets(request):
     """
-    A view to show all tickets 
+    A view to show all tickets
     """
     if request.user.is_superuser:
         tickets = Ticket.objects.all()
+        
+        # Filter by unresolved status
+        unresolved = request.GET.get('unresolved')
+        if unresolved == 'true':
+            tickets = tickets.filter(status='pending')
+
+        # Filter by unresolved status
+        resolved = request.GET.get('resolved')
+        if resolved == 'true':
+            tickets = tickets.filter(status='resolved')
+
+        # Sorting by date ascending and descending
+        sort_by_date = request.GET.get('sort')
+        if sort_by_date == 'asc':
+            tickets = tickets.order_by('date_received')
+        elif sort_by_date == 'desc':
+            tickets = tickets.order_by('-date_received')
+
+        # Sorting by ID number
+        sort_by_id = request.GET.get('sort_by_id')
+        if sort_by_id == 'asc':
+            tickets = tickets.order_by('id')
+        elif sort_by_id == 'desc':
+            tickets = tickets.order_by('-id')
+        
         admin = TicketReply.objects.all()
         context = {
             'tickets': tickets,

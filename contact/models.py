@@ -21,7 +21,6 @@ class TicketReply(models.Model):
     class Meta:
         get_latest_by = 'date_reply'
         
-        
     def __str__(self):
         return f'Reply to: {self.ticket.title}'
     

@@ -1,6 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
+
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="?unresolved=true">Unresolved</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="?resolved=true">Resolved</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="?sort=asc" class="dropdown-item">Sort by date (ascending)</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="?sort=desc" class="dropdown-item">Sort by date (descending)</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="?sort_by_id=asc" class="dropdown-item">Sort by ID (ascending)</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="?sort_by_id=desc" class="dropdown-item">Sort by ID (descending)</a>            
+                </li>
+                <li>
+                    <a class="dropdown-item" href="{% url 'contact_tickets' %}" class="dropdown-item">Clear All Filters</a>            
+                </li>
+            <ul>
+      </div>
+
     <table class="table table-hover">
         <thead>
           <tr>
