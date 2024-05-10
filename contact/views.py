@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
-
 from .models import Ticket
-from .forms import TicketForm
+from .forms import TicketForm, TicketReplyForm
 # from django.core.paginator import Paginator
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required   
+from django.contrib.auth.decorators import login_required  
+from django.core.mail import send_mail 
 
 
 def contact(request):
@@ -83,12 +83,42 @@ def contact_tickets(request):
     
     
 def ticket_detail(request, ticket_id):
+    print("Hello view")
     """ Returns page with all ticket information """
     ticket = get_object_or_404(Ticket, pk=ticket_id)
+    """
+    Allows admin to reply to a ticket 
+    """
+    template = 'contact/ticket_detail.html'
+    email = ticket.email
+    if request.user.is_superuser:  
+        if request.method == 'POST':
+            form = TicketReplyForm(request.POST)
+            if form.is_valid():
+                form.save()
+                title = ticket.title
+                content = form.cleaned_data.get('content')         
+                send_mail(
+                    title,
+                    content,
+                    'support@animeasy.com',
+                    [email],
+                    fail_silently=False,
+                )
+                messages.success(request, 'Reply was sent to ' + email )
+                return redirect('contact_tickets')
+        else: 
+            print("Hello else")
+            form = TicketReplyForm()
+    else: 
+        messages.error(request, 'You do not have permission to reply to tickets')
+        return redirect('home')
+    
     context = {
         'ticket': ticket,
+        'form' : form,
     }
-    return render(request, 'contact/ticket_detail.html', context)
+    return render(request, template, context)
 
 
 def privacy_policy(request):
