@@ -1,5 +1,5 @@
 from django import forms
-from .models import Ticket
+from .models import Ticket, TicketReply
 from django.core.exceptions import ValidationError
 
 class TicketForm(forms.ModelForm):
@@ -30,15 +30,15 @@ class TicketForm(forms.ModelForm):
         
 class TicketReplyForm(forms.ModelForm):
     class Meta:
-        model = Ticket
-        fields = [ 'content',]
+        model = TicketReply
+        fields = [ 'reply', 'admin',]
         
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['content'].widget.attrs.update({
-            'placeholder': 'Content',
+        self.fields['reply'].widget.attrs.update({
+            'placeholder': 'Reply',
             'autocomplete': 'off',
             'class' : 'form-control m',
         })
-        self.fields['content'].label = False
+        self.fields['reply'].label = False
         

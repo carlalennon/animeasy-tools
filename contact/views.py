@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Ticket
+from .models import Ticket, TicketReply
 from .forms import TicketForm, TicketReplyForm
+from profiles.models import UserProfile
 # from django.core.paginator import Paginator
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required  
@@ -83,7 +84,6 @@ def contact_tickets(request):
     
     
 def ticket_detail(request, ticket_id):
-    print("Hello view")
     """ Returns page with all ticket information """
     ticket = get_object_or_404(Ticket, pk=ticket_id)
     """
@@ -91,13 +91,20 @@ def ticket_detail(request, ticket_id):
     """
     template = 'contact/ticket_detail.html'
     email = ticket.email
+    reply = None
     if request.user.is_superuser:  
         if request.method == 'POST':
             form = TicketReplyForm(request.POST)
             if form.is_valid():
-                form.save()
+                reply = TicketReply()
+                reply.ticket = ticket
+                reply.reply = form.cleaned_data.get('reply')  
+                reply.admin = UserProfile.objects.get(user=request.user)
+
+                reply.save()
+
                 title = ticket.title
-                content = form.cleaned_data.get('content')         
+                """    
                 send_mail(
                     title,
                     content,
@@ -105,7 +112,11 @@ def ticket_detail(request, ticket_id):
                     [email],
                     fail_silently=False,
                 )
+                """
+
                 messages.success(request, 'Reply was sent to ' + email )
+                ticket.status = 'resolved'
+                ticket.save()
                 return redirect('contact_tickets')
         else: 
             print("Hello else")
@@ -117,6 +128,7 @@ def ticket_detail(request, ticket_id):
     context = {
         'ticket': ticket,
         'form' : form,
+        'reply' : reply,
     }
     return render(request, template, context)
 
