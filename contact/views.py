@@ -21,7 +21,6 @@ def contact(request):
         form = TicketForm(request.POST)
         if form.is_valid():
             ticket = form.save()
-            """
             title = form.cleaned_data.get('title')
             content = form.cleaned_data.get('content')   
             email = form.cleaned_data.get('email')      
@@ -32,7 +31,6 @@ def contact(request):
                 email,
                 fail_silently=False,
             )
-            """
             messages.success(request, 'Your ticket has been submitted')
             ticket_id = ticket.id 
             return redirect('contact_success', ticket_id=ticket.id)
@@ -129,7 +127,6 @@ def ticket_detail(request, ticket_id):
                 reply.admin = UserProfile.objects.get(user=request.user)
                 reply.save()
                 title = ticket.title   
-                """
                 send_mail(
                     title,
                     reply,
@@ -137,7 +134,6 @@ def ticket_detail(request, ticket_id):
                     [email],
                     fail_silently=False,
                 )
-                """
                 messages.success(request, 'Reply was sent to ' + email )
                 ticket.status = 'resolved'
                 ticket.save()

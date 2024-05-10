@@ -29,7 +29,6 @@ def newsletter_create(request):
                 form.save()
                 title = form.cleaned_data.get('title')
                 content = form.cleaned_data.get('content')  
-                """       
                 send_mail(
                     title,
                     content,
@@ -37,7 +36,6 @@ def newsletter_create(request):
                     email_list,
                     fail_silently=False,
                 )
-                """
                 messages.success(request, 'Newsletter created successfully')
                 return redirect('newsletter_success')
         else: 
