@@ -18,6 +18,10 @@ class TicketReply(models.Model):
     reply = models.TextField(null=True)
     date_reply = models.DateTimeField(auto_now_add=True)
     
+    class Meta:
+        get_latest_by = 'date_reply'
+        
+        
     def __str__(self):
         return f'Reply to: {self.ticket.title}'
     
