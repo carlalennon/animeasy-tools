@@ -10,15 +10,21 @@ class TicketForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['title'].widget.attrs.update({
-            'placeholder': 'Title',
+            'placeholder': 'Subject',
             'autocomplete': 'off',
-            'class' : 'form-control',
+            'class' : 'form-control my-1',
+        })
+        self.fields['email'].label = False 
+        self.fields['email'].widget.attrs.update({
+            'placeholder': 'Email Address',
+            'autocomplete': 'off',
+            'class' : 'form-control my-1',
         })
         self.fields['title'].label = False
         self.fields['content'].widget.attrs.update({
-            'placeholder': 'Content',
+            'placeholder': 'What can we help you with?',
             'autocomplete': 'off',
-            'class' : 'form-control m',
+            'class' : 'form-control my-1',
         })
         self.fields['content'].label = False
         
