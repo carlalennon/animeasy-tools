@@ -5,7 +5,7 @@ from .forms import NewsletterForm
 from django.contrib import messages
 from django.core.mail import send_mail
 from django_pandas.io import read_frame
-from django.contrib.auth.decorators import login_required   
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -63,10 +63,19 @@ def newsletter_success(request):
             'subscribers': subscribers,
             'latest_newsletter': latest_newsletter,
         }
+
         return render(request, 'newsletter/newsletter_success.html', context)
     else: 
         messages.error(request, 'You do not have permission to view this page')
         return redirect('home')
+    
+
+def add_subscribers(email_list):
+    """ 
+    A temporary function to add 50 emails from a list to subscribers
+    """
+    for email in email_list:
+        Subscriber.objects.get_or_create(email=email)
 
 @login_required
 def newsletter_archive(request):

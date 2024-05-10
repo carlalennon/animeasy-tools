@@ -1,31 +1,51 @@
 {% extends 'base.html' %}
 
+{% block extra_css %}
+<style>
+.subscriber-list {
+    height: 200px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+</style>
+{% endblock%}
+
 {% block page_header %}
 Newsletter Sent! 
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-
-
-        <div class=" p-3 mt-3">
-            <h2>Last Sent Newsletter</h2>
-            <h3>{{ latest_newsletter.title }}</h3>
-            <p>{{ latest_newsletter.content }}</p>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">
+                <h5>
+                    {{ latest_newsletter.title }}
+                </h5>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <p>
+                    {{ latest_newsletter.content}}
+                </p>
+            </div>
         </div>
     </div>
-
-<a href="{% url 'newsletter_archive' %}"> View a list of all newsletters in the archive</a>
-
-    <div class=" p-3 mt-3">
-        <h2>Subscribers</h2>
-        <div class="scrollable-list">
-            <ul>
-                {% for subscriber in subscribers %}
-                    <li>{{ subscriber }}</li>
-                {% endfor %}
-            </ul>
+    <a href="{% url 'newsletter_archive' %}" class="btn btn-danger btn-lg my-4">Newsletter Archive</a>
+    <div class="card">
+        <div class="card-title h5 p-2">
+            Subscribers
+        </div>
+        <div class="card-body">
+            <div class="subscriber-list">
+                <ul class="list-group">
+                    {% for subscriber in subscribers %}
+                    <li class="list-group-item">{{ subscriber.email }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
+    
     
 {% endblock %}
