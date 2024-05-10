@@ -28,7 +28,7 @@ def contact(request):
                 title,
                 content,
                 'contact@animeasy.com',
-                email,
+                [email],
                 fail_silently=False,
             )
             messages.success(request, 'Your ticket has been submitted')
