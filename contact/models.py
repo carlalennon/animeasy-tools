@@ -1,4 +1,5 @@
 from django.db import models
+from profiles.models import UserProfile
 status = models.CharField(max_length=10, choices=[('pending', 'Pending'), ('resolved', 'Resolved')])
 
 class Ticket(models.Model):
@@ -11,3 +12,12 @@ class Ticket(models.Model):
     def __str__(self):
         return self.title
 
+class TicketReply(models.Model):
+    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE)
+    admin = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    reply = models.TextField(null=True)
+    date_reply = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f'Reply to: {self.ticket.title}'
+    
