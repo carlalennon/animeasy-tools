@@ -1,18 +1,24 @@
 {% extends 'base.html' %}
 
 {% block page_header %}
-Newsletter Sent! 
+Thanks for getting in touch!
 {% endblock %}
 
 {% block content %}
     <div class="container">
-
-
-        <div class=" p-3 mt-3">
-            <h2>Your ticket:</h2>
-            <h3> Your contact information: {{ ticket.email }}<h3>
-            <h3>{{ ticket.title }}</h3>
-            <p>{{ ticket.content }}</p>
+        <div class="h3 my-5">
+            <p>
+                Your ticket has been received. A member of our time will be in touch shortly at <i>{{ ticket.email }}</i>.
+            </p>
+        </div>
+        <div class="card" style="min-height: 40vh;">
+            <div class="card-header h6 mb-3">
+                    Subject: {{ ticket.title }}
+            </div> 
+            <div class="card-body p-4">
+                <div class="mb-5"><strong>You wrote:</strong>
+                <p>{{ ticket.content }}</p>
+            </div>
         </div>
     </div>
 
