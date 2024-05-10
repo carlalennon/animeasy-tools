@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
@@ -49,3 +49,15 @@ def order_history(request, order_number):
     }
     
     return render(request, template, context)
+
+@login_required
+def delete_profile(request):
+    """Delete user profile."""
+    if request.method == 'POST':
+        profile = get_object_or_404(UserProfile, user=request.user)
+        profile.delete()
+        messages.success(request, 'Your profile has been deleted. Come back any time.')
+        return redirect('home')  
+    else:
+        # In case of get requests on page 
+        pass
