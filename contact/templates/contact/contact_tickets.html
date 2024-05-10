@@ -9,6 +9,8 @@
             <th scope="col">Email</th>
             <th scope="col">Date</th>
             <th scope="col">Status</th>
+            <th scope="col">Resolved by</th>
+            <th scope="col">Date resolved</th>
           </tr>
         </thead>
         <tbody>
@@ -40,6 +42,20 @@
                         {{ ticket.status }}
                     </span>
                 {% endif %}
+            </td>
+            <td>
+                {% for reply in ticket.ticketreply_set.all %}
+                {{ reply.admin }}
+                {% empty %}
+                ----
+                {% endfor %}
+            </td>
+            <td>
+                {% for reply in ticket.ticketreply_set.all %}
+                {{ reply.date_reply }}
+                {% empty %}
+                ----
+                {% endfor %}
             </td>
           </tr>
           {% endfor%}

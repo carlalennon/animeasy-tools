@@ -31,7 +31,7 @@ class TicketForm(forms.ModelForm):
 class TicketReplyForm(forms.ModelForm):
     class Meta:
         model = TicketReply
-        fields = [ 'reply', 'admin',]
+        fields = [ 'reply',]
         
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

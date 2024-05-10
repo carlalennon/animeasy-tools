@@ -72,8 +72,10 @@ def contact_tickets(request):
     """
     if request.user.is_superuser:
         tickets = Ticket.objects.all()
+        admin = TicketReply.objects.all()
         context = {
             'tickets': tickets,
+            'admin': admin,
         }
 
         return render(request, 'contact/contact_tickets.html', context)
@@ -100,20 +102,15 @@ def ticket_detail(request, ticket_id):
                 reply.ticket = ticket
                 reply.reply = form.cleaned_data.get('reply')  
                 reply.admin = UserProfile.objects.get(user=request.user)
-
                 reply.save()
-
-                title = ticket.title
-                """    
+                title = ticket.title   
                 send_mail(
                     title,
-                    content,
+                    reply,
                     'support@animeasy.com',
                     [email],
                     fail_silently=False,
                 )
-                """
-
                 messages.success(request, 'Reply was sent to ' + email )
                 ticket.status = 'resolved'
                 ticket.save()
