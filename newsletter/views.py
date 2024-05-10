@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Subscriber, Newsletter
 from .forms import NewsletterForm
 # from django.core.paginator import Paginator
@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django_pandas.io import read_frame
 from django.contrib.auth.decorators import login_required   
+
 
 
 
@@ -27,7 +28,8 @@ def newsletter_create(request):
             if form.is_valid():
                 form.save()
                 title = form.cleaned_data.get('title')
-                content = form.cleaned_data.get('content')         
+                content = form.cleaned_data.get('content')  
+                """       
                 send_mail(
                     title,
                     content,
@@ -35,6 +37,7 @@ def newsletter_create(request):
                     email_list,
                     fail_silently=False,
                 )
+                """
                 messages.success(request, 'Newsletter created successfully')
                 return redirect('newsletter_success')
         else: 
@@ -79,7 +82,18 @@ def newsletter_archive(request):
         return render(request, 'newsletter/newsletter_archive.html', context)
     else:
         messages.error(request, 'You do not have permission to view this page')
-        return redirect('home')
+        return redirect('home')#
+    
+    
+@login_required
+def newsletter_detail(request, newsletter_id):
+    """ Returns page with detailed information about selected product  """
+    
+    newsletter = get_object_or_404(Newsletter, pk=newsletter_id)
+    context = {
+        'newsletter': newsletter,
+    }
+    return render(request, 'newsletter/newsletter_detail.html', context)
 
 def newsletter_unsubscribe(request):
     if request.method == 'POST':

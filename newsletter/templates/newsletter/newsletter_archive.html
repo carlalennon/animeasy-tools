@@ -1,13 +1,37 @@
 {% extends 'base.html' %}
 
+{% block page_header %}
+Newsletter Archive 
+{% endblock %}
+
 {% block content %}
-    <h1>Newsletter Archive</h1>
-    <ul>
-        {% for newsletter in newsletters %}
-            <li>
-                {{newsletter.title}}
-                {{ newsletter.content}}
-            </li>
-        {% endfor %}
-    </ul>
+<div class="container">
+
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Content</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for newsletter in newsletters %}
+          <tr>
+            <td>
+                <a href="{% url 'newsletter_detail' newsletter.id %}">
+                 {{ newsletter.title|truncatechars_html:100 }} 
+                </a>
+            </td>
+            <td>
+                <a href="{% url 'newsletter_detail' newsletter.id %}">
+                    {{ newsletter.content|truncatechars_html:120 }}
+                </a>
+            </td>
+            <td>{{ newsletter.date_created }}</td>
+          </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+</div>
 {% endblock %}
