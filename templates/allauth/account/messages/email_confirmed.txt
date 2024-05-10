@@ -1,2 +1,2 @@
 {% load i18n %}
- You have confirmed {{email}}.{%   %}
+ You have confirmed {{email}}.
