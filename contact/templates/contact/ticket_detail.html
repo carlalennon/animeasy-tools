@@ -8,10 +8,42 @@ Support Ticket #{{ ticket.id}}
 
 {% block content %}
 <div class="container"> 
-{{ ticket.email }}
-{{ ticket.title }}
-{{ ticket.content }}
-{{ ticket.status }}
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">
+                <strong>From:</strong> {{ ticket.email}}
+            </div>
+            <div class="card-title">
+                <strong>Date:</strong> {{ ticket.date_received }}
+            </div>
+            <div class="card-title">
+                <strong>Subject:</strong> {{ ticket.title }}
+            </div>
+        </div>
+        <div class="card-body">
+            <p>
+                {{ card.content }}
+            </p>
+        </div>
+    </div> 
+
+    {% for reply in ticket.ticketreply_set.all %}
+    <div class="card my-4">
+        <div class="card-header">
+            <div class="card-title">
+                <strong>Admin:</strong> {{ reply.admin }}
+            </div>
+            <div class="card-title">
+                <strong>Date:</strong> {{ reply.date_reply }}
+            </div>
+        </div>
+        <div class="card-body">
+            <p>
+                {{ reply.reply }}
+            </p>
+        </div>
+    </div> 
+    {% endfor %}
 
     <div class="card p-3">
         <form method="POST" action="{% url 'ticket_detail' ticket.id %}">

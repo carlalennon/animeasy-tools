@@ -104,6 +104,7 @@ def ticket_detail(request, ticket_id):
                 reply.admin = UserProfile.objects.get(user=request.user)
                 reply.save()
                 title = ticket.title   
+                """
                 send_mail(
                     title,
                     reply,
@@ -111,6 +112,7 @@ def ticket_detail(request, ticket_id):
                     [email],
                     fail_silently=False,
                 )
+                """
                 messages.success(request, 'Reply was sent to ' + email )
                 ticket.status = 'resolved'
                 ticket.save()
