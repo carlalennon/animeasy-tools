@@ -1,9 +1,49 @@
 {% extends 'base.html' %}
 {% block content %}
-<ul>
-    {% for ticket in tickets %}
-    <li>{{ ticket.title }}</li>
-</a>
-    {% endfor %}
-</ul>
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Issue</th>
+            <th scope="col">Email</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for ticket in tickets %}
+          <tr>
+            <td>
+                <a href="{% url 'ticket_detail' ticket.id %}">
+                 {{ ticket.id }} 
+                </a>
+            </td>
+            <td>
+                <a href="{% url 'ticket_detail' ticket.id %}">
+                    {{ ticket.title|truncatechars_html:30 }}
+                </a>
+            </td>
+            <td>{{ ticket.email}}</td>
+            <td>{{ ticket.date_received }}</td>
+            <td>
+                {% if ticket.status == "pending" %}
+                    <span class="badge text-bg-warning">
+                        {{ ticket.status }}
+                    </span>
+                {% elif ticket.status == "resolved" %}
+                    <span class="badge text-bg-success">
+                        {{ ticket.status }}
+                    </span>
+                {% else %}
+                    <span class="badge text-bg-secondary">
+                        {{ ticket.status }}
+                    </span>
+                {% endif %}
+            </td>
+          </tr>
+          {% endfor%}
+        </tbody>
+      </table>
+</div>
 {% endblock %}

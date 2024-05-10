@@ -88,7 +88,7 @@ def ticket_detail(request, ticket_id):
     context = {
         'ticket': ticket,
     }
-    return render(request, 'contact/contact_detail.html', context)
+    return render(request, 'contact/ticket_detail.html', context)
 
 
 def privacy_policy(request):

@@ -55,8 +55,10 @@
     {% endblock %}
     </div>
     {% load crispy_forms_tags %}
+    <body>
     {% block content %}
     {% endblock %}
+    </body>
     {% block postloadjs %}
     <script type="text/javascript">
       $(document).ready(function() {
