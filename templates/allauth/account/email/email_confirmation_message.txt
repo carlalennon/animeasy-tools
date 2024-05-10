@@ -5,6 +5,6 @@ You're seeing this because you have signed up for an account with Animeasy.
 If this if you, go to {{ activate_url }}
 
 If this wasn't you, there's no action needed at this time.
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
-{{ site_domain }}{% endblocktrans %}
+Thank you from {{ site_name }}!
+{{ site_domain }}
 {% endautoescape %}
