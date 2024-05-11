@@ -60,4 +60,4 @@ def delete_profile(request):
         return redirect('home')  
     else:
         # In case of GET requests, redirect to the profile page
-        return redirect('profile', user=request.user)
+        return redirect('profile')
