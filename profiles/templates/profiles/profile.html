@@ -101,7 +101,7 @@ My Profile
                     <div class="display-6 mt-5">
                         Order History
                     </div>
-                    {% if user.orders.all %}
+                    {% if user.orders.all().exists  %}
                     <div class="order-history table-responsive">
                         <table class="table table-striped">
                             <thead>
