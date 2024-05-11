@@ -53,11 +53,7 @@ def order_history(request, order_number):
 @login_required
 def delete_profile(request):
     """Delete user profile."""
-    if request.method == 'POST':
-        profile = get_object_or_404(UserProfile, user=request.user)
-        profile.delete()
-        messages.success(request, 'Your profile has been deleted. Come back any time.')
-        return redirect('home')  
-    else:
-        # In case of GET requests, redirect to the profile page
-        return redirect('profile')
+    profile = get_object_or_404(UserProfile, user=request.user)
+    profile.delete()
+    messages.success(request, 'Your profile has been deleted. Come back any time.')
+    return redirect('home')  
