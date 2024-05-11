@@ -41,8 +41,6 @@
                     {% endif %}
                   </ul>                     
             </li>
-            <li><a href="#" class="nav-link px-2 text-white"><i class="fa-brands fa-light fa-facebook-f"></i></a></li>
-            <li><a href="#" class="nav-link px-2 text-white"><i class="fa-brands fa-light fa-linkedin-in"></i></a></li>
             {% if user.is_authenticated %}
                {% if request.user.is_superuser %}
                {% include 'includes/admin_panel.html' %}
@@ -52,6 +50,8 @@
             {% else %}
             <li><a href="{% url 'account_login' %}" class="nav-link px-2 text-white">Sign In</a></li>
             <li><a href="{% url 'account_signup'%}" class="nav-link px-2 text-white">Sign Up</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61559552969497" rel="noopener" target="_blank" class="nav-link px-2 text-white"><i class="fa-brands fa-light fa-facebook-f"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/animeasy/" rel="noopener" target="_blank" class="nav-link px-2 text-white"><i class="fa-brands fa-light fa-linkedin-in"></i></a></li>
             {% endif %}
           </ul>
   

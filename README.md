@@ -243,6 +243,8 @@ I created a very simple page for Animeasy, and populated it with the same data a
 
 ![Linkedin profile](readme-images/readme-linkedin.png)
 
+[Linkedin page](https://www.linkedin.com/company/animeasy/)
+
 ****
 ## Deployment 
 
