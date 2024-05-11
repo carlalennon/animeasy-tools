@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages 
 from django.conf import settings
+from .webhook_handler import StripeWH_Handler
 
 from .forms import OrderForm
 from products.models import Product
@@ -127,6 +128,9 @@ def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
+    order = get_object_or_404(Order, order_number=order_number)
+    email_confirmation = StripeWH_Handler(request)
+    email_confirmation._send_confirmation_email(order)
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     
@@ -162,5 +166,5 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-    
     return render(request, template, context)
+

@@ -32,9 +32,6 @@ def adjust_bag(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
-    
-    print("Made it to views!")  # This will print the updated bag to the console
-
     if quantity > 0:
         bag[item_id] = quantity
         messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')

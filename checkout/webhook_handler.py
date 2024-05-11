@@ -22,12 +22,13 @@ class StripeWH_Handler:
         Send confirmation email on order
         """
         cust_email = order.email
+        order_items = order.lineitems.all()
         subject = render_to_string(
             'checkout/checkout_emails/confirmation_email_subject.txt',
             {'order': order})
         body = render_to_string(
         'checkout/checkout_emails/confirmation_email_body.txt',
-        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+        {'order': order, 'order_items': order_items, 'contact_email': settings.DEFAULT_FROM_EMAIL})
         send_mail(
             subject,
             body,
