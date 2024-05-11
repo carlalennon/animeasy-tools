@@ -1,10 +1,10 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}Hello from {{ site_name }}!
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}Hello from Animeasy.com!
 
 You're seeing this because you have signed up for an account with Animeasy. 
 
 If this if you, go to {{ activate_url }}
 
 If this wasn't you, there's no action needed at this time.
-Thank you from {{ site_name }}!
+Thank you from Animeasy!
 {{ site_domain }}
 {% endautoescape %}
