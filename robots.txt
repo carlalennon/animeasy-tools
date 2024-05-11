@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /account/
+Disallow: /profile/
+Sitemap: https://animeasy-40dca18e887f.herokuapp.com/
