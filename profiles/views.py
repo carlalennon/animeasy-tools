@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 from checkout.models import Order
+from django.contrib.auth.models import User
 
 @login_required
 def profile(request):
@@ -53,7 +54,9 @@ def order_history(request, order_number):
 @login_required
 def delete_profile(request):
     """Delete user profile."""
+    user = profile.user
     profile = get_object_or_404(UserProfile, user=request.user)
     profile.delete()
+    user.delete()
     messages.success(request, 'Your profile has been deleted. Come back any time.')
     return redirect('home')  
