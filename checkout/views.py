@@ -9,7 +9,7 @@ from .models import Order, OrderLineItem
 from bag.contexts import bag_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile 
-from webhook_handler import _send_confirmation_email_test
+from .webhook_handler import _send_confirmation_email_test
 
 import stripe
 import json
