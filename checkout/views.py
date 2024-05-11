@@ -9,6 +9,7 @@ from .models import Order, OrderLineItem
 from bag.contexts import bag_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile 
+from webhook_handler import _send_confirmation_email_test
 
 import stripe
 import json
@@ -151,7 +152,7 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-                
+    _send_confirmation_email_test(order)
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
