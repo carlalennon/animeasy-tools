@@ -95,46 +95,107 @@ Once the app is running, users can access it through a web browser. They can per
 ###  User Stories 
 
 I added the following user stories to my kanban board
+<ul> 
+    <li>
+    <strong>User Story 1: User Registration</strong>
+            <ul>
+                <li>
+                    As a customer of the Animeasy, I want to be able to create an account where I can access information about my previous purchases and opt in to promotional emails and updates about projects, along with special offers.
+                </li>
+            </ul>
+        </li>
+    <li>
+    <strong>User Story 2: Products</strong>
+        <ul>
+            <li>
+            As a potential customer of Animeasy, I want to see what products are available to purchase
+            </li>
+        </ul>
+    </li>
+    <li>
+    <strong>>User Story 3: Purchasing/Cart</strong>
+        <ul>
+            <li>
+            As a customer, I can purchase items from Animeasy
+            </li>
+        </ul>
+    </li>
+    <li>
+    <strong>User Story 4: Navigation</strong>
+    </li>
+    <ul>
+        <li>
+        As a potential customer of Animeasy, I want to easily explore and find products on the site
+        </li>
+    </ul>
+    <li>
+    <strong>User Story 5: User Profile</strong>
+    </li>
+    <ul>
+        <li>
+        As a user, I can create a profile that allows me to purchase items easily
+        </li>
+    </ul>
+    <li>
+    <strong>User Story 6: Review</strong>
+    </li>
+    <ul>
+        <li>As a customer of Animeasy, I want to be able to leave reviews on products I have purchased to share my experience with other users.
+        </li>
+    </ul>
+    <li>
+    <strong>User Story 7: Admin Permissions</strong>
+    </li>
+    <ul>
+        <li>
+        As a store owner, I can add, edit or delete products
+        </li>
+    </ul>
+    <li>
+    <strong>User Story 8: Newsletter</strong>
+    </li>
+    <ul>
+        <li>
+        As a marketer of animeasy, I want to be able to reach out to my interested leads with offers and announcements of new products via email.
+        </li>
+    </ul>
+    <li>
+    <strong>User Story 9: Contact Form</strong>
+    </li>
+    <ul>
+        <li>
+        As a seller, I would like a place to handle any issues from my customers
+        </li>
+        <li>
+        As a customer, I would like a place to contact the seller should the need arise
+        </li>
+    </ul>
+    <li>
+    <strong>User Story 10: SEO & Marketing</strong>
+    </li>
+    <ul>
+        <li>
+        As a potential customer, I would like to be able to find Animeasy when I search for ways to make my animation workflow faster
+        </li>
+        <li>
+        As a seller, I would like to reach more people who might benefit from using my products
+        </li>
+    </ul>
+    <li>
+    <strong>User Story 11: Help and FAQs</strong>
+    </li>
+    <ul>
+        <li>
+        As a customer of Animeasy, I would like to be able to access an install guide for my new products
+        </li>
+    </ul>
+</ul>
 
- - User Story 1: User Registration 
- -  - As a customer of the Animeasy, I want to be able to create an account where I can access information about my previous purchases and opt in to promotional emails and updates about projects, along with special offers.
-
- -  User Story 2: Products 
- -  - As a potential customer of Animeasy, I want to see what products are available to purchase
- 
- -  User Story 3: Purchasing/Cart 
- -  - As a customer, I can purchase items from Animeasy
-
- -  User Story 4: Navigation 
- -  - As a potential customer of Animeasy, I want to easily explore and find products on the site
- 
- -  User Story 5: User Profile 
- -  - As a user, I can create a profile that allows me to purchase items easily
-
- -  User Story 6: Review
- -  - As a customer of Animeasy, I want to be able to leave reviews on products I have purchased to share my experience with other users.
-
- -  User Story 7: Admin Permissions
- -  - As a store owner, I can add, edit or delete products
-
- -  User Story 8: Newsletter 
- -  As a marketer of animeasy, I want to be able to reach out to my interested leads with offers and announcements of new products via email.
-
- -  User Story 9: Contact Form 
- -  - As a seller, I would like a place to handle any issues from my customers
- -  - As a customer, I would like a place to contact the seller should the need arise
-
- -  User Story 10: SEO & Marketing 
- -  - As a potential customer, I would like to be able to find Animeasy when I search for ways to make my animation workflow faste
- -  - As a seller, I would like to reach more people who might benefit from using my products
-  
- -  User Story 11: Help and FAQs
- -  - As a customer of Animeasy, I would like to be able to access an install guide for my new products
 ### Kanban Board 
 - Labelled user stories as Must Have, Could Have or Won't Have 
 - Main features are labelled as Must Have 
 - Extras for each section are separated out into their own issues and marked as Could Have 
-- 
+
 ## AWS Integration
 - This project uses Amazon Web Services to serve static files and images 
 - I used S3 for serving static files and images to the Heroku app. 
