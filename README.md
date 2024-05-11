@@ -94,19 +94,42 @@ Once the app is running, users can access it through a web browser. They can per
 ## Agile method
 ###  User Stories 
 
-- As a potential customer, I want a clean and attractive site that's easy to navigate so I can browse the product suite. 
-- As a freelance animator, I want to easily find a tool on the site that solves a pain point in my workflow, so I can work faster and make better profit. 
-- As a working professional, I want the site to provide detailed descriptions and tutorials for each tool in the suite so that I can understand their functionality and decide if the tools suits my needs.
-- As an animator working on tight deadlines, I need the ecommerce site to offer secure and efficient payment processing so that I can quickly purchase the tools I need.
-- As a small animation studio owner, I want the site to provide licensing information for use of the tool within the studio, and have the option for multiple copies of the tool to place on my machines.
-- As a potential customer, I want the site to have a contact form so I can ask questions about the product, submit feedback or suggest future improvements.
-- As a customer interested in staying updated with the latest advancements in animation technology, I expect the site to regularly feature new releases and updates for the animation tool suite.
-- As a customer, I would like the site to feature user reviews and testimonials to help me make informed purchasing decisions and to trust that I am buying a good product.
-- As a mobile user, I need the ecommerce site to be mobile-friendly and responsive so that I can easily access and purchase the animation tools from my smartphone or tablet device.
-- As an animator working in a digital pipeline, I want the ecommerce site to offer digital downloads of the animation tools instead of physical copies, elimiating shipping times and making use easier.
-- As a loyal customer of the Animeasy, I want the ecommerce site to provide a user-friendly account dashboard where I can manage my purchases, access product updates, and receive exclusive offers and discounts as a token of appreciation for my continued support.
-- As an admin, I can add, update and delete products.
+I added the following user stories to my kanban board
 
+ - User Story 1: User Registration 
+ -  - As a customer of the Animeasy, I want to be able to create an account where I can access information about my previous purchases and opt in to promotional emails and updates about projects, along with special offers.
+
+ -  User Story 2: Products 
+ -  - As a potential customer of Animeasy, I want to see what products are available to purchase
+ 
+ -  User Story 3: Purchasing/Cart 
+ -  - As a customer, I can purchase items from Animeasy
+
+ -  User Story 4: Navigation 
+ -  - As a potential customer of Animeasy, I want to easily explore and find products on the site
+ 
+ -  User Story 5: User Profile 
+ -  - As a user, I can create a profile that allows me to purchase items easily
+
+ -  User Story 6: Review
+ -  - As a customer of Animeasy, I want to be able to leave reviews on products I have purchased to share my experience with other users.
+
+ -  User Story 7: Admin Permissions
+ -  - As a store owner, I can add, edit or delete products
+
+ -  User Story 8: Newsletter 
+ -  As a marketer of animeasy, I want to be able to reach out to my interested leads with offers and announcements of new products via email.
+
+ -  User Story 9: Contact Form 
+ -  - As a seller, I would like a place to handle any issues from my customers
+ -  - As a customer, I would like a place to contact the seller should the need arise
+
+ -  User Story 10: SEO & Marketing 
+ -  - As a potential customer, I would like to be able to find Animeasy when I search for ways to make my animation workflow faste
+ -  - As a seller, I would like to reach more people who might benefit from using my products
+  
+ -  User Story 11: Help and FAQs
+ -  - As a customer of Animeasy, I would like to be able to access an install guide for my new products
 ### Kanban Board 
 - Labelled user stories as Must Have, Could Have or Won't Have 
 - Main features are labelled as Must Have 
@@ -149,6 +172,17 @@ Finally I added a sample post, advertising the product and adding a call to acti
 
 The page can be found [here](https://www.facebook.com/profile.php?id=61559552969497)
 
+### LinkedIn Page 
+
+I followed a similar procedure to create a LinkedIn profile for Animeasy. 
+
+LinkedIn's userbase is professionals looking to market themselves, so this fits Animeasy's target market. 
+
+I created a very simple page for Animeasy, and populated it with the same data as the Facebook page 
+
+![Linkedin profile](readme-images/readme-linkedin.png)
+
+****
 ## Deployment 
 
 ## Future Features 
