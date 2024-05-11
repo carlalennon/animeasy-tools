@@ -59,5 +59,5 @@ def delete_profile(request):
         messages.success(request, 'Your profile has been deleted. Come back any time.')
         return redirect('home')  
     else:
-        # In case of get requests on page 
-        pass
+        # In case of GET requests, redirect to the profile page
+        return redirect('profile', user=request.user)
