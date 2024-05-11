@@ -12,25 +12,21 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}
-{% block content %}
+{% block content %} 
 
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center" style="background-image: url('{{MEDIA_URL}}home-hero.png'); background-size: cover;">
     <div class="col-md-6 p-lg-5 mx-auto my-5">
       <h1 class="display-3 fw-bold">Animation... automated.</h1>
       <h3 class="fw-normal text-muted mb-3">Animation made easier with custom tools for your workflow.<h3>
       <div class="d-flex gap-3 justify-content-center lead fw-normal">
-        <a class="icon-link" href="#">
+        <a class="btn btn-danger btn-lg" href="{% url 'about' %}">
           Learn more
-          <svg class="bi"><use xlink:href="#chevron-right"/></svg>
         </a>
-        <a class="icon-link" href="#">
+        <a class="btn btn-dark btn-lg" href="{% url 'products'%}">
           Buy
-          <svg class="bi"><use xlink:href="#chevron-right"/></svg>
         </a>
       </div>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
 
   <div class="newsletter container">
@@ -41,7 +37,7 @@
       {{ form | crispy }}
       </div>
       <div class="col-3">
-        <input class="btn btn-danger" type="submit" value="Subscribe" name=>
+        <input class="btn btn-danger" type="submit" value="Subscribe">
       </div>
     </form>
   </div>
@@ -50,24 +46,22 @@
 <div class="container">
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
-      <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      <h2 class="featurette-heading fw-normal lh-1">Streamline your workflow.</h2>
+      <p class="lead">Custom After Effects plugins, designed by animation professionals, for animation professionals.</p>
     </div>
     <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-    </div>
+      <img class="img img-fluid" height="500" width="500" style="object-fit: cover;" src="{{MEDIA_URL}}ae-keymakrer.gif" alt="Animator at a desk">    </div>
   </div>
 
   <hr class="featurette-divider">
 
   <div class="row featurette">
     <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-      <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      <h2 class="featurette-heading fw-normal lh-1">TV Paint, demystified.</h2>
+      <p class="lead">Tradigital animation simplified so you can leave the technical behind and focus on your craft.</p>
     </div>
     <div class="col-md-5 order-md-1">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
-    </div>
+      <img class="img img-fluid" height="500" width="500" style="object-fit: cover;" src="{{MEDIA_URL}}tvp-mrflip.gif" alt="Animator at a desk">    </div>
   </div>
 
   <hr class="featurette-divider">
@@ -78,7 +72,7 @@
       <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
     </div>
     <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+      <img class="img img-fluid" height="500" width="500" style="object-fit: cover;" src="{{MEDIA_URL}}animator-at-desk.jpg" alt="Animator at a desk">
     </div>
   </div>
 </div>
