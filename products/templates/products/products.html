@@ -11,44 +11,42 @@
 
 
 {% block content %}
-    <div class="container mt-3">
-        <form method="GET" action="{% url 'products' %}">
-            <div class="input-group">
-                <button class="btn btn-outline-secondary" type="button" id="search-btn"><i class="fas fa-search"></i></button>
-                <input type="text" class="form-control search-bar d-none" placeholder="Search..." name="q">
-                <select class="form-select search-bar d-none" name="category" aria-label="Search">
-                    <option selected value="">Filter Software</option>
-                    <option value="after_effects">After Effects</option>
-                    <option value="tv_paint">TV Paint</option>
-                </select>
-                <button class="btn btn-outline-secondary d-none" type="submit" id="submit-btn">Go</button>
-            </div>
-        </form>
-<!-- From Boutique Ado walkthrough -->
-        <div class="d-flex justify-content-end">
-            <div class="sort-select-wrapper w-50">
-                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                </select>
+<div class="container mt-3">
+    <form method="GET" action="{% url 'products' %}">
+        <div class="input-group">
+            <button class="btn btn-outline-secondary" type="button" id="search-btn"><i class="fas fa-search"></i></button>
+            <input type="text" class="form-control search-bar d-none" placeholder="Search..." name="q">
+            <select class="form-select search-bar d-none" name="category" aria-label="Search">
+                <option selected value="">Filter Software</option>
+                <option value="after_effects">After Effects</option>
+                <option value="tv_paint">TV Paint</option>
+            </select>
+            <button class="btn btn-outline-secondary d-none" type="submit" id="submit-btn">Go</button>
+        </div>
+    </form>
+    <!-- From Boutique Ado walkthrough -->
+    <div class="d-flex justify-content-end">
+        <div class="sort-select-wrapper w-50">
+            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+            </select>
         </div>
     </div>
-
-    <!-- Search entry displayed back to user -->
     <div class="container mt-3">
         {% if search_term or current_categories or current_sorting != 'None_none' %}
             <span><a class="nav-link" href="{% url 'products' %}">Clear all</a></span>
         {% endif %}
         {{ products|length }} products {% if search_term %} found for "{{ search_term}}"{% endif %}
-
-    <!-- Catgory badges -->
+    </div>
+        <!-- Catgory badges -->
     <div class="container">
     {% for c in current_categories %}
         <a href="{% url 'products' %}?category={{ c.name }}">
@@ -59,7 +57,7 @@
     <div class="album py-5 bg-body-tertiary">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for product in products %}
+                {% for product in products %}
                 <div class="col">
                     <div class="card shadow-sm">
                         {% if product.image %}
@@ -73,27 +71,26 @@
                         {% endif %}
                         <div class="card-body">
                             <h4 class="card-title">{{product.name}}</h4>
-                        <p class="card-text">{{product.description}}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                            <p class="card-text">{{product.description}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
                             </div>
                         <h3>€{{product.price}}</h3>
-                        </div>
-                        {% if request.user.is_superuser %}
-                            <a href="{% url 'edit_product' product.id %}" class="btn btn-sm btn-outline-secondary">Edit</a>
-                        {% endif %}
-                        </div>
                     </div>
+                {% if request.user.is_superuser %}
+                    <a href="{% url 'edit_product' product.id %}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                {% endif %}
                 </div>
+            </div>
+        </div>
         {% endfor %}
-
-    <div class="btt-button shadow-sm rounded-0 border border-black">
-        <a class="btt-link d-flex h-100 text-decoration-none">
-            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-        </a>	
-    </div>
+        <div class="btt-button shadow-sm rounded-0 border border-black">
+            <a class="btt-link d-flex h-100 text-decoration-none">
+                <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+            </a>	
+        </div>
 {% endblock %}
 {% block postloadjs %}
 <script>
@@ -105,13 +102,13 @@
     });
 </script>
 {{ block.super }}
-<script type="text/javascript">
+<script>
     $('.btt-link').click(function(e) {
         window.scrollTo(0,0)
     })
 </script>
 
-<script type="text/javascript">
+<script>
     $('#sort-selector').change(function() {
         var selector = $(this);
         var currentUrl = new URL(window.location);

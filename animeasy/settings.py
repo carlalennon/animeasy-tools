@@ -14,6 +14,10 @@ from pathlib import Path
 import os
 import dj_database_url
 
+# Connect env.py
+if os.path.isfile('env.py'):
+    import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,8 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!#
 #
-SECRET_KEY = 'fake_secret_key'
-#SECRET_KEY = os.environ.get('SECRET_KEY', '')
+#SECRET_KEY = 'fake_secret_key'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = 'DEVELOPMENT' in os.environ
@@ -37,6 +41,7 @@ ALLOWED_HOSTS = ['animeasy-40dca18e887f.herokuapp.com',
    'localhost',
    '8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu111.gitpod.io',]
 
+CSRF_TRUSTED_ORIGINS = ["https://*.gitpod.io"]
 
 # Application definition
 
