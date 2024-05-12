@@ -15,14 +15,23 @@ In my animation career, I starte out using plugins purchased or developed by the
 ### User authentication: Allow users to register, login, and manage their accounts.
 
 - Users can make purchases without making an account, but they can make an account if they want to
+![The registraion form](readme-images/readme-reg-signup-form.png)
 - Returning users can log into their account 
+![Log in form](readme-images/readme-reg-signup-login.png)
+
 - Users can reset their password to recover their account if they forget 
-- Users can delete their account 
+- Users can delete their account. The initial click disables the button and confirms the action, in case they clicked it by accident 
+![Delete your account section](readme-images/readme-reg-delete-button.png)
+![Delete your account modal](readme-images/readme-reg-delete-modal.png)
+
 
 ### Profiles 
 - Users can view their information from their profile page 
-
+![Information in user profile](readme-images/readme-profile-user-info-updated.png)
+- If no user information exists yet, the information section reads "none"
+![Empty information](readme-images/readme-profile-user-info-empty.png)
 - Users can change their information from their profile page 
+![User information form](readme-images/readme-profile-user-info-form.png)
 - User's order history is saved at the bottom of their profile 
 - User's support tickets and the replies can be accessed from the profile page 
 
