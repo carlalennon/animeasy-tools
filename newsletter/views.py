@@ -8,8 +8,6 @@ from django_pandas.io import read_frame
 from django.contrib.auth.decorators import login_required
 
 
-
-
 @login_required
 def newsletter_create(request):
     """
