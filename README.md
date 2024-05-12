@@ -40,9 +40,12 @@ In my animation career, I starte out using plugins purchased or developed by the
 ### Product browsing: Enable users to search, filter, and view products.
 
 - Users can see all products in Animeasy store in one place 
+
 - Users can sort products by category, depending on which software they're looking for 
+
+
 - Users can search for products by title or key word 
-- Users can quickly add a product to their bag from the search results page 
+
 - A product detail page is available for each product 
 - The product detail page displays a product description, the software category and any user reviews 
 - Users can add multiples of a product to their bag from the product detail page 
