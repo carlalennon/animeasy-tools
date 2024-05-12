@@ -40,15 +40,21 @@ In my animation career, I starte out using plugins purchased or developed by the
 ### Product browsing: Enable users to search, filter, and view products.
 
 - Users can see all products in Animeasy store in one place 
-
+![All Products page](readme-images/readme-products-products-page.png)
 - Users can sort products by category, depending on which software they're looking for 
-
-
+![Sorting by cateogry from the nav bar](readme-images/readme-products-sort-cat-01.png)
+![Sorting by category from the search bar](readme-images/readme-products-sort-cat-02.png)
 - Users can search for products by title or key word 
-
+![Searching by key word](readme-images/readme-products-search.png)
 - A product detail page is available for each product 
 - The product detail page displays a product description, the software category and any user reviews 
+![Product detail page](readme-images/readme-products-detial.png)
 - Users can add multiples of a product to their bag from the product detail page 
+![Adding multiple products](readme-images/readme-products-add-multiples-02.png)
+- Users can sort returned products by certain characteristics using the filter dropdown 
+![Filter dropdown for sort order ](readme-images/readme-products-sort-cat-03.png)
+- A back to top button scrolls the user back to the top of the page when clicked 
+![Back to top button ](readme-images/readme-products-btt-button.png)
 
 ### Shopping cart: Allow users to add and remove items from their cart.
 - The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
