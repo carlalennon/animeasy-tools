@@ -253,7 +253,8 @@ I created a very simple page for Animeasy, and populated it with the same data a
 - In the future, I would like to let users enter reviews of the product. The product model is set up with a rating system in anticipate adding this in the future.
 - I would also like to set up a system where on purchase of a tool, users are sent an email with a link to download the files. 
 
-
+## Known Issues 
+- With the way the confirmation email is currently called, if you refresh on the confirmation page you get an email every time you refresh 
 ## Contact
 For any questions, feedback, or support issues, please contact me at carlalennon@gmail.com .
 
