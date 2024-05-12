@@ -33,6 +33,8 @@ In my animation career, I starte out using plugins purchased or developed by the
 - Users can change their information from their profile page 
 ![User information form](readme-images/readme-profile-user-info-form.png)
 - User's order history is saved at the bottom of their profile 
+- If the user has no order history, this is reflected back to them 
+![The empty order section](readme-images/readme-profile-user-order-none.png)
 - User's support tickets and the replies can be accessed from the profile page 
 
 ### Product browsing: Enable users to search, filter, and view products.
