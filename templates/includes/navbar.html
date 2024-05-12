@@ -19,26 +19,28 @@
                                   <tr>
                                       <td><a href="{% url 'product_detail' item.product.id %}" class="text-black text-decoration-none"><strong>{{ item.product.name }}</strong></a></td>
                                       <td>{{ item.quantity }}</td>
-                                      <td><a href="{% url 'product_detail' item.product.id %}"><img class="thumbnail" style="object-fit: cover;" width="50" height="50" src="{{ item.product.image.url }}"></a></td>
+                                      <td><a href="{% url 'product_detail' item.product.id %}"><img class="thumbnail" style="object-fit: cover;" width="50" height="50" src="{{ item.product.image.url }}" alt="{{item.product.name}}"></a></td>
                                   </tr>
                               </tbody>
                           </table>
                       </div>
                   </li>
+                  
                     {% endfor %}
-                    {% if total %}
-                    <div class="container h6 col offset-1 mb-2">
-                    Total: €{{ total}}
-                    </div>
-                    <div class="container ml-1 my-2">
-                    <a class="btn btn-dark" href="{% url 'view_bag' %}">View Bag</a>
-                    <a class="btn btn-danger" href="{% url 'checkout' %}">Checkout</a>
-                    </div>
+
+                    <ul class="list-group list-group-flush">
+                      {% if total %}
+                      <li class="container d-flex justify-content-center">
+                          Total: <strong>€{{ total}}</strong>
+                      </li>
+                      <li class="container d-flex justify-content-evenly">
+                        <a class="btn btn-dark" href="{% url 'view_bag' %}">View Bag</a>
+                        <a class="btn btn-danger" href="{% url 'checkout' %}">Checkout</a>
+                      </li>
                     {% else %}
-                    <div class="container m-2">
-                    <p class="mt-2">Your cart is empty</p>
-                </div>
+                    <li class="mt-2">Your cart is empty</li>
                     {% endif %}
+                    </ul>
                   </ul>                     
             </li>
             {% if user.is_authenticated %}
