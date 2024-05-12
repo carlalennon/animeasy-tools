@@ -21,6 +21,7 @@ In my animation career, I starte out using plugins purchased or developed by the
 
 ### Profiles 
 - Users can view their information from their profile page 
+
 - Users can change their information from their profile page 
 - User's order history is saved at the bottom of their profile 
 - User's support tickets and the replies can be accessed from the profile page 
@@ -275,12 +276,17 @@ About Page
 
 Add Product 
 ![Add Product results](readme-images/readme-linting-add-product-duplicate-id-error.png)
+This error is caused from the image thumbnail uploader. It needs to have a duplicate ID to work with the custom scripting/styling
+
+![Edit product results](readme-images/readme-linting-edit-product-duplicate-id-error.png)
+Same error as the add product page
 
 Bag
 ![Bag results](readme-images/readme-linting-bag-errors.png)
 
 Checkout 
 ![Checkout results](readme-images/readme-linting-checkout-errors-spinner-div.png)
+HTML does not like the "empty" h3 heading that the loading spinner is under.
 
 Checkout Success
 ![Checkout Success results](readme-images/readme-linting-checkout-success.png)
