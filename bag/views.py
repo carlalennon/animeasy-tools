@@ -2,8 +2,6 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from products.models import Product # Import Product model from products app
 
-# Create your views here.
-
 def view_bag(request):
     """ Returns user bag """
     return render(request, 'bag/bag.html')
@@ -44,7 +42,6 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """ Remove item from shopping bag """
-    
     try:
         product = get_object_or_404(Product, pk=item_id)
         bag = request.session.get('bag', {})

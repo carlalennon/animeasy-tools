@@ -4,7 +4,6 @@ from products.models import Product
 
 def bag_contents(request):
     """ Returns bag contents """
-    
     bag_items = []
     total = 0
     product_count = 0
@@ -18,14 +17,12 @@ def bag_contents(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
-        })
-        
+        })   
         
     context = {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
-        ##'grand_total': grand_total, 
     }
 
     return context

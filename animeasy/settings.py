@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import dj_database_url
 
-# Connect env.py
 if os.path.isfile('env.py'):
     import env
 
@@ -35,6 +34,7 @@ SECRET_KEY = 'fake_secret_key'
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
+
 ALLOWED_HOSTS = [
     'animeasy-40dca18e887f.herokuapp.com', 
     '127.0.0.1',
@@ -47,7 +47,6 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = ["https://*.gitpod.io/", 'https://carlalennon-animeasytoo-4wi9e7yx140.ws-eu111.gitpod.io/',]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -140,7 +139,6 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'animeasy.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -155,8 +153,6 @@ else:
         'NAME' : os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -175,7 +171,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -196,6 +191,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -236,10 +232,6 @@ STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'animeasy@animeasy.com'
-
-"""
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'animeasy@animeasy.com'
@@ -254,5 +246,3 @@ else:
 
 # Allauth socials 
 
-
-"""

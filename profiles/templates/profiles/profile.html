@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-
-
 {% block extra_css%}
 {% endblock %}
 {% block extra_js%}
@@ -12,134 +10,133 @@ My Profile
 {% endblock %}
 {% block content %}
 
-<body>
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-md-10 mx-auto">
-                <div class="accordion" id="accordionProfile">
-                    <div class="accordion-item">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <h4 class="card-title">{{request.user.username}}</h4>
-                        </button>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionProfile">
-                            <div class="accordion-body">
-                                <div class="card-title">
-                                    Your billing details:
-                                </div>
-                                <table>
-                                    <tr>
-                                        <th>Email:</th>
-                                        <td class="float-end">{{request.user.email}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Phone:</th>
-                                        <td class="float-end">{{profile.default_phone_number}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Country:</th>
-                                        <td class="float-end">{{profile.default_country}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Postcode:</th>
-                                        <td class="float-end">{{profile.default_postcode}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Town/City:</th>
-                                        <td class="float-end">{{profile.default_town_or_city}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Street Address 1:</th>
-                                        <td class="float-end">{{profile.default_street_address1}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Street Address 2:</th>
-                                        <td class="float-end">{{profile.default_street_address2}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>County:</th>
-                                        <td class="float-end">{{profile.default_postcode}}</td>
-                                    </tr>
-                                </table>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="accordion" id="accordionProfile">
+                <div class="accordion-item">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="h4">{{request.user.username}}</span>
+                    </button>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionProfile">
+                        <div class="accordion-body">
+                            <div class="card-title">
+                                Your billing details:
                             </div>
+                            <table>
+                                <tr>
+                                    <th>Email:</th>
+                                    <td class="float-end">{{request.user.email}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone:</th>
+                                    <td class="float-end">{{profile.default_phone_number}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Country:</th>
+                                    <td class="float-end">{{profile.default_country}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Postcode:</th>
+                                    <td class="float-end">{{profile.default_postcode}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Town/City:</th>
+                                    <td class="float-end">{{profile.default_town_or_city}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Street Address 1:</th>
+                                    <td class="float-end">{{profile.default_street_address1}}</td>
+                                </tr>
+                                <tr>
+                                    <th>Street Address 2:</th>
+                                    <td class="float-end">{{profile.default_street_address2}}</td>
+                                </tr>
+                                <tr>
+                                    <th>County:</th>
+                                    <td class="float-end">{{profile.default_postcode}}</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <h5>Edit Your Information  <i class="fa-solid fa-user-pen"></i></h5>
-                          </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionProfile">
-                          <div class="accordion-body">
-                            <div class="card">
-                                <div class="card-body">
-                                    <form action="{% url 'profile'%}" method="POST" id="profile-update-form">
-                                        {%  csrf_token %}
-                                        {{ form|crispy }}
-                                        <button class="btn btn-danger mt-4 float-end">Update Profile</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>     
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <h5>Delete Your Account   <i class="fa-solid fa-trash"></i></h5>
-                          </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionProfile">
-                          <div class="accordion-body">
-                            <div class="card">
-                                <div class="card-body">
-                                    <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete Your Account</a>
-                                </div>
-                            </div>
-                        </div>     
-                    </div>
                 </div>
-                    <div class="display-6 mt-5">
-                        Order History
-                    </div>
-                    {% if has_orders %}
-                    <div class="order-history table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Order Number</th>
-                                    <th>Date</th>
-                                    <th>Items</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for order in orders %}
-                                <tr>
-                                    <td>
-                                        <a href="{% url "order_history" order.order_number %}" title="{{ order.order_number }}">
-                                            {{ order.order_number|truncatechars:6 }}
-                                        </a>
-                                    </td>
-                                    <td>{{ order.date }}</td>
-                                    <td>
-                                        <ul class="list-unstyled">
-                                            {% for item in order.lineitems.all %}
-                                            <li>{{ item.product.name }} x {{ item.quantity }}</li>
-                                            {% endfor %}
-                                        </ul>
-                                    </td>
-                                    <td>€{{ order.grand_total }}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                            {% else %}
-                            <p class="container">  You have no orders yet. </p>
-                            {% endif %}
-                        </table>                        
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span class="h5">Edit Your Information  <i class="fa-solid fa-user-pen"></i></span>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionProfile">
+                        <div class="accordion-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="{% url 'profile'%}" method="POST" id="profile-update-form">
+                                    {%  csrf_token %}
+                                    {{ form|crispy }}
+                                    <button class="btn btn-danger mt-4 float-end">Update Profile</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>     
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <span class="h5">Delete Your Account   <i class="fa-solid fa-trash"></i></span>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionProfile">
+                        <div class="accordion-body">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete Your Account</a>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+                <div class="display-6 mt-5">
+                    Order History
+                </div>
+                {% if has_orders %}
+                <div class="order-history table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Order Number</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                            <tr>
+                                <td>
+                                    <a href="{% url "order_history" order.order_number %}" title="{{ order.order_number }}">
+                                        {{ order.order_number|truncatechars:6 }}
+                                    </a>
+                                </td>
+                                <td>{{ order.date }}</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        {% for item in order.lineitems.all %}
+                                        <li>{{ item.product.name }} x {{ item.quantity }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                                <td>€{{ order.grand_total }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        {% else %}
+                        <p class="container">  You have no orders yet. </p>
+                        {% endif %}
+                </div>                      
             </div>
         </div>
     </div>
+</div>
 
     <!-- Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -159,31 +156,31 @@ My Profile
       </div>
     </div>
   </div>
-</body>
+
 
 
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
-    <script>
-        document.getElementById('deleteModal').addEventListener('submit', function(event) {
-          event.preventDefault();
-        });
-        document.getElementById('deleteModal').addEventListener('click', function(event) {
-          if (event.target.classList.contains('btn-close')) {
-            // Do nothing
-            return;
-          }
-        });
-        document.getElementById('deleteModal').addEventListener('click', function(event) {
-          if (event.target.classList.contains('btn-primary')) {
-            // Redirect to delete URL
-            window.location.href = "{% url 'delete_profile' %}";
-          }
-        });
-      </script>
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+<script src="{% static 'profiles/js/countryfield.js' %}"></script>
+<script>
+    document.getElementById('deleteModal').addEventListener('submit', function(event) {
+        event.preventDefault();
+    });
+    document.getElementById('deleteModal').addEventListener('click', function(event) {
+        if (event.target.classList.contains('btn-close')) {
+        // Do nothing
+        return;
+        }
+    });
+    document.getElementById('deleteModal').addEventListener('click', function(event) {
+        if (event.target.classList.contains('btn-primary')) {
+        // Redirect to delete URL
+        window.location.href = "{% url 'delete_profile' %}";
+        }
+    });
+</script>
         
 {% endblock %}

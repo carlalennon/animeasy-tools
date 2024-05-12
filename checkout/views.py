@@ -16,6 +16,9 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Saves user daa if box is checked
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -31,6 +34,9 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
     
 def checkout(request):
+    """
+    Responsible for checkout form
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     
@@ -128,9 +134,6 @@ def checkout_success(request, order_number):
     """
     Handle successful checkouts
     """
-    # order = get_object_or_404(Order, order_number=order_number)
-    # email_confirmation = StripeWH_Handler(request)
-    # email_confirmation._send_confirmation_email(order)
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
     
