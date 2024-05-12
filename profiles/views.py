@@ -24,6 +24,7 @@ def profile(request):
     form = UserProfileForm(instance=profile)
     template = 'profiles/profile.html'
     orders = profile.orders.all()
+    has_orders = profile.orders.all().exists()
     
     context = {
         'form': form,
