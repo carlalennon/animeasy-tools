@@ -1,7 +1,7 @@
 {% if widget.is_initial %}
     <p>{{ widget.initial_text }}:</p> 
         <a href="{{ widget.value.url }}">
-            <img width="86" height="96" class="rounded shadow-sm" src="{{widget.value.url}}">
+            <img width="86" height="96" class="rounded shadow-sm" src="{{widget.value.url}}" alt="Image preview">
         </a>
     {% if not widget.required %}
         <input type="checkbox" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}"{% if widget.attrs.disabled %} disabled{% endif %}{% if widget.attrs.checked %} checked{% endif %}>

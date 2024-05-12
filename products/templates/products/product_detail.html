@@ -21,7 +21,7 @@
         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
           {% csrf_token %}
           <div class="my-5 ">
-            <label for="quantity"><strong>Quantity:</stong></label>
+            <label for="id_qty_{{product.id}}"><strong>Quantity:</strong></label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <button type="button" 
@@ -67,11 +67,11 @@
       <p class="my-5">{{ product.description }}</p>
       <hr>
       <h4>Software Requirements:</h4>
-      <p class="my-5">
-        <ul>
-          {{ product.category.friendly_name }}
-        </ul>
-        </p>
+      <ul class="my-5">
+        <li>
+        {{ product.category.friendly_name }}
+        </li>
+      </ul>
     </div>
     {% if product.category == after_effects %}
     <p class="mt-5 "><href="{% url 'products' %}?category=after_effects" class="text-decoration-none">See more After Effects products > </a></p>

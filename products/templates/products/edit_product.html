@@ -4,18 +4,11 @@
 {% block extra_js%}
 <script src="https://js.stripe.com/v3/"></script>
 {% endblock %}
-
-
 {% block page_header %}
     Edit Product
 {% endblock %}
 {% block content %}
-
-<body>
-    <div class="container">
-        <div class="row">
-        </div>
-
+<div class="container">
     <div class="row mt-5">
         <div class="col-md-6 offset-md-3">
             <div class="card">
@@ -40,8 +33,7 @@
             </div>
         </div>
     </div>
-</body>
-
+</div>
 <!-- Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -61,12 +53,10 @@
     </div>
   </div>
 {% endblock %}
-
-
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/delete_product_script.html' %}
-    <script type="text/javascript">
+    <script>
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`New Image: ${file.name}`);
