@@ -192,9 +192,22 @@ I added the following user stories to my kanban board
 </ul>
 
 ### Kanban Board 
-- Labelled user stories as Must Have, Could Have or Won't Have 
+- Created an issue for each user story 
+- Created issues for other tasks, like "Extras" and "Testing"
+- Extras are tasks that would improve Animeasy but not essential to it's core functions
+- Labelled user stories as Must Have, Could Have or Won't Have
+- Testing is labelled as "Testing"
+- Extras are labelled as "Could Have" 
 - Main features are labelled as Must Have 
-- Extras for each section are separated out into their own issues and marked as Could Have 
+- Extras for each section are separated out into their own issues and marked as Could Have
+- Each user story has a checklist of Acceptance Criteria and Tasks
+
+#### Kanban Board Gallery
+
+![The Issues page](readme-images/readme-kanban-issues.png)
+![The Kanban Board](readme-images/readme-kanban-board.png)
+![The Checklist](readme-images/readme-kanban-checklist.png)
+
 
 ## AWS Integration
 - This project uses Amazon Web Services to serve static files and images 
@@ -233,6 +246,7 @@ Finally I added a sample post, advertising the product and adding a call to acti
 
 The page can be found [here](https://www.facebook.com/profile.php?id=61559552969497)
 
+
 ### LinkedIn Page 
 
 I followed a similar procedure to create a LinkedIn profile for Animeasy. 
@@ -245,13 +259,98 @@ I created a very simple page for Animeasy, and populated it with the same data a
 
 [Linkedin page](https://www.linkedin.com/company/animeasy/)
 
-****
-## Deployment 
+
+## Testing 
+
+### Manual Testing 
+
+I did the following manual testing of Animeasy: 
+
+### Linting 
+
+The following is the results from the [W3 Schools HTML validation service](https://validator.w3.org/)
+
+About Page
+![About Page results](readme-images/readme-linting-about.png)
+
+Add Product 
+![Add Product results](readme-images/readme-linting-add-product-duplicate-id-error.png)
+
+Bag
+![Bag results](readme-images/readme-linting-bag-errors.png)
+
+Checkout 
+![Checkout results](readme-images/readme-linting-checkout-errors-spinner-div.png)
+
+Checkout Success
+![Checkout Success results](readme-images/readme-linting-checkout-success.png)
+
+Contact Form
+![Contact Form results](readme-images/readme-linting-contact-form.png)
+
+Contact Success
+![Contact Success results](readme-images/readme-linting-contact-success.png)
+
+Contact Tickets
+![Contact Ticketsresults](readme-images/readme-linting-contact-tickets.png)
+
+Edit Product
+![Edit Product results](readme-images/readme-linting-edit-product-duplicate-id-error.png)
+
+FAQ
+![FAQ results](readme-images/readme-linting-faq.png)
+
+Home page
+![Home page results](readme-images/readme-linting-index.png)
+
+Installation Guide
+![Installation Guide results](readme-images/readme-linting-installpng.png)
+
+Newsletter Archive
+![Newsletter Archive results](readme-images/readme-linting-newsletter-archive.png)
+
+Newsletter Detail
+![Newsletter Detail results](readme-images/readme-linting-newsletter-detail.png)
+
+Newsletter Success
+![Newsletter Success results](readme-images/readme-linting-contact-success.png)
+
+Newsletter Unsubscribe 
+![Newsletter Unsubscribe results](readme-images/readme-linting-newsletter-unsubscribe.png)
+
+Newsletter Creator 
+![Newsletter Creator results](readme-images/readme-linting-newsletter.png)
+
+Privacy Policy
+![Privacy Policy results](readme-images/readme-linting-privacy-policy.png)
+
+Product Detail
+![Product Detail results](readme-images/readme-linting-product-detail.png)
+
+Products
+![Products results](readme-images/readme-linting-products.png)
+
+Profile
+![Profile results](readme-images/readme-linting-profile.png)
+
+Terms and Conditions
+![Terms and Conditions results](readme-images/readme-linting-terms-and-conditions.png)
+
+Contact Ticket Detail 
+![Contact Ticket results](readme-images/readme-linting-ticket-details.png)
+
+
 
 ## Future Features 
 ### Reviews 
 - In the future, I would like to let users enter reviews of the product. The product model is set up with a rating system in anticipate adding this in the future.
-- I would also like to set up a system where on purchase of a tool, users are sent an email with a link to download the files. 
+- Users could rate the products by giving them a start rating 
+- Reviews written about the product would be written below the project 
+
+### File Downloads
+- I would like to send users a link to download their purchased files 
+- Animeasy would generate a token to prevent fraud 
+- The link would be sent in the confirmation email 
 
 ## Known Issues 
 - With the way the confirmation email is currently called, if you refresh on the confirmation page you get an email every time you refresh 
@@ -261,5 +360,5 @@ For any questions, feedback, or support issues, please contact me at carlalennon
 ## Sources: 
 https://www.youtube.com/watch?v=hWtlskOaFNI newsletter
 https://www.grokcode.com/819/one-click-unsubscribes-for-django-apps/ Unsubscribe
-
+Linter HTML https://validator.w3.org/
 #
