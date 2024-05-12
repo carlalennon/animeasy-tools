@@ -6,10 +6,12 @@ from django.conf import settings
 from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
+from django.views.decorators.csrf import csrf_exempt
 
 import stripe
 import json
 import time
+
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
