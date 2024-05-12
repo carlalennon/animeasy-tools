@@ -22,14 +22,13 @@ class TicketModelTest(TestCase):
 class TicketReplyModelTest(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='testuser', password='12345')
-        #self.user_profile = UserProfile.objects.create(user=self.user)
         self.ticket = Ticket.objects.create(
             email='test@test.com',
             title='Test Ticket',
             content='This is a test ticket',
             status='pending'
         )
-        self.user_profile = UserProfile.objects.create(user=None)  # replace with actual user
+        self.user_profile = UserProfile.objects.create(user=None)  # replaces with admin who replied 
         self.ticket_reply = TicketReply.objects.create(
             ticket=self.ticket,
             admin=self.user_profile,

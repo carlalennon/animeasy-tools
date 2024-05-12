@@ -3,6 +3,9 @@ from .models import Ticket, TicketReply
 from django.core.exceptions import ValidationError
 
 class TicketForm(forms.ModelForm):
+    """"
+    Creates contact form ticket
+    """
     class Meta:
         model = Ticket
         fields = ['title', 'content', 'email', ]
@@ -29,6 +32,9 @@ class TicketForm(forms.ModelForm):
         self.fields['content'].label = False
         
 class TicketReplyForm(forms.ModelForm):
+    """
+    Creates replies and attaches them to ticket
+    """
     class Meta:
         model = TicketReply
         fields = [ 'reply',]
