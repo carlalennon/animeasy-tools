@@ -7,13 +7,11 @@
         $(`#id_qty_minus_${itemId}`).prop('disabled', minusDisabled);
         $(`#id_qty_plus_${itemId}`).prop('disabled', plusDisabled);
     }
-
     var allQtyInputs = $('.qty_input');
     for (var i = 0; i < allQtyInputs.length; i++) {
         var itemId = $(allQtyInputs[i]).data('item_id');
         handleEnableDisable(itemId);
     }
-
     $('.qty_input').change(function() {
         var itemId = $(this).data('item_id');
         handleEnableDisable(itemId);

@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load bag_tools %}
-
 {% block content %}
 <div class="container">
     <h1>Shopping Bag</h1>
@@ -71,12 +70,10 @@
 <p class="text-center">Your bag is empty</p>
 {% endif %}
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-
-<script type="text/javascript">
+<script>
     //Update quatity link
     $('.update-link').click(function(e) {
         e.preventDefault();
@@ -84,7 +81,6 @@
         console.log(form);  
         form.submit();
     })
-
     // Remove item link
     $('.remove-link').click(function(e) {
         e.preventDefault(); 

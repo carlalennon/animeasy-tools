@@ -1,4 +1,3 @@
-<!-- Dark section -->
 <nav>
   <div class="text-bg-dark">
     <div class="container">
@@ -24,19 +23,23 @@
                     </table>
                 </li>
                 {% endfor %}
-                <ul class="list-group list-group-flush">
-                  {% if total %}
-                  <li class="container d-flex justify-content-center">
-                      Total: <strong>€{{ total}}</strong>
+                <li>
+                  <ul class="list-group list-group-flush">
+                    {% if total %}
+                    <li class="container d-flex justify-content-center">
+                        Total: <strong>€{{ total}}</strong>
+                    </li>
+                    <li class="container d-flex justify-content-evenly">
+                      <a class="btn btn-dark" href="{% url 'view_bag' %}">View Bag</a>
+                      <a class="btn btn-danger" href="{% url 'checkout' %}">Checkout</a>
+                    </li>
+                  {% else %}
+                  <li class="mt-2">
+                    Your cart is empty
                   </li>
-                  <li class="container d-flex justify-content-evenly">
-                    <a class="btn btn-dark" href="{% url 'view_bag' %}">View Bag</a>
-                    <a class="btn btn-danger" href="{% url 'checkout' %}">Checkout</a>
-                  </li>
-                {% else %}
-                <li class="mt-2">Your cart is empty</li>
-                {% endif %}
-                </ul>
+                  {% endif %}
+                  </ul>
+                </li>
               </ul>                     
           </li>
           {% if user.is_authenticated %}
@@ -56,20 +59,20 @@
     </div>
   </div>
 </nav>
-  <header class="py-3 mb-4 border-bottom">
-    <div class="">
-      <div class="container">
-        <a href="{% url 'home' %}">
-        <img src="{{ MEDIA_URL }}animeasy-temp-logo.png" class="img img-fluid" alt="Animeasylogo" height="200">
-        </a>
-        <div class="d-flex flex-wrap align-items-center justify-content-center mt-sm-5 justify-content-lg-end">
-          <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="{% url 'products' %}?category=tv_paint" class="nav-link text-black">TV Paint</a></li>
-            <li><a href="{% url 'products' %}?category=after_effects" class="nav-link text-black">After Effects</a></li>
-            <li><a href="{% url 'products' %}" class="btn btn-danger">All Products</a></li>
-          </ul>
-        </div>
+<header class="py-3 mb-4 border-bottom">
+  <div class="">
+    <div class="container">
+      <a href="{% url 'home' %}">
+      <img src="{{ MEDIA_URL }}animeasy-temp-logo.png" class="img img-fluid" alt="Animeasylogo" height="200">
+      </a>
+      <div class="d-flex flex-wrap align-items-center justify-content-center mt-sm-5 justify-content-lg-end">
+        <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="{% url 'products' %}?category=tv_paint" class="nav-link text-black">TV Paint</a></li>
+          <li><a href="{% url 'products' %}?category=after_effects" class="nav-link text-black">After Effects</a></li>
+          <li><a href="{% url 'products' %}" class="btn btn-danger">All Products</a></li>
+        </ul>
       </div>
     </div>
+  </div>
 </header>
 

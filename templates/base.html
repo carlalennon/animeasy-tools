@@ -70,15 +70,13 @@
     {% block content %}
     {% endblock %}
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
       $(document).ready(function() {
         $('.toast').toast('show');
       });
-    </script> 
-  {% endblock %}
+    </script>
+    <script src="https://kit.fontawesome.com/881b1c7cd9.js" crossorigin="anonymous"></script>
+    {% endblock %} 
+    {% include 'includes/footer.html' %}
   </body>
-  {% include 'includes/footer.html' %}
-    
-
-  <script src="https://kit.fontawesome.com/881b1c7cd9.js" crossorigin="anonymous"></script>
 </html>
