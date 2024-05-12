@@ -1,39 +1,37 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-
     <div class="dropdown float-end mb-4">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Filter Tickets
         </a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" href="?unresolved=true">Unresolved</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="?resolved=true">Resolved</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="?sort=asc" class="dropdown-item">Sort by date (ascending)</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="?sort=desc" class="dropdown-item">Sort by date (descending)</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="?sort_by_id=asc" class="dropdown-item">Sort by ID (ascending)</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="?sort_by_id=desc" class="dropdown-item">Sort by ID (descending)</a>            
-                </li>
-                <li>
-                    <a class="dropdown-item" href="{% url 'contact_tickets' %}" class="dropdown-item">Clear All Filters</a>            
-                </li>
-            <ul>
-      </div>
-
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item" href="?unresolved=true">Unresolved</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="?resolved=true">Resolved</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="?sort=asc">Sort by date (ascending)</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="?sort=desc">Sort by date (descending)</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="?sort_by_id=asc">Sort by ID (ascending)</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="?sort_by_id=desc">Sort by ID (descending)</a>            
+            </li>
+            <li>
+                <a class="dropdown-item" href="{% url 'contact_tickets' %}">Clear All Filters</a>            
+            </li>
+        </ul>
+    </div>
     <table class="table table-hover">
         <thead>
-          <tr>
+        <tr>
             <th scope="col">#</th>
             <th scope="col">Issue</th>
             <th scope="col">Email</th>
@@ -41,59 +39,63 @@
             <th scope="col">Status</th>
             <th scope="col">Resolved by</th>
             <th scope="col">Date resolved</th>
-          </tr>
+        </tr>
         </thead>
         <tbody>
             {% for ticket in tickets %}
-          <tr>
-            <td>
-                <a href="{% url 'ticket_detail' ticket.id %}">
-                 {{ ticket.id }} 
-                </a>
-            </td>
-            <td>
-                <a href="{% url 'ticket_detail' ticket.id %}">
-                    {{ ticket.title|truncatechars_html:30 }}
-                </a>
-            </td>
-            <td>{{ ticket.email}}</td>
-            <td>{{ ticket.date_received }}</td>
-            <td>
-                {% if ticket.status == "pending" %}
+            <tr>
+                <td>
+                    <a href="{% url 'ticket_detail' ticket.id %}">
+                    {{ ticket.id }} 
+                    </a>
+                </td>
+                <td>
+                    <a href="{% url 'ticket_detail' ticket.id %}">
+                        {{ ticket.title|truncatechars_html:30 }}
+                    </a>
+                </td>
+                <td>
+                    {{ ticket.email}}
+                </td>
+                <td>
+                    {{ ticket.date_received }}
+                </td>
+                <td>
+                    {% if ticket.status == "pending" %}
                     <span class="badge text-bg-warning">
                         {{ ticket.status }}
                     </span>
-                {% elif ticket.status == "resolved" %}
+                    {% elif ticket.status == "resolved" %}
                     <span class="badge text-bg-success">
                         {{ ticket.status }}
                     </span>
-                {% else %}
+                    {% else %}
                     <span class="badge text-bg-secondary">
                         {{ ticket.status }}
                     </span>
-                {% endif %}
-            </td>
-            <td>
-                {% with latest_reply=ticket.ticketreply_set.latest %}
-                    {% if latest_reply %}
-                        {{ latest_reply.admin }}
-                    {% else %}
-                        ----
                     {% endif %}
-                {% endwith %}
-            </td>
-            <td>
-                {% with latest_reply=ticket.ticketreply_set.latest %}
-                    {% if latest_reply %}
-                        {{ latest_reply.date_reply }}
-                    {% else %}
-                        ----
-                    {% endif %}
-                {% endwith %}
-            </td>
-          </tr>
-          {% endfor%}
+                </td>
+                <td>
+                    {% with latest_reply=ticket.ticketreply_set.latest %}
+                        {% if latest_reply %}
+                            {{ latest_reply.admin }}
+                        {% else %}
+                            ----
+                        {% endif %}
+                    {% endwith %}
+                </td>
+                <td>
+                    {% with latest_reply=ticket.ticketreply_set.latest %}
+                        {% if latest_reply %}
+                            {{ latest_reply.date_reply }}
+                        {% else %}
+                            ----
+                        {% endif %}
+                    {% endwith %}
+                </td>
+            </tr>
+        {% endfor%}
         </tbody>
-      </table>
+    </table>
 </div>
 {% endblock %}
