@@ -1,26 +1,23 @@
 {% extends 'base.html' %}
- 
 {% block page_header %}
 Contact Us
 {% endblock %}
-
 {% block content %}
-    <div class="container">
-        <div>
-            <p>For any queries, make sure to check out our <a href="{% url 'install_guide' %}">installation guide</a> or our <a href="{% url 'faq' %}">FAQ section.</a></p>
-            <br>
-            <p>Alternatively, feel free to get in touch using the form below.</p>
+<div class="container">
+    <div>
+        <p>For any queries, make sure to check out our <a href="{% url 'install_guide' %}">installation guide</a> or our <a href="{% url 'faq' %}">FAQ section.</a></p>
+        <br>
+        <p>Alternatively, feel free to get in touch using the form below.</p>
 
-        </div>
-        <div class="card p-3 mt-4">
-            <form method="POST" action="{% url 'contact' %}">
-                {% csrf_token %}
-                
-                {{ form | crispy }}
-                
-                <button type="submit" class="btn btn-danger btn-lg float-end mt-5">Send</button>
-            </form>
-        </div>
+    </div>
+    <div class="card p-3 mt-4">
+        <form method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
+            
+            {{ form | crispy }}
+            
+            <button type="submit" class="btn btn-danger btn-lg float-end mt-5">Send</button>
+        </form>
     </div>
 </div>
 {% endblock %}
