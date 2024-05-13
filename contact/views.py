@@ -140,6 +140,7 @@ def ticket_detail(request, ticket_id):
                 return redirect('contact_tickets')
         else: 
             form = TicketReplyForm()
+        return render(request, template, {'form': form, 'ticket': ticket})
     else: 
         messages.error(request, 'You do not have permission to reply to tickets')
         return redirect('home')
