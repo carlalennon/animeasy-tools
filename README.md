@@ -15,7 +15,7 @@ In my animation career, I starte out using plugins purchased or developed by the
 ### User authentication: Allow users to register, login, and manage their accounts.
 
 - Users can make purchases without making an account, but they can make an account if they want to
-![The registraion form](readme-images/readme-reg-signup-form.png)
+![The registration form](readme-images/readme-reg-signup-form.png)
 - Returning users can log into their account 
 ![Log in form](readme-images/readme-reg-signup-login.png)
 
