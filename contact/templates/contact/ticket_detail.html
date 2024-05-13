@@ -20,12 +20,12 @@ Support Ticket #{{ ticket.id}}
                 <strong>Subject:</strong> {{ ticket.title }}
             </div>
         </div>
-        <div class="card-body">
-            <p>
-                {{ card.content }}
-            </p>
-        </div>
-    </div> 
+    </div>
+    <div class="card-body">
+        <p>
+            {{ card.content }}
+        </p>
+</div> 
 
     {% for reply in ticket.ticketreply_set.all %}
     <div class="card my-4">
