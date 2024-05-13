@@ -123,12 +123,13 @@ def ticket_detail(request, ticket_id):
                 reply = TicketReply()
                 reply.ticket = ticket
                 reply.reply = form.cleaned_data.get('reply')  
+                email_body = reply.reply
                 reply.admin = UserProfile.objects.get(user=request.user)
                 reply.save()
                 title = ticket.title   
                 send_mail(
                     title,
-                    reply,
+                    email_body,  # Use reply.reply instead of reply
                     'support@animeasy.com',
                     [email],
                     fail_silently=False,
@@ -142,14 +143,6 @@ def ticket_detail(request, ticket_id):
     else: 
         messages.error(request, 'You do not have permission to reply to tickets')
         return redirect('home')
-    
-    context = {
-        'ticket': ticket,
-        'form' : form,
-        'reply' : reply,
-    }
-    return render(request, template, context)
-
 
 def privacy_policy(request):
     template = 'contact/privacy_policy.html'

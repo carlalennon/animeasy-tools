@@ -48,7 +48,7 @@ Support Ticket #{{ ticket.id}}
     <div class="card p-3">
         <form method="POST" action="{% url 'ticket_detail' ticket.id %}">
             <div class="h5">
-                Replying to: {{ ticket.title }}
+                Replying to: {{ ticket.title|truncatechars_html:30 }}
             </div>
             {% csrf_token %}
 
