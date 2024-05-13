@@ -151,7 +151,7 @@
     </tr>
     <tr>
       <th>Server time:</th>
-      <td>Mon, 13 May 2024 18:23:39 +0000</td>
+      <td>Mon, 13 May 2024 19:48:06 +0000</td>
     </tr>
   </table>
 </div>
@@ -168,44 +168,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/backends/utils.py</code>, line 105, in _execute
           
           
-            <div class="context" id="c140499702855360">
+            <div class="context" id="c140409384241216">
               
-                <ol start="98" class="pre-context" id="pre140499702855360">
+                <ol start="98" class="pre-context" id="pre140409384241216">
                 
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>            warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>            warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)</pre></li>
                 
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>        self.db.validate_no_broken_transaction()</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>        self.db.validate_no_broken_transaction()</pre></li>
                 
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>        with self.db.wrap_database_errors:</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>        with self.db.wrap_database_errors:</pre></li>
                 
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>            if params is None:</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>            if params is None:</pre></li>
                 
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>                # params default might be backend specific.</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>                # params default might be backend specific.</pre></li>
                 
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>                return self.cursor.execute(sql)</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>                return self.cursor.execute(sql)</pre></li>
                 
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>            else:</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>            else:</pre></li>
                 
                 </ol>
               
               <ol start="105" class="context-line">
-                <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>                return self.cursor.execute(sql, params)
+                <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>                return self.cursor.execute(sql, params)
                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='106' class="post-context" id="post140499702855360">
+                <ol start='106' class="post-context" id="post140409384241216">
                   
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>    def _executemany(self, sql, param_list, *ignored_wrapper_args):</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>    def _executemany(self, sql, param_list, *ignored_wrapper_args):</pre></li>
                   
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>        # Raise a warning during app initialization (stored_app_configs is only</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>        # Raise a warning during app initialization (stored_app_configs is only</pre></li>
                   
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>        # ever set during testing).</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>        # ever set during testing).</pre></li>
                   
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>        if not apps.ready and not apps.stored_app_configs:</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>        if not apps.ready and not apps.stored_app_configs:</pre></li>
                   
-                  <li onclick="toggle('pre140499702855360', 'post140499702855360')"><pre>            warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)</pre></li>
+                  <li onclick="toggle('pre140409384241216', 'post140409384241216')"><pre>            warnings.warn(self.APPS_NOT_READY_WARNING_MSG, category=RuntimeWarning)</pre></li>
                   
               </ol>
               
@@ -216,7 +216,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499702855360">
+            <table class="vars" id="v140409384241216">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -229,25 +229,25 @@
                     <td>ignored_wrapper_args</td>
                     <td class="code"><pre>(False,
  {&#x27;connection&#x27;: &lt;DatabaseWrapper vendor=&#x27;postgresql&#x27; alias=&#x27;default&#x27;&gt;,
-  &#x27;cursor&#x27;: &lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fc8a2df2c30&gt;})</pre></td>
+  &#x27;cursor&#x27;: &lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fb39bde7fe0&gt;})</pre></td>
                   </tr>
                 
                   <tr>
                     <td>params</td>
-                    <td class="code"><pre>(6,
- &quot;(&#x27;56555&#x27;,)&quot;,
- &quot;(&#x27;GA&#x27;,)&quot;,
- &quot;(&#x27;55555&#x27;,)&quot;,
- &quot;(&#x27;hhhgtfg&#x27;,)&quot;,
- &quot;(&#x27;hhtrthrhtr&#x27;,)&quot;,
- &quot;(&#x27;hrthrthrthr&#x27;,)&quot;,
- &quot;(&#x27;htrthrhtrthr&#x27;,)&quot;,
- 6)</pre></td>
+                    <td class="code"><pre>(7,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;AF&#x27;,)&quot;,
+ &quot;(&#x27;42424&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ 7)</pre></td>
                   </tr>
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fc8a2df2c30&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fb39bde7fe0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -277,44 +277,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/core/handlers/exception.py</code>, line 55, in inner
           
           
-            <div class="context" id="c140499701880192">
+            <div class="context" id="c140409384242560">
               
-                <ol start="48" class="pre-context" id="pre140499701880192">
+                <ol start="48" class="pre-context" id="pre140409384242560">
                 
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>        return inner</pre></li>
                 
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>    else:</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>    else:</pre></li>
                 
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>        @wraps(get_response)</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>        @wraps(get_response)</pre></li>
                 
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>        def inner(request):</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>        def inner(request):</pre></li>
                 
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>            try:</pre></li>
                 
                 </ol>
               
               <ol start="55" class="context-line">
-                <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>                response = get_response(request)
+                <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>                response = get_response(request)
                                ^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='56' class="post-context" id="post140499701880192">
+                <ol start='56' class="post-context" id="post140409384242560">
                   
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>            except Exception as exc:</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>            except Exception as exc:</pre></li>
                   
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>                response = response_for_exception(request, exc)</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>                response = response_for_exception(request, exc)</pre></li>
                   
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>            return response</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>            return response</pre></li>
                   
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre>        return inner</pre></li>
                   
-                  <li onclick="toggle('pre140499701880192', 'post140499701880192')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384242560', 'post140409384242560')"><pre></pre></li>
                   
               </ol>
               
@@ -325,7 +325,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701880192">
+            <table class="vars" id="v140409384242560">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -341,7 +341,7 @@
                 
                   <tr>
                     <td>get_response</td>
-                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fc8bcef79b0&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fb3b4e9e000&gt;&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -361,44 +361,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/core/handlers/base.py</code>, line 197, in _get_response
           
           
-            <div class="context" id="c140499701880128">
+            <div class="context" id="c140409384241856">
               
-                <ol start="190" class="pre-context" id="pre140499701880128">
+                <ol start="190" class="pre-context" id="pre140409384241856">
                 
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>        if response is None:</pre></li>
                 
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
                 
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
                 
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>            if iscoroutinefunction(wrapped_callback):</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>            if iscoroutinefunction(wrapped_callback):</pre></li>
                 
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
                 
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>            try:</pre></li>
                 
                 </ol>
               
               <ol start="197" class="context-line">
-                <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
+                <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='198' class="post-context" id="post140499701880128">
+                <ol start='198' class="post-context" id="post140409384241856">
                   
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>            except Exception as e:</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>            except Exception as e:</pre></li>
                   
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
                   
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>                if response is None:</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>                if response is None:</pre></li>
                   
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>                    raise</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>                    raise</pre></li>
                   
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701880128', 'post140499701880128')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  <li onclick="toggle('pre140409384241856', 'post140409384241856')"><pre>        # Complain if the view returned None (a common error).</pre></li>
                   
               </ol>
               
@@ -409,7 +409,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701880128">
+            <table class="vars" id="v140409384241856">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -420,7 +420,7 @@
                 
                   <tr>
                     <td>callback</td>
-                    <td class="code"><pre>&lt;function webhook at 0x7fc8baa6bba0&gt;</pre></td>
+                    <td class="code"><pre>&lt;function webhook at 0x7fb3b3307b00&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -450,12 +450,12 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fc8bcef79b0&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fb3b4e9e000&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>wrapped_callback</td>
-                    <td class="code"><pre>&lt;function webhook at 0x7fc8baa6bba0&gt;</pre></td>
+                    <td class="code"><pre>&lt;function webhook at 0x7fb3b3307b00&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -470,44 +470,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/views/decorators/http.py</code>, line 64, in inner
           
           
-            <div class="context" id="c140499701880064">
+            <div class="context" id="c140409384242240">
               
-                <ol start="57" class="pre-context" id="pre140499701880064">
+                <ol start="57" class="pre-context" id="pre140409384242240">
                 
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>                        &quot;Method Not Allowed (%s): %s&quot;,</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>                        &quot;Method Not Allowed (%s): %s&quot;,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>                        request.method,</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>                        request.method,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>                        request.path,</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>                        request.path,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>                        response=response,</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>                        response=response,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>                        request=request,</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>                        request=request,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>                    )</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>                    )</pre></li>
                 
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>                    return response</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>                    return response</pre></li>
                 
                 </ol>
               
               <ol start="64" class="context-line">
-                <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>                return func(request, *args, **kwargs)
+                <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>                return func(request, *args, **kwargs)
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='65' class="post-context" id="post140499701880064">
+                <ol start='65' class="post-context" id="post140409384242240">
                   
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>        return inner</pre></li>
                   
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre>    return decorator</pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre>    return decorator</pre></li>
                   
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701880064', 'post140499701880064')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384242240', 'post140409384242240')"><pre></pre></li>
                   
               </ol>
               
@@ -518,7 +518,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701880064">
+            <table class="vars" id="v140409384242240">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -534,7 +534,7 @@
                 
                   <tr>
                     <td>func</td>
-                    <td class="code"><pre>&lt;function webhook at 0x7fc8baa6ba60&gt;</pre></td>
+                    <td class="code"><pre>&lt;function webhook at 0x7fb3b33079c0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -564,40 +564,40 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/views/decorators/csrf.py</code>, line 65, in _view_wrapper
           
           
-            <div class="context" id="c140499701879936">
+            <div class="context" id="c140409384241600">
               
-                <ol start="58" class="pre-context" id="pre140499701879936">
+                <ol start="58" class="pre-context" id="pre140409384241600">
                 
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre>        async def _view_wrapper(request, *args, **kwargs):</pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre>        async def _view_wrapper(request, *args, **kwargs):</pre></li>
                 
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre>            return await view_func(request, *args, **kwargs)</pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre>            return await view_func(request, *args, **kwargs)</pre></li>
                 
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre>    else:</pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre>    else:</pre></li>
                 
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre>        def _view_wrapper(request, *args, **kwargs):</pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre>        def _view_wrapper(request, *args, **kwargs):</pre></li>
                 
                 </ol>
               
               <ol start="65" class="context-line">
-                <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre>            return view_func(request, *args, **kwargs)
+                <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre>            return view_func(request, *args, **kwargs)
                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='66' class="post-context" id="post140499701879936">
+                <ol start='66' class="post-context" id="post140409384241600">
                   
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre>    _view_wrapper.csrf_exempt = True</pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre>    _view_wrapper.csrf_exempt = True</pre></li>
                   
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701879936', 'post140499701879936')"><pre>    return wraps(view_func)(_view_wrapper)</pre></li>
+                  <li onclick="toggle('pre140409384241600', 'post140409384241600')"><pre>    return wraps(view_func)(_view_wrapper)</pre></li>
                   
               </ol>
               
@@ -608,7 +608,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701879936">
+            <table class="vars" id="v140409384241600">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -634,7 +634,7 @@
                 
                   <tr>
                     <td>view_func</td>
-                    <td class="code"><pre>&lt;function webhook at 0x7fc8baa6bb00&gt;</pre></td>
+                    <td class="code"><pre>&lt;function webhook at 0x7fb3b3307a60&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -649,34 +649,34 @@
             <code class="fname">/app/checkout/webhooks.py</code>, line 50, in webhook
           
           
-            <div class="context" id="c140499701879872">
+            <div class="context" id="c140409384241984">
               
-                <ol start="43" class="pre-context" id="pre140499701879872">
+                <ol start="43" class="pre-context" id="pre140409384241984">
                 
-                  <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    </pre></li>
+                  <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    </pre></li>
                 
-                  <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    # Get the webhook type from Stripe</pre></li>
+                  <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    # Get the webhook type from Stripe</pre></li>
                 
-                  <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    event_type = event[&#x27;type&#x27;]</pre></li>
+                  <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    event_type = event[&#x27;type&#x27;]</pre></li>
                 
-                  <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    </pre></li>
+                  <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    </pre></li>
                 
-                  <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    event_handler = event_map.get(event_type, handler.handle_event)</pre></li>
+                  <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    event_handler = event_map.get(event_type, handler.handle_event)</pre></li>
                 
-                  <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    </pre></li>
+                  <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    </pre></li>
                 
-                  <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    # Call the event handler with the event</pre></li>
+                  <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    # Call the event handler with the event</pre></li>
                 
                 </ol>
               
               <ol start="50" class="context-line">
-                <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    response = event_handler(event)
+                <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    response = event_handler(event)
                    ^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='51' class="post-context" id="post140499701879872">
+                <ol start='51' class="post-context" id="post140409384241984">
                   
-                  <li onclick="toggle('pre140499701879872', 'post140499701879872')"><pre>    return response</pre></li>
+                  <li onclick="toggle('pre140409384241984', 'post140409384241984')"><pre>    return response</pre></li>
                   
               </ol>
               
@@ -687,7 +687,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701879872">
+            <table class="vars" id="v140409384241984">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -698,17 +698,17 @@
                 
                   <tr>
                     <td>event</td>
-                    <td class="code"><pre>&lt;Event event id=evt_3PG3WTEtLZegFfEs0ILZmGGV at 0x7fc8a2d17cf0&gt; JSON: {
+                    <td class="code"><pre>&lt;Event event id=evt_3PG4qVEtLZegFfEs1UEgzoUn at 0x7fb39b754460&gt; JSON: {
   &quot;api_version&quot;: &quot;2024-04-10&quot;,
-  &quot;created&quot;: 1715624594,
+  &quot;created&quot;: 1715629681,
   &quot;data&quot;: {
     &quot;object&quot;: {
-      &quot;amount&quot;: 100,
+      &quot;amount&quot;: 300,
       &quot;amount_capturable&quot;: 0,
       &quot;amount_details&quot;: {
         &quot;tip&quot;: {}
       },
-      &quot;amount_received&quot;: 100,
+      &quot;amount_received&quot;: 300,
       &quot;application&quot;: null,
       &quot;application_fee_amount&quot;: null,
       &quot;automatic_payment_methods&quot;: {
@@ -718,26 +718,26 @@
       &quot;canceled_at&quot;: null,
       &quot;cancellation_reason&quot;: null,
       &quot;capture_method&quot;: &quot;automatic_async&quot;,
-      &quot;client_secret&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D_secret_xJj7gH7EPnXA4FclkIDJxmkgL&quot;,
+      &quot;client_secret&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp_secret_3PqO38MMeM1inTabvhmYqARau&quot;,
       &quot;confirmation_method&quot;: &quot;automatic&quot;,
-      &quot;created&quot;: 1715624573,
+      &quot;created&quot;: 1715629659,
       &quot;currency&quot;: &quot;usd&quot;,
       &quot;customer&quot;: null,
       &quot;description&quot;: null,
-      &quot;id&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D&quot;,
+      &quot;id&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp&quot;,
       &quot;invoice&quot;: null,
       &quot;last_payment_error&quot;: null,
-      &quot;latest_charge&quot;: &quot;ch_3PG3WTEtLZegFfEs0up9LH2W&quot;,
+      &quot;latest_charge&quot;: &quot;ch_3PG4qVEtLZegFfEs1WKVn6UJ&quot;,
       &quot;livemode&quot;: false,
       &quot;metadata&quot;: {
-        &quot;bag&quot;: &quot;{\&quot;1\&quot;: 1}&quot;,
+        &quot;bag&quot;: &quot;{\&quot;2\&quot;: 1}&quot;,
         &quot;save_info&quot;: &quot;true&quot;,
-        &quot;username&quot;: &quot;ReadmeReader&quot;
+        &quot;username&quot;: &quot;helpmeoisin&quot;
       },
       &quot;next_action&quot;: null,
       &quot;object&quot;: &quot;payment_intent&quot;,
       &quot;on_behalf_of&quot;: null,
-      &quot;payment_method&quot;: &quot;pm_1PG3WnEtLZegFfEsQ5iwjiMe&quot;,
+      &quot;payment_method&quot;: &quot;pm_1PG4qrEtLZegFfEsQaMih3Qc&quot;,
       &quot;payment_method_configuration_details&quot;: null,
       &quot;payment_method_options&quot;: {
         &quot;card&quot;: {
@@ -763,13 +763,13 @@
       &quot;transfer_group&quot;: null
     }
   },
-  &quot;id&quot;: &quot;evt_3PG3WTEtLZegFfEs0ILZmGGV&quot;,
+  &quot;id&quot;: &quot;evt_3PG4qVEtLZegFfEs1UEgzoUn&quot;,
   &quot;livemode&quot;: false,
   &quot;object&quot;: &quot;event&quot;,
   &quot;pending_webhooks&quot;: 2,
   &quot;request&quot;: {
-    &quot;id&quot;: &quot;req_l3gHDeeA5kCaIw&quot;,
-    &quot;idempotency_key&quot;: &quot;0615db27-fa8f-432d-9f26-a8ff03e6b5fa&quot;
+    &quot;id&quot;: &quot;req_fAUOEeSdIboQur&quot;,
+    &quot;idempotency_key&quot;: &quot;6dec7d0f-9ecd-4d5f-8f24-e37444588a8c&quot;
   },
   &quot;type&quot;: &quot;payment_intent.succeeded&quot;
 }</pre></td>
@@ -777,13 +777,13 @@
                 
                   <tr>
                     <td>event_handler</td>
-                    <td class="code"><pre>&lt;bound method StripeWH_Handler.handle_payment_intent_succeeded of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fc8a2df5bb0&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method StripeWH_Handler.handle_payment_intent_succeeded of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fb39b743680&gt;&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>event_map</td>
-                    <td class="code"><pre>{&#x27;payment_intent.payment_failed&#x27;: &lt;bound method StripeWH_Handler.handle_payment_intent_payment_failed of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fc8a2df5bb0&gt;&gt;,
- &#x27;payment_intent.succeeded&#x27;: &lt;bound method StripeWH_Handler.handle_payment_intent_succeeded of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fc8a2df5bb0&gt;&gt;}</pre></td>
+                    <td class="code"><pre>{&#x27;payment_intent.payment_failed&#x27;: &lt;bound method StripeWH_Handler.handle_payment_intent_payment_failed of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fb39b743680&gt;&gt;,
+ &#x27;payment_intent.succeeded&#x27;: &lt;bound method StripeWH_Handler.handle_payment_intent_succeeded of &lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fb39b743680&gt;&gt;}</pre></td>
                   </tr>
                 
                   <tr>
@@ -793,41 +793,41 @@
                 
                   <tr>
                     <td>handler</td>
-                    <td class="code"><pre>&lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fc8a2df5bb0&gt;</pre></td>
+                    <td class="code"><pre>&lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fb39b743680&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>payload</td>
-                    <td class="code"><pre>(b&#x27;{\n  &quot;id&quot;: &quot;evt_3PG3WTEtLZegFfEs0ILZmGGV&quot;,\n  &quot;object&quot;: &quot;event&quot;,\n  &quot;api_ve&#x27;
- b&#x27;rsion&quot;: &quot;2024-04-10&quot;,\n  &quot;created&quot;: 1715624594,\n  &quot;data&quot;: {\n    &quot;object&quot;:&#x27;
- b&#x27; {\n      &quot;id&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D&quot;,\n      &quot;object&quot;: &quot;payment_i&#x27;
- b&#x27;ntent&quot;,\n      &quot;amount&quot;: 100,\n      &quot;amount_capturable&quot;: 0,\n      &quot;amount&#x27;
+                    <td class="code"><pre>(b&#x27;{\n  &quot;id&quot;: &quot;evt_3PG4qVEtLZegFfEs1UEgzoUn&quot;,\n  &quot;object&quot;: &quot;event&quot;,\n  &quot;api_ve&#x27;
+ b&#x27;rsion&quot;: &quot;2024-04-10&quot;,\n  &quot;created&quot;: 1715629681,\n  &quot;data&quot;: {\n    &quot;object&quot;:&#x27;
+ b&#x27; {\n      &quot;id&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp&quot;,\n      &quot;object&quot;: &quot;payment_i&#x27;
+ b&#x27;ntent&quot;,\n      &quot;amount&quot;: 300,\n      &quot;amount_capturable&quot;: 0,\n      &quot;amount&#x27;
  b&#x27;_details&quot;: {\n        &quot;tip&quot;: {\n        }\n      },\n      &quot;amount_received&quot;&#x27;
- b&#x27;: 100,\n      &quot;application&quot;: null,\n      &quot;application_fee_amount&quot;: null,\n&#x27;
+ b&#x27;: 300,\n      &quot;application&quot;: null,\n      &quot;application_fee_amount&quot;: null,\n&#x27;
  b&#x27;      &quot;automatic_payment_methods&quot;: {\n        &quot;allow_redirects&quot;: &quot;always&quot;&#x27;
  b&#x27;,\n        &quot;enabled&quot;: true\n      },\n      &quot;canceled_at&quot;: null,\n      &quot;can&#x27;
  b&#x27;cellation_reason&quot;: null,\n      &quot;capture_method&quot;: &quot;automatic_async&quot;,\n    &#x27;
- b&#x27;  &quot;client_secret&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D_secret_xJj7gH7EPnXA4FclkIDJx&#x27;
- b&#x27;mkgL&quot;,\n      &quot;confirmation_method&quot;: &quot;automatic&quot;,\n      &quot;created&quot;: 171562&#x27;
- b&#x27;4573,\n      &quot;currency&quot;: &quot;usd&quot;,\n      &quot;customer&quot;: null,\n      &quot;descriptio&#x27;
+ b&#x27;  &quot;client_secret&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp_secret_3PqO38MMeM1inTabvhmYq&#x27;
+ b&#x27;ARau&quot;,\n      &quot;confirmation_method&quot;: &quot;automatic&quot;,\n      &quot;created&quot;: 171562&#x27;
+ b&#x27;9659,\n      &quot;currency&quot;: &quot;usd&quot;,\n      &quot;customer&quot;: null,\n      &quot;descriptio&#x27;
  b&#x27;n&quot;: null,\n      &quot;invoice&quot;: null,\n      &quot;last_payment_error&quot;: null,\n     &#x27;
- b&#x27; &quot;latest_charge&quot;: &quot;ch_3PG3WTEtLZegFfEs0up9LH2W&quot;,\n      &quot;livemode&quot;: false&#x27;
- b&#x27;,\n      &quot;metadata&quot;: {\n        &quot;bag&quot;: &quot;{\\&quot;1\\&quot;: 1}&quot;,\n        &quot;save_inf&#x27;
- b&#x27;o&quot;: &quot;true&quot;,\n        &quot;username&quot;: &quot;ReadmeReader&quot;\n      },\n      &quot;next_acti&#x27;
- b&#x27;on&quot;: null,\n      &quot;on_behalf_of&quot;: null,\n      &quot;payment_method&quot;: &quot;pm_1PG3W&#x27;
- b&#x27;nEtLZegFfEsQ5iwjiMe&quot;,\n      &quot;payment_method_configuration_details&quot;: null&#x27;
- b&#x27;,\n      &quot;payment_method_options&quot;: {\n        &quot;card&quot;: {\n          &quot;install&#x27;
- b&#x27;ments&quot;: null,\n          &quot;mandate_options&quot;: null,\n          &quot;network&quot;: nu&#x27;
- b&#x27;ll,\n          &quot;request_three_d_secure&quot;: &quot;automatic&quot;\n        }\n      },\n &#x27;
- b&#x27;     &quot;payment_method_types&quot;: [\n        &quot;card&quot;\n      ],\n      &quot;processing&#x27;
- b&#x27;&quot;: null,\n      &quot;receipt_email&quot;: null,\n      &quot;review&quot;: null,\n      &quot;setup&#x27;
- b&#x27;_future_usage&quot;: null,\n      &quot;shipping&quot;: null,\n      &quot;source&quot;: null,\n    &#x27;
- b&#x27;  &quot;statement_descriptor&quot;: null,\n      &quot;statement_descriptor_suffix&quot;: nul&#x27;
- b&#x27;l,\n      &quot;status&quot;: &quot;succeeded&quot;,\n      &quot;transfer_data&quot;: null,\n      &quot;tran&#x27;
- b&#x27;sfer_group&quot;: null\n    }\n  },\n  &quot;livemode&quot;: false,\n  &quot;pending_webhooks&quot;: &#x27;
- b&#x27;2,\n  &quot;request&quot;: {\n    &quot;id&quot;: &quot;req_l3gHDeeA5kCaIw&quot;,\n    &quot;idempotency_key&quot;:&#x27;
- b&#x27; &quot;0615db27-fa8f-432d-9f26-a8ff03e6b5fa&quot;\n  },\n  &quot;type&quot;: &quot;payment_intent.s&#x27;
- b&#x27;ucceeded&quot;\n}&#x27;)</pre></td>
+ b&#x27; &quot;latest_charge&quot;: &quot;ch_3PG4qVEtLZegFfEs1WKVn6UJ&quot;,\n      &quot;livemode&quot;: false&#x27;
+ b&#x27;,\n      &quot;metadata&quot;: {\n        &quot;bag&quot;: &quot;{\\&quot;2\\&quot;: 1}&quot;,\n        &quot;save_inf&#x27;
+ b&#x27;o&quot;: &quot;true&quot;,\n        &quot;username&quot;: &quot;helpmeoisin&quot;\n      },\n      &quot;next_actio&#x27;
+ b&#x27;n&quot;: null,\n      &quot;on_behalf_of&quot;: null,\n      &quot;payment_method&quot;: &quot;pm_1PG4qr&#x27;
+ b&#x27;EtLZegFfEsQaMih3Qc&quot;,\n      &quot;payment_method_configuration_details&quot;: null,&#x27;
+ b&#x27;\n      &quot;payment_method_options&quot;: {\n        &quot;card&quot;: {\n          &quot;installm&#x27;
+ b&#x27;ents&quot;: null,\n          &quot;mandate_options&quot;: null,\n          &quot;network&quot;: nul&#x27;
+ b&#x27;l,\n          &quot;request_three_d_secure&quot;: &quot;automatic&quot;\n        }\n      },\n  &#x27;
+ b&#x27;    &quot;payment_method_types&quot;: [\n        &quot;card&quot;\n      ],\n      &quot;processing&quot;&#x27;
+ b&#x27;: null,\n      &quot;receipt_email&quot;: null,\n      &quot;review&quot;: null,\n      &quot;setup_&#x27;
+ b&#x27;future_usage&quot;: null,\n      &quot;shipping&quot;: null,\n      &quot;source&quot;: null,\n     &#x27;
+ b&#x27; &quot;statement_descriptor&quot;: null,\n      &quot;statement_descriptor_suffix&quot;: null&#x27;
+ b&#x27;,\n      &quot;status&quot;: &quot;succeeded&quot;,\n      &quot;transfer_data&quot;: null,\n      &quot;trans&#x27;
+ b&#x27;fer_group&quot;: null\n    }\n  },\n  &quot;livemode&quot;: false,\n  &quot;pending_webhooks&quot;: 2&#x27;
+ b&#x27;,\n  &quot;request&quot;: {\n    &quot;id&quot;: &quot;req_fAUOEeSdIboQur&quot;,\n    &quot;idempotency_key&quot;: &#x27;
+ b&#x27;&quot;6dec7d0f-9ecd-4d5f-8f24-e37444588a8c&quot;\n  },\n  &quot;type&quot;: &quot;payment_intent.su&#x27;
+ b&#x27;cceeded&quot;\n}&#x27;)</pre></td>
                   </tr>
                 
                   <tr>
@@ -837,7 +837,7 @@
                 
                   <tr>
                     <td>sig_header</td>
-                    <td class="code"><pre>&#x27;t=1715624615,v1=ae4c36d06caf8b27217b1f05483f9039874253abd11f893ebe7ea6ab9708ac72,v0=66de47eabdb1eef54065ed5fedbf67a2b29bcac9eb89cbe269e5247c0a7d0b62&#x27;</pre></td>
+                    <td class="code"><pre>&#x27;t=1715629682,v1=f215daad78f76e57e46c40f8018cbc4b832b08b2ee8f32a13a962bfdd4c6cb11,v0=69b7eac4b7d8738cca49b34ad71e91d0a4e03d2e8d48e6a05dee2b3a314452b4&#x27;</pre></td>
                   </tr>
                 
                   <tr>
@@ -857,44 +857,44 @@
             <code class="fname">/app/checkout/webhook_handler.py</code>, line 86, in handle_payment_intent_succeeded
           
           
-            <div class="context" id="c140499701880000">
+            <div class="context" id="c140409384242304">
               
-                <ol start="79" class="pre-context" id="pre140499701880000">
+                <ol start="79" class="pre-context" id="pre140409384242304">
                 
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                profile.default_phone_number = billing_details.phone,</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                profile.default_phone_number = billing_details.phone,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                profile.default_country = billing_details.address.country,</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                profile.default_country = billing_details.address.country,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                profile.default_postcode = billing_details.address.postal_code,</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                profile.default_postcode = billing_details.address.postal_code,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                profile.default_town_or_city = billing_details.address.city,</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                profile.default_town_or_city = billing_details.address.city,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                profile.default_street_address1 = billing_details.address.line1,</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                profile.default_street_address1 = billing_details.address.line1,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                profile.default_street_address2 = billing_details.address.line2,</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                profile.default_street_address2 = billing_details.address.line2,</pre></li>
                 
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                profile.default_county = billing_details.address.state,</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                profile.default_county = billing_details.address.state,</pre></li>
                 
                 </ol>
               
               <ol start="86" class="context-line">
-                <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                profile.save()
+                <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                profile.save()
                     ^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='87' class="post-context" id="post140499701880000">
+                <ol start='87' class="post-context" id="post140409384242304">
                   
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                    </pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                    </pre></li>
                   
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>        order_exists = False</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>        order_exists = False</pre></li>
                   
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>        attempt = 1</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>        attempt = 1</pre></li>
                   
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>        while attempt &lt;= 5: </pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>        while attempt &lt;= 5: </pre></li>
                   
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>            try:</pre></li>
                   
-                  <li onclick="toggle('pre140499701880000', 'post140499701880000')"><pre>                order = Order.objects.get(</pre></li>
+                  <li onclick="toggle('pre140409384242304', 'post140409384242304')"><pre>                order = Order.objects.get(</pre></li>
                   
               </ol>
               
@@ -905,7 +905,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701880000">
+            <table class="vars" id="v140409384242304">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -916,39 +916,39 @@
                 
                   <tr>
                     <td>bag</td>
-                    <td class="code"><pre>&#x27;{&quot;1&quot;: 1}&#x27;</pre></td>
+                    <td class="code"><pre>&#x27;{&quot;2&quot;: 1}&#x27;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>billing_details</td>
-                    <td class="code"><pre>&lt;BillingDetails at 0x7fc8a2d20c30&gt; JSON: {
+                    <td class="code"><pre>&lt;BillingDetails at 0x7fb39b7568f0&gt; JSON: {
   &quot;address&quot;: {
-    &quot;city&quot;: &quot;hhhgtfg&quot;,
-    &quot;country&quot;: &quot;GA&quot;,
-    &quot;line1&quot;: &quot;hhtrthrhtr&quot;,
-    &quot;line2&quot;: &quot;hrthrthrthr&quot;,
-    &quot;postal_code&quot;: &quot;55555&quot;,
-    &quot;state&quot;: &quot;htrthrhtrthr&quot;
+    &quot;city&quot;: &quot;test&quot;,
+    &quot;country&quot;: &quot;AF&quot;,
+    &quot;line1&quot;: &quot;test&quot;,
+    &quot;line2&quot;: &quot;test&quot;,
+    &quot;postal_code&quot;: &quot;42424&quot;,
+    &quot;state&quot;: &quot;test&quot;
   },
-  &quot;email&quot;: &quot;carlalennon@gmail.com&quot;,
-  &quot;name&quot;: &quot;ewffewefw&quot;,
-  &quot;phone&quot;: &quot;56555&quot;
+  &quot;email&quot;: &quot;test@test.com&quot;,
+  &quot;name&quot;: &quot;test&quot;,
+  &quot;phone&quot;: &quot;test&quot;
 }</pre></td>
                   </tr>
                 
                   <tr>
                     <td>event</td>
-                    <td class="code"><pre>&lt;Event event id=evt_3PG3WTEtLZegFfEs0ILZmGGV at 0x7fc8a2d17cf0&gt; JSON: {
+                    <td class="code"><pre>&lt;Event event id=evt_3PG4qVEtLZegFfEs1UEgzoUn at 0x7fb39b754460&gt; JSON: {
   &quot;api_version&quot;: &quot;2024-04-10&quot;,
-  &quot;created&quot;: 1715624594,
+  &quot;created&quot;: 1715629681,
   &quot;data&quot;: {
     &quot;object&quot;: {
-      &quot;amount&quot;: 100,
+      &quot;amount&quot;: 300,
       &quot;amount_capturable&quot;: 0,
       &quot;amount_details&quot;: {
         &quot;tip&quot;: {}
       },
-      &quot;amount_received&quot;: 100,
+      &quot;amount_received&quot;: 300,
       &quot;application&quot;: null,
       &quot;application_fee_amount&quot;: null,
       &quot;automatic_payment_methods&quot;: {
@@ -958,26 +958,26 @@
       &quot;canceled_at&quot;: null,
       &quot;cancellation_reason&quot;: null,
       &quot;capture_method&quot;: &quot;automatic_async&quot;,
-      &quot;client_secret&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D_secret_xJj7gH7EPnXA4FclkIDJxmkgL&quot;,
+      &quot;client_secret&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp_secret_3PqO38MMeM1inTabvhmYqARau&quot;,
       &quot;confirmation_method&quot;: &quot;automatic&quot;,
-      &quot;created&quot;: 1715624573,
+      &quot;created&quot;: 1715629659,
       &quot;currency&quot;: &quot;usd&quot;,
       &quot;customer&quot;: null,
       &quot;description&quot;: null,
-      &quot;id&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D&quot;,
+      &quot;id&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp&quot;,
       &quot;invoice&quot;: null,
       &quot;last_payment_error&quot;: null,
-      &quot;latest_charge&quot;: &quot;ch_3PG3WTEtLZegFfEs0up9LH2W&quot;,
+      &quot;latest_charge&quot;: &quot;ch_3PG4qVEtLZegFfEs1WKVn6UJ&quot;,
       &quot;livemode&quot;: false,
       &quot;metadata&quot;: {
-        &quot;bag&quot;: &quot;{\&quot;1\&quot;: 1}&quot;,
+        &quot;bag&quot;: &quot;{\&quot;2\&quot;: 1}&quot;,
         &quot;save_info&quot;: &quot;true&quot;,
-        &quot;username&quot;: &quot;ReadmeReader&quot;
+        &quot;username&quot;: &quot;helpmeoisin&quot;
       },
       &quot;next_action&quot;: null,
       &quot;object&quot;: &quot;payment_intent&quot;,
       &quot;on_behalf_of&quot;: null,
-      &quot;payment_method&quot;: &quot;pm_1PG3WnEtLZegFfEsQ5iwjiMe&quot;,
+      &quot;payment_method&quot;: &quot;pm_1PG4qrEtLZegFfEsQaMih3Qc&quot;,
       &quot;payment_method_configuration_details&quot;: null,
       &quot;payment_method_options&quot;: {
         &quot;card&quot;: {
@@ -1003,13 +1003,13 @@
       &quot;transfer_group&quot;: null
     }
   },
-  &quot;id&quot;: &quot;evt_3PG3WTEtLZegFfEs0ILZmGGV&quot;,
+  &quot;id&quot;: &quot;evt_3PG4qVEtLZegFfEs1UEgzoUn&quot;,
   &quot;livemode&quot;: false,
   &quot;object&quot;: &quot;event&quot;,
   &quot;pending_webhooks&quot;: 2,
   &quot;request&quot;: {
-    &quot;id&quot;: &quot;req_l3gHDeeA5kCaIw&quot;,
-    &quot;idempotency_key&quot;: &quot;0615db27-fa8f-432d-9f26-a8ff03e6b5fa&quot;
+    &quot;id&quot;: &quot;req_fAUOEeSdIboQur&quot;,
+    &quot;idempotency_key&quot;: &quot;6dec7d0f-9ecd-4d5f-8f24-e37444588a8c&quot;
   },
   &quot;type&quot;: &quot;payment_intent.succeeded&quot;
 }</pre></td>
@@ -1022,18 +1022,18 @@
                 
                   <tr>
                     <td>grand_total</td>
-                    <td class="code"><pre>1.0</pre></td>
+                    <td class="code"><pre>3.0</pre></td>
                   </tr>
                 
                   <tr>
                     <td>intent</td>
-                    <td class="code"><pre>&lt;PaymentIntent payment_intent id=pi_3PG3WTEtLZegFfEs01S0zZ8D at 0x7fc8a2d20370&gt; JSON: {
-  &quot;amount&quot;: 100,
+                    <td class="code"><pre>&lt;PaymentIntent payment_intent id=pi_3PG4qVEtLZegFfEs1TpgMtrp at 0x7fb39b754370&gt; JSON: {
+  &quot;amount&quot;: 300,
   &quot;amount_capturable&quot;: 0,
   &quot;amount_details&quot;: {
     &quot;tip&quot;: {}
   },
-  &quot;amount_received&quot;: 100,
+  &quot;amount_received&quot;: 300,
   &quot;application&quot;: null,
   &quot;application_fee_amount&quot;: null,
   &quot;automatic_payment_methods&quot;: {
@@ -1043,26 +1043,26 @@
   &quot;canceled_at&quot;: null,
   &quot;cancellation_reason&quot;: null,
   &quot;capture_method&quot;: &quot;automatic_async&quot;,
-  &quot;client_secret&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D_secret_xJj7gH7EPnXA4FclkIDJxmkgL&quot;,
+  &quot;client_secret&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp_secret_3PqO38MMeM1inTabvhmYqARau&quot;,
   &quot;confirmation_method&quot;: &quot;automatic&quot;,
-  &quot;created&quot;: 1715624573,
+  &quot;created&quot;: 1715629659,
   &quot;currency&quot;: &quot;usd&quot;,
   &quot;customer&quot;: null,
   &quot;description&quot;: null,
-  &quot;id&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D&quot;,
+  &quot;id&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp&quot;,
   &quot;invoice&quot;: null,
   &quot;last_payment_error&quot;: null,
-  &quot;latest_charge&quot;: &quot;ch_3PG3WTEtLZegFfEs0up9LH2W&quot;,
+  &quot;latest_charge&quot;: &quot;ch_3PG4qVEtLZegFfEs1WKVn6UJ&quot;,
   &quot;livemode&quot;: false,
   &quot;metadata&quot;: {
-    &quot;bag&quot;: &quot;{\&quot;1\&quot;: 1}&quot;,
+    &quot;bag&quot;: &quot;{\&quot;2\&quot;: 1}&quot;,
     &quot;save_info&quot;: &quot;true&quot;,
-    &quot;username&quot;: &quot;ReadmeReader&quot;
+    &quot;username&quot;: &quot;helpmeoisin&quot;
   },
   &quot;next_action&quot;: null,
   &quot;object&quot;: &quot;payment_intent&quot;,
   &quot;on_behalf_of&quot;: null,
-  &quot;payment_method&quot;: &quot;pm_1PG3WnEtLZegFfEsQ5iwjiMe&quot;,
+  &quot;payment_method&quot;: &quot;pm_1PG4qrEtLZegFfEsQaMih3Qc&quot;,
   &quot;payment_method_configuration_details&quot;: null,
   &quot;payment_method_options&quot;: {
     &quot;card&quot;: {
@@ -1091,12 +1091,12 @@
                 
                   <tr>
                     <td>pid</td>
-                    <td class="code"><pre>&#x27;pi_3PG3WTEtLZegFfEs01S0zZ8D&#x27;</pre></td>
+                    <td class="code"><pre>&#x27;pi_3PG4qVEtLZegFfEs1TpgMtrp&#x27;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>profile</td>
-                    <td class="code"><pre>&lt;UserProfile: ReadmeReader&gt;</pre></td>
+                    <td class="code"><pre>&lt;UserProfile: helpmeoisin&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1106,35 +1106,35 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fc8a2df5bb0&gt;</pre></td>
+                    <td class="code"><pre>&lt;checkout.webhook_handler.StripeWH_Handler object at 0x7fb39b743680&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>stripe_charge</td>
-                    <td class="code"><pre>&lt;Charge charge id=ch_3PG3WTEtLZegFfEs0up9LH2W at 0x7fc8a2d20280&gt; JSON: {
-  &quot;amount&quot;: 100,
-  &quot;amount_captured&quot;: 100,
+                    <td class="code"><pre>&lt;Charge charge id=ch_3PG4qVEtLZegFfEs1WKVn6UJ at 0x7fb39b754640&gt; JSON: {
+  &quot;amount&quot;: 300,
+  &quot;amount_captured&quot;: 300,
   &quot;amount_refunded&quot;: 0,
   &quot;application&quot;: null,
   &quot;application_fee&quot;: null,
   &quot;application_fee_amount&quot;: null,
-  &quot;balance_transaction&quot;: &quot;txn_3PG3WTEtLZegFfEs0LYSyTfO&quot;,
+  &quot;balance_transaction&quot;: null,
   &quot;billing_details&quot;: {
     &quot;address&quot;: {
-      &quot;city&quot;: &quot;hhhgtfg&quot;,
-      &quot;country&quot;: &quot;GA&quot;,
-      &quot;line1&quot;: &quot;hhtrthrhtr&quot;,
-      &quot;line2&quot;: &quot;hrthrthrthr&quot;,
-      &quot;postal_code&quot;: &quot;55555&quot;,
-      &quot;state&quot;: &quot;htrthrhtrthr&quot;
+      &quot;city&quot;: &quot;test&quot;,
+      &quot;country&quot;: &quot;AF&quot;,
+      &quot;line1&quot;: &quot;test&quot;,
+      &quot;line2&quot;: &quot;test&quot;,
+      &quot;postal_code&quot;: &quot;42424&quot;,
+      &quot;state&quot;: &quot;test&quot;
     },
-    &quot;email&quot;: &quot;carlalennon@gmail.com&quot;,
-    &quot;name&quot;: &quot;ewffewefw&quot;,
-    &quot;phone&quot;: &quot;56555&quot;
+    &quot;email&quot;: &quot;test@test.com&quot;,
+    &quot;name&quot;: &quot;test&quot;,
+    &quot;phone&quot;: &quot;test&quot;
   },
   &quot;calculated_statement_descriptor&quot;: &quot;Stripe&quot;,
   &quot;captured&quot;: true,
-  &quot;created&quot;: 1715624593,
+  &quot;created&quot;: 1715629681,
   &quot;currency&quot;: &quot;usd&quot;,
   &quot;customer&quot;: null,
   &quot;description&quot;: null,
@@ -1145,13 +1145,13 @@
   &quot;failure_code&quot;: null,
   &quot;failure_message&quot;: null,
   &quot;fraud_details&quot;: {},
-  &quot;id&quot;: &quot;ch_3PG3WTEtLZegFfEs0up9LH2W&quot;,
+  &quot;id&quot;: &quot;ch_3PG4qVEtLZegFfEs1WKVn6UJ&quot;,
   &quot;invoice&quot;: null,
   &quot;livemode&quot;: false,
   &quot;metadata&quot;: {
-    &quot;bag&quot;: &quot;{\&quot;1\&quot;: 1}&quot;,
+    &quot;bag&quot;: &quot;{\&quot;2\&quot;: 1}&quot;,
     &quot;save_info&quot;: &quot;true&quot;,
-    &quot;username&quot;: &quot;ReadmeReader&quot;
+    &quot;username&quot;: &quot;helpmeoisin&quot;
   },
   &quot;object&quot;: &quot;charge&quot;,
   &quot;on_behalf_of&quot;: null,
@@ -1160,16 +1160,16 @@
     &quot;network_status&quot;: &quot;approved_by_network&quot;,
     &quot;reason&quot;: null,
     &quot;risk_level&quot;: &quot;normal&quot;,
-    &quot;risk_score&quot;: 37,
+    &quot;risk_score&quot;: 47,
     &quot;seller_message&quot;: &quot;Payment complete.&quot;,
     &quot;type&quot;: &quot;authorized&quot;
   },
   &quot;paid&quot;: true,
-  &quot;payment_intent&quot;: &quot;pi_3PG3WTEtLZegFfEs01S0zZ8D&quot;,
-  &quot;payment_method&quot;: &quot;pm_1PG3WnEtLZegFfEsQ5iwjiMe&quot;,
+  &quot;payment_intent&quot;: &quot;pi_3PG4qVEtLZegFfEs1TpgMtrp&quot;,
+  &quot;payment_method&quot;: &quot;pm_1PG4qrEtLZegFfEsQaMih3Qc&quot;,
   &quot;payment_method_details&quot;: {
     &quot;card&quot;: {
-      &quot;amount_authorized&quot;: 100,
+      &quot;amount_authorized&quot;: 300,
       &quot;brand&quot;: &quot;visa&quot;,
       &quot;checks&quot;: {
         &quot;address_line1_check&quot;: &quot;pass&quot;,
@@ -1177,8 +1177,8 @@
         &quot;cvc_check&quot;: &quot;pass&quot;
       },
       &quot;country&quot;: &quot;US&quot;,
-      &quot;exp_month&quot;: 5,
-      &quot;exp_year&quot;: 2055,
+      &quot;exp_month&quot;: 4,
+      &quot;exp_year&quot;: 2025,
       &quot;extended_authorization&quot;: {
         &quot;status&quot;: &quot;disabled&quot;
       },
@@ -1198,7 +1198,7 @@
         &quot;used&quot;: false
       },
       &quot;overcapture&quot;: {
-        &quot;maximum_amount_capturable&quot;: 100,
+        &quot;maximum_amount_capturable&quot;: 300,
         &quot;status&quot;: &quot;unavailable&quot;
       },
       &quot;three_d_secure&quot;: null,
@@ -1209,7 +1209,7 @@
   &quot;radar_options&quot;: {},
   &quot;receipt_email&quot;: null,
   &quot;receipt_number&quot;: null,
-  &quot;receipt_url&quot;: &quot;https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUEFXZHBFdExaZWdGZkVzKKe1ibIGMgZCfMHox6A6LBaQPPUlXP-Bk01EKDealmd_bvac8ZEWgGILKzhU49mw86nwhZH-73rT2Ro1&quot;,
+  &quot;receipt_url&quot;: &quot;https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUEFXZHBFdExaZWdGZkVzKPLcibIGMgYHHG_bUys6LBa-17bhZXKb_HOituupvGCoB8VnWLxxdS-3M5VfkWkjbC87z9SltI6hLCHQ&quot;,
   &quot;refunded&quot;: false,
   &quot;review&quot;: null,
   &quot;shipping&quot;: null,
@@ -1225,12 +1225,12 @@
                 
                   <tr>
                     <td>username</td>
-                    <td class="code"><pre>&#x27;ReadmeReader&#x27;</pre></td>
+                    <td class="code"><pre>&#x27;helpmeoisin&#x27;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>value</td>
-                    <td class="code"><pre>&#x27;htrthrhtrthr&#x27;</pre></td>
+                    <td class="code"><pre>&#x27;test&#x27;</pre></td>
                   </tr>
                 
               </tbody>
@@ -1245,44 +1245,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/models/base.py</code>, line 822, in save
           
           
-            <div class="context" id="c140499703404736">
+            <div class="context" id="c140409384025472">
               
-                <ol start="815" class="pre-context" id="pre140499703404736">
+                <ol start="815" class="pre-context" id="pre140409384025472">
                 
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>            for field in self._meta.concrete_fields:</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>            for field in self._meta.concrete_fields:</pre></li>
                 
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>                if not field.primary_key and not hasattr(field, &quot;through&quot;):</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>                if not field.primary_key and not hasattr(field, &quot;through&quot;):</pre></li>
                 
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>                    field_names.add(field.attname)</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>                    field_names.add(field.attname)</pre></li>
                 
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>            loaded_fields = field_names.difference(deferred_non_generated_fields)</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>            loaded_fields = field_names.difference(deferred_non_generated_fields)</pre></li>
                 
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>            if loaded_fields:</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>            if loaded_fields:</pre></li>
                 
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>                update_fields = frozenset(loaded_fields)</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>                update_fields = frozenset(loaded_fields)</pre></li>
                 
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre></pre></li>
                 
                 </ol>
               
               <ol start="822" class="context-line">
-                <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>        self.save_base(
+                <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>        self.save_base(
              ^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='823' class="post-context" id="post140499703404736">
+                <ol start='823' class="post-context" id="post140409384025472">
                   
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>            using=using,</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>            using=using,</pre></li>
                   
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>            force_insert=force_insert,</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>            force_insert=force_insert,</pre></li>
                   
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>            force_update=force_update,</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>            force_update=force_update,</pre></li>
                   
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>            update_fields=update_fields,</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>            update_fields=update_fields,</pre></li>
                   
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre>        )</pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre>        )</pre></li>
                   
-                  <li onclick="toggle('pre140499703404736', 'post140499703404736')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384025472', 'post140409384025472')"><pre></pre></li>
                   
               </ol>
               
@@ -1293,7 +1293,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499703404736">
+            <table class="vars" id="v140409384025472">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1319,7 +1319,7 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;UserProfile: ReadmeReader&gt;</pre></td>
+                    <td class="code"><pre>&lt;UserProfile: helpmeoisin&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1344,44 +1344,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/models/base.py</code>, line 909, in save_base
           
           
-            <div class="context" id="c140499701879808">
+            <div class="context" id="c140409384242048">
               
-                <ol start="902" class="pre-context" id="pre140499701879808">
+                <ol start="902" class="pre-context" id="pre140409384242048">
                 
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>            parent_inserted = False</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>            parent_inserted = False</pre></li>
                 
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>            if not raw:</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>            if not raw:</pre></li>
                 
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                # Validate force insert only when parents are inserted.</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                # Validate force insert only when parents are inserted.</pre></li>
                 
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                force_insert = self._validate_force_insert(force_insert)</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                force_insert = self._validate_force_insert(force_insert)</pre></li>
                 
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                parent_inserted = self._save_parents(</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                parent_inserted = self._save_parents(</pre></li>
                 
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                    cls, using, update_fields, force_insert</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                    cls, using, update_fields, force_insert</pre></li>
                 
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                )</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                )</pre></li>
                 
                 </ol>
               
               <ol start="909" class="context-line">
-                <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>            updated = self._save_table(
+                <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>            updated = self._save_table(
                            </pre> <span>…</span></li>
               </ol>
               
-                <ol start='910' class="post-context" id="post140499701879808">
+                <ol start='910' class="post-context" id="post140409384242048">
                   
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                raw,</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                raw,</pre></li>
                   
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                cls,</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                cls,</pre></li>
                   
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                force_insert or parent_inserted,</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                force_insert or parent_inserted,</pre></li>
                   
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                force_update,</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                force_update,</pre></li>
                   
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                using,</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                using,</pre></li>
                   
-                  <li onclick="toggle('pre140499701879808', 'post140499701879808')"><pre>                update_fields,</pre></li>
+                  <li onclick="toggle('pre140409384242048', 'post140409384242048')"><pre>                update_fields,</pre></li>
                   
               </ol>
               
@@ -1392,7 +1392,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701879808">
+            <table class="vars" id="v140409384242048">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1408,7 +1408,7 @@
                 
                   <tr>
                     <td>context_manager</td>
-                    <td class="code"><pre>&lt;contextlib._GeneratorContextManager object at 0x7fc8a2fa55e0&gt;</pre></td>
+                    <td class="code"><pre>&lt;contextlib._GeneratorContextManager object at 0x7fb39e37b9e0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1443,7 +1443,7 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;UserProfile: ReadmeReader&gt;</pre></td>
+                    <td class="code"><pre>&lt;UserProfile: helpmeoisin&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1468,44 +1468,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/models/base.py</code>, line 1036, in _save_table
           
           
-            <div class="context" id="c140499701879744">
+            <div class="context" id="c140409384241344">
               
-                <ol start="1029" class="pre-context" id="pre140499701879744">
+                <ol start="1029" class="pre-context" id="pre140409384241344">
                 
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>                    f,</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>                    f,</pre></li>
                 
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>                    None,</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>                    None,</pre></li>
                 
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>                    (getattr(self, f.attname) if raw else f.pre_save(self, False)),</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>                    (getattr(self, f.attname) if raw else f.pre_save(self, False)),</pre></li>
                 
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>                )</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>                )</pre></li>
                 
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>                for f in non_pks</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>                for f in non_pks</pre></li>
                 
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>            ]</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>            ]</pre></li>
                 
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>            forced_update = update_fields or force_update</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>            forced_update = update_fields or force_update</pre></li>
                 
                 </ol>
               
               <ol start="1036" class="context-line">
-                <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>            updated = self._do_update(
+                <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>            updated = self._do_update(
                             </pre> <span>…</span></li>
               </ol>
               
-                <ol start='1037' class="post-context" id="post140499701879744">
+                <ol start='1037' class="post-context" id="post140409384241344">
                   
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>                base_qs, using, pk_val, values, update_fields, forced_update</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>                base_qs, using, pk_val, values, update_fields, forced_update</pre></li>
                   
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>            )</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>            )</pre></li>
                   
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>            if force_update and not updated:</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>            if force_update and not updated:</pre></li>
                   
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>                raise DatabaseError(&quot;Forced update did not affect any rows.&quot;)</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>                raise DatabaseError(&quot;Forced update did not affect any rows.&quot;)</pre></li>
                   
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>            if update_fields and not updated:</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>            if update_fields and not updated:</pre></li>
                   
-                  <li onclick="toggle('pre140499701879744', 'post140499701879744')"><pre>                raise DatabaseError(&quot;Save with update_fields did not affect any rows.&quot;)</pre></li>
+                  <li onclick="toggle('pre140409384241344', 'post140409384241344')"><pre>                raise DatabaseError(&quot;Save with update_fields did not affect any rows.&quot;)</pre></li>
                   
               </ol>
               
@@ -1516,7 +1516,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701879744">
+            <table class="vars" id="v140409384241344">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1527,7 +1527,7 @@
                 
                   <tr>
                     <td>base_qs</td>
-                    <td class="code"><pre>&lt;QuerySet [&lt;UserProfile: kejabi&gt;, &lt;UserProfile: ReadMeScreenShotUser&gt;, &lt;UserProfile: animeasyfan&gt;, &lt;UserProfile: sable2&gt;, &lt;UserProfile: ReadmeReader&gt;]&gt;</pre></td>
+                    <td class="code"><pre>&lt;QuerySet [&lt;UserProfile: kejabi&gt;, &lt;UserProfile: ReadMeScreenShotUser&gt;, &lt;UserProfile: animeasyfan&gt;, &lt;UserProfile: ReadmeReader&gt;, &lt;UserProfile: sable2&gt;, &lt;UserProfile: helpmeoisin&gt;]&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1574,7 +1574,7 @@
                 
                   <tr>
                     <td>pk_val</td>
-                    <td class="code"><pre>6</pre></td>
+                    <td class="code"><pre>7</pre></td>
                   </tr>
                 
                   <tr>
@@ -1584,7 +1584,7 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;UserProfile: ReadmeReader&gt;</pre></td>
+                    <td class="code"><pre>&lt;UserProfile: helpmeoisin&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1604,20 +1604,18 @@
                 
                   <tr>
                     <td>values</td>
-                    <td class="code"><pre>[(&lt;django.db.models.fields.related.OneToOneField: user&gt;, None, 6),
- (&lt;django.db.models.fields.CharField: default_phone_number&gt;, None, (&#x27;56555&#x27;,)),
- (&lt;django_countries.fields.CountryField: default_country&gt;, None, &quot;(&#x27;GA&#x27;,)&quot;),
- (&lt;django.db.models.fields.CharField: default_postcode&gt;, None, (&#x27;55555&#x27;,)),
- (&lt;django.db.models.fields.CharField: default_town_or_city&gt;,
-  None,
-  (&#x27;hhhgtfg&#x27;,)),
+                    <td class="code"><pre>[(&lt;django.db.models.fields.related.OneToOneField: user&gt;, None, 7),
+ (&lt;django.db.models.fields.CharField: default_phone_number&gt;, None, (&#x27;test&#x27;,)),
+ (&lt;django_countries.fields.CountryField: default_country&gt;, None, &quot;(&#x27;AF&#x27;,)&quot;),
+ (&lt;django.db.models.fields.CharField: default_postcode&gt;, None, (&#x27;42424&#x27;,)),
+ (&lt;django.db.models.fields.CharField: default_town_or_city&gt;, None, (&#x27;test&#x27;,)),
  (&lt;django.db.models.fields.CharField: default_street_address1&gt;,
   None,
-  (&#x27;hhtrthrhtr&#x27;,)),
+  (&#x27;test&#x27;,)),
  (&lt;django.db.models.fields.CharField: default_street_address2&gt;,
   None,
-  (&#x27;hrthrthrthr&#x27;,)),
- (&lt;django.db.models.fields.CharField: default_county&gt;, None, (&#x27;htrthrhtrthr&#x27;,))]</pre></td>
+  (&#x27;test&#x27;,)),
+ (&lt;django.db.models.fields.CharField: default_county&gt;, None, (&#x27;test&#x27;,))]</pre></td>
                   </tr>
                 
               </tbody>
@@ -1632,44 +1630,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/models/base.py</code>, line 1101, in _do_update
           
           
-            <div class="context" id="c140499701879616">
+            <div class="context" id="c140409384241792">
               
-                <ol start="1094" class="pre-context" id="pre140499701879616">
+                <ol start="1094" class="pre-context" id="pre140409384241792">
                 
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>                # rows. The same result can occur in some rare cases when the</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>                # rows. The same result can occur in some rare cases when the</pre></li>
                 
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>                # database returns zero despite the UPDATE being executed</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>                # database returns zero despite the UPDATE being executed</pre></li>
                 
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>                # successfully (a row is matched and updated). In order to</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>                # successfully (a row is matched and updated). In order to</pre></li>
                 
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>                # distinguish these two cases, the object&#x27;s existence in the</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>                # distinguish these two cases, the object&#x27;s existence in the</pre></li>
                 
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>                # database is again checked for if the UPDATE query returns 0.</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>                # database is again checked for if the UPDATE query returns 0.</pre></li>
                 
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>                (filtered._update(values) &gt; 0 or filtered.exists())</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>                (filtered._update(values) &gt; 0 or filtered.exists())</pre></li>
                 
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>            )</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>            )</pre></li>
                 
                 </ol>
               
               <ol start="1101" class="context-line">
-                <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>        return filtered._update(values) &gt; 0
+                <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>        return filtered._update(values) &gt; 0
                      ^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='1102' class="post-context" id="post140499701879616">
+                <ol start='1102' class="post-context" id="post140409384241792">
                   
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>    def _do_insert(self, manager, using, fields, returning_fields, raw):</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>    def _do_insert(self, manager, using, fields, returning_fields, raw):</pre></li>
                   
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>        &quot;&quot;&quot;</pre></li>
                   
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>        Do an INSERT. If returning_fields is defined then this method should</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>        Do an INSERT. If returning_fields is defined then this method should</pre></li>
                   
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>        return the newly created data for the model.</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>        return the newly created data for the model.</pre></li>
                   
-                  <li onclick="toggle('pre140499701879616', 'post140499701879616')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140409384241792', 'post140409384241792')"><pre>        &quot;&quot;&quot;</pre></li>
                   
               </ol>
               
@@ -1680,7 +1678,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701879616">
+            <table class="vars" id="v140409384241792">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1691,12 +1689,12 @@
                 
                   <tr>
                     <td>base_qs</td>
-                    <td class="code"><pre>&lt;QuerySet [&lt;UserProfile: kejabi&gt;, &lt;UserProfile: ReadMeScreenShotUser&gt;, &lt;UserProfile: animeasyfan&gt;, &lt;UserProfile: sable2&gt;, &lt;UserProfile: ReadmeReader&gt;]&gt;</pre></td>
+                    <td class="code"><pre>&lt;QuerySet [&lt;UserProfile: kejabi&gt;, &lt;UserProfile: ReadMeScreenShotUser&gt;, &lt;UserProfile: animeasyfan&gt;, &lt;UserProfile: ReadmeReader&gt;, &lt;UserProfile: sable2&gt;, &lt;UserProfile: helpmeoisin&gt;]&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>filtered</td>
-                    <td class="code"><pre>&lt;QuerySet [&lt;UserProfile: ReadmeReader&gt;]&gt;</pre></td>
+                    <td class="code"><pre>&lt;QuerySet [&lt;UserProfile: helpmeoisin&gt;]&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1706,12 +1704,12 @@
                 
                   <tr>
                     <td>pk_val</td>
-                    <td class="code"><pre>6</pre></td>
+                    <td class="code"><pre>7</pre></td>
                   </tr>
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;UserProfile: ReadmeReader&gt;</pre></td>
+                    <td class="code"><pre>&lt;UserProfile: helpmeoisin&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1726,20 +1724,18 @@
                 
                   <tr>
                     <td>values</td>
-                    <td class="code"><pre>[(&lt;django.db.models.fields.related.OneToOneField: user&gt;, None, 6),
- (&lt;django.db.models.fields.CharField: default_phone_number&gt;, None, (&#x27;56555&#x27;,)),
- (&lt;django_countries.fields.CountryField: default_country&gt;, None, &quot;(&#x27;GA&#x27;,)&quot;),
- (&lt;django.db.models.fields.CharField: default_postcode&gt;, None, (&#x27;55555&#x27;,)),
- (&lt;django.db.models.fields.CharField: default_town_or_city&gt;,
-  None,
-  (&#x27;hhhgtfg&#x27;,)),
+                    <td class="code"><pre>[(&lt;django.db.models.fields.related.OneToOneField: user&gt;, None, 7),
+ (&lt;django.db.models.fields.CharField: default_phone_number&gt;, None, (&#x27;test&#x27;,)),
+ (&lt;django_countries.fields.CountryField: default_country&gt;, None, &quot;(&#x27;AF&#x27;,)&quot;),
+ (&lt;django.db.models.fields.CharField: default_postcode&gt;, None, (&#x27;42424&#x27;,)),
+ (&lt;django.db.models.fields.CharField: default_town_or_city&gt;, None, (&#x27;test&#x27;,)),
  (&lt;django.db.models.fields.CharField: default_street_address1&gt;,
   None,
-  (&#x27;hhtrthrhtr&#x27;,)),
+  (&#x27;test&#x27;,)),
  (&lt;django.db.models.fields.CharField: default_street_address2&gt;,
   None,
-  (&#x27;hrthrthrthr&#x27;,)),
- (&lt;django.db.models.fields.CharField: default_county&gt;, None, (&#x27;htrthrhtrthr&#x27;,))]</pre></td>
+  (&#x27;test&#x27;,)),
+ (&lt;django.db.models.fields.CharField: default_county&gt;, None, (&#x27;test&#x27;,))]</pre></td>
                   </tr>
                 
               </tbody>
@@ -1754,44 +1750,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/models/query.py</code>, line 1278, in _update
           
           
-            <div class="context" id="c140499701879680">
+            <div class="context" id="c140409384241728">
               
-                <ol start="1271" class="pre-context" id="pre140499701879680">
+                <ol start="1271" class="pre-context" id="pre140409384241728">
                 
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>        if self.query.is_sliced:</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>        if self.query.is_sliced:</pre></li>
                 
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>            raise TypeError(&quot;Cannot update a query once a slice has been taken.&quot;)</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>            raise TypeError(&quot;Cannot update a query once a slice has been taken.&quot;)</pre></li>
                 
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>        query = self.query.chain(sql.UpdateQuery)</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>        query = self.query.chain(sql.UpdateQuery)</pre></li>
                 
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>        query.add_update_fields(values)</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>        query.add_update_fields(values)</pre></li>
                 
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>        # Clear any annotations so that they won&#x27;t be present in subqueries.</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>        # Clear any annotations so that they won&#x27;t be present in subqueries.</pre></li>
                 
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>        query.annotations = {}</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>        query.annotations = {}</pre></li>
                 
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>        self._result_cache = None</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>        self._result_cache = None</pre></li>
                 
                 </ol>
               
               <ol start="1278" class="context-line">
-                <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>        return query.get_compiler(self.db).execute_sql(CURSOR)
+                <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>        return query.get_compiler(self.db).execute_sql(CURSOR)
                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='1279' class="post-context" id="post140499701879680">
+                <ol start='1279' class="post-context" id="post140409384241728">
                   
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>    _update.alters_data = True</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>    _update.alters_data = True</pre></li>
                   
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>    _update.queryset_only = False</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>    _update.queryset_only = False</pre></li>
                   
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>    def exists(self):</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>    def exists(self):</pre></li>
                   
-                  <li onclick="toggle('pre140499701879680', 'post140499701879680')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140409384241728', 'post140409384241728')"><pre>        &quot;&quot;&quot;</pre></li>
                   
               </ol>
               
@@ -1802,7 +1798,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701879680">
+            <table class="vars" id="v140409384241728">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1813,30 +1809,28 @@
                 
                   <tr>
                     <td>query</td>
-                    <td class="code"><pre>&lt;django.db.models.sql.subqueries.UpdateQuery object at 0x7fc8a4390770&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.db.models.sql.subqueries.UpdateQuery object at 0x7fb39b780d40&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;QuerySet [&lt;UserProfile: ReadmeReader&gt;]&gt;</pre></td>
+                    <td class="code"><pre>&lt;QuerySet [&lt;UserProfile: helpmeoisin&gt;]&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>values</td>
-                    <td class="code"><pre>[(&lt;django.db.models.fields.related.OneToOneField: user&gt;, None, 6),
- (&lt;django.db.models.fields.CharField: default_phone_number&gt;, None, (&#x27;56555&#x27;,)),
- (&lt;django_countries.fields.CountryField: default_country&gt;, None, &quot;(&#x27;GA&#x27;,)&quot;),
- (&lt;django.db.models.fields.CharField: default_postcode&gt;, None, (&#x27;55555&#x27;,)),
- (&lt;django.db.models.fields.CharField: default_town_or_city&gt;,
-  None,
-  (&#x27;hhhgtfg&#x27;,)),
+                    <td class="code"><pre>[(&lt;django.db.models.fields.related.OneToOneField: user&gt;, None, 7),
+ (&lt;django.db.models.fields.CharField: default_phone_number&gt;, None, (&#x27;test&#x27;,)),
+ (&lt;django_countries.fields.CountryField: default_country&gt;, None, &quot;(&#x27;AF&#x27;,)&quot;),
+ (&lt;django.db.models.fields.CharField: default_postcode&gt;, None, (&#x27;42424&#x27;,)),
+ (&lt;django.db.models.fields.CharField: default_town_or_city&gt;, None, (&#x27;test&#x27;,)),
  (&lt;django.db.models.fields.CharField: default_street_address1&gt;,
   None,
-  (&#x27;hhtrthrhtr&#x27;,)),
+  (&#x27;test&#x27;,)),
  (&lt;django.db.models.fields.CharField: default_street_address2&gt;,
   None,
-  (&#x27;hrthrthrthr&#x27;,)),
- (&lt;django.db.models.fields.CharField: default_county&gt;, None, (&#x27;htrthrhtrthr&#x27;,))]</pre></td>
+  (&#x27;test&#x27;,)),
+ (&lt;django.db.models.fields.CharField: default_county&gt;, None, (&#x27;test&#x27;,))]</pre></td>
                   </tr>
                 
               </tbody>
@@ -1851,44 +1845,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/models/sql/compiler.py</code>, line 1990, in execute_sql
           
           
-            <div class="context" id="c140499701878336">
+            <div class="context" id="c140409384240064">
               
-                <ol start="1983" class="pre-context" id="pre140499701878336">
+                <ol start="1983" class="pre-context" id="pre140409384240064">
                 
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>    def execute_sql(self, result_type):</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>    def execute_sql(self, result_type):</pre></li>
                 
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        Execute the specified update. Return the number of rows affected by</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        Execute the specified update. Return the number of rows affected by</pre></li>
                 
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        the primary update query. The &quot;primary update query&quot; is the first</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        the primary update query. The &quot;primary update query&quot; is the first</pre></li>
                 
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        non-empty query that is executed. Row counts for any subsequent,</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        non-empty query that is executed. Row counts for any subsequent,</pre></li>
                 
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        related queries are not available.</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        related queries are not available.</pre></li>
                 
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        &quot;&quot;&quot;</pre></li>
                 
                 </ol>
               
               <ol start="1990" class="context-line">
-                <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        cursor = super().execute_sql(result_type)
+                <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        cursor = super().execute_sql(result_type)
                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='1991' class="post-context" id="post140499701878336">
+                <ol start='1991' class="post-context" id="post140409384240064">
                   
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        try:</pre></li>
                   
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>            rows = cursor.rowcount if cursor else 0</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>            rows = cursor.rowcount if cursor else 0</pre></li>
                   
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>            is_empty = cursor is None</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>            is_empty = cursor is None</pre></li>
                   
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>        finally:</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>        finally:</pre></li>
                   
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>            if cursor:</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>            if cursor:</pre></li>
                   
-                  <li onclick="toggle('pre140499701878336', 'post140499701878336')"><pre>                cursor.close()</pre></li>
+                  <li onclick="toggle('pre140409384240064', 'post140409384240064')"><pre>                cursor.close()</pre></li>
                   
               </ol>
               
@@ -1899,7 +1893,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701878336">
+            <table class="vars" id="v140409384240064">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -1935,44 +1929,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/models/sql/compiler.py</code>, line 1562, in execute_sql
           
           
-            <div class="context" id="c140499701877056">
+            <div class="context" id="c140409384173056">
               
-                <ol start="1555" class="pre-context" id="pre140499701877056">
+                <ol start="1555" class="pre-context" id="pre140409384173056">
                 
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>            else:</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>            else:</pre></li>
                 
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>                return</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>                return</pre></li>
                 
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>        if chunked_fetch:</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>        if chunked_fetch:</pre></li>
                 
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>            cursor = self.connection.chunked_cursor()</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>            cursor = self.connection.chunked_cursor()</pre></li>
                 
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>        else:</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>        else:</pre></li>
                 
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>            cursor = self.connection.cursor()</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>            cursor = self.connection.cursor()</pre></li>
                 
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>        try:</pre></li>
                 
                 </ol>
               
               <ol start="1562" class="context-line">
-                <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>            cursor.execute(sql, params)
+                <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>            cursor.execute(sql, params)
                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='1563' class="post-context" id="post140499701877056">
+                <ol start='1563' class="post-context" id="post140409384173056">
                   
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>        except Exception:</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>        except Exception:</pre></li>
                   
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>            # Might fail for server-side cursors (e.g. connection closed)</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>            # Might fail for server-side cursors (e.g. connection closed)</pre></li>
                   
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>            cursor.close()</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>            cursor.close()</pre></li>
                   
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>            raise</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>            raise</pre></li>
                   
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701877056', 'post140499701877056')"><pre>        if result_type == CURSOR:</pre></li>
+                  <li onclick="toggle('pre140409384173056', 'post140409384173056')"><pre>        if result_type == CURSOR:</pre></li>
                   
               </ol>
               
@@ -1983,7 +1977,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701877056">
+            <table class="vars" id="v140409384173056">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -2004,20 +1998,20 @@
                 
                   <tr>
                     <td>cursor</td>
-                    <td class="code"><pre>&lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fc8a2df2c30&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fb39bde7fe0&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>params</td>
-                    <td class="code"><pre>(6,
- &quot;(&#x27;56555&#x27;,)&quot;,
- &quot;(&#x27;GA&#x27;,)&quot;,
- &quot;(&#x27;55555&#x27;,)&quot;,
- &quot;(&#x27;hhhgtfg&#x27;,)&quot;,
- &quot;(&#x27;hhtrthrhtr&#x27;,)&quot;,
- &quot;(&#x27;hrthrthrthr&#x27;,)&quot;,
- &quot;(&#x27;htrthrhtrthr&#x27;,)&quot;,
- 6)</pre></td>
+                    <td class="code"><pre>(7,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;AF&#x27;,)&quot;,
+ &quot;(&#x27;42424&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ 7)</pre></td>
                   </tr>
                 
                   <tr>
@@ -2050,44 +2044,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/backends/utils.py</code>, line 122, in execute
           
           
-            <div class="context" id="c140499701879552">
+            <div class="context" id="c140409384241088">
               
-                <ol start="115" class="pre-context" id="pre140499701879552">
+                <ol start="115" class="pre-context" id="pre140409384241088">
                 
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>class CursorDebugWrapper(CursorWrapper):</pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>class CursorDebugWrapper(CursorWrapper):</pre></li>
                 
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>    # XXX callproc isn&#x27;t instrumented at this time.</pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>    # XXX callproc isn&#x27;t instrumented at this time.</pre></li>
                 
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>    def execute(self, sql, params=None):</pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>    def execute(self, sql, params=None):</pre></li>
                 
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>        with self.debug_sql(sql, params, use_last_executed_query=True):</pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>        with self.debug_sql(sql, params, use_last_executed_query=True):</pre></li>
                 
                 </ol>
               
               <ol start="122" class="context-line">
-                <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>            return super().execute(sql, params)
+                <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>            return super().execute(sql, params)
                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='123' class="post-context" id="post140499701879552">
+                <ol start='123' class="post-context" id="post140409384241088">
                   
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>    def executemany(self, sql, param_list):</pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>    def executemany(self, sql, param_list):</pre></li>
                   
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>        with self.debug_sql(sql, param_list, many=True):</pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>        with self.debug_sql(sql, param_list, many=True):</pre></li>
                   
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>            return super().executemany(sql, param_list)</pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>            return super().executemany(sql, param_list)</pre></li>
                   
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701879552', 'post140499701879552')"><pre>    @contextmanager</pre></li>
+                  <li onclick="toggle('pre140409384241088', 'post140409384241088')"><pre>    @contextmanager</pre></li>
                   
               </ol>
               
@@ -2098,7 +2092,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701879552">
+            <table class="vars" id="v140409384241088">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -2114,20 +2108,20 @@
                 
                   <tr>
                     <td>params</td>
-                    <td class="code"><pre>(6,
- &quot;(&#x27;56555&#x27;,)&quot;,
- &quot;(&#x27;GA&#x27;,)&quot;,
- &quot;(&#x27;55555&#x27;,)&quot;,
- &quot;(&#x27;hhhgtfg&#x27;,)&quot;,
- &quot;(&#x27;hhtrthrhtr&#x27;,)&quot;,
- &quot;(&#x27;hrthrthrthr&#x27;,)&quot;,
- &quot;(&#x27;htrthrhtrthr&#x27;,)&quot;,
- 6)</pre></td>
+                    <td class="code"><pre>(7,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;AF&#x27;,)&quot;,
+ &quot;(&#x27;42424&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ 7)</pre></td>
                   </tr>
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fc8a2df2c30&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fb39bde7fe0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -2150,44 +2144,44 @@
             <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/backends/utils.py</code>, line 79, in execute
           
           
-            <div class="context" id="c140499701879488">
+            <div class="context" id="c140409384241472">
               
-                <ol start="72" class="pre-context" id="pre140499701879488">
+                <ol start="72" class="pre-context" id="pre140409384241472">
                 
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>            elif kparams is None:</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>            elif kparams is None:</pre></li>
                 
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>                return self.cursor.callproc(procname, params)</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>                return self.cursor.callproc(procname, params)</pre></li>
                 
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>            else:</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>            else:</pre></li>
                 
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>                params = params or ()</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>                params = params or ()</pre></li>
                 
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>                return self.cursor.callproc(procname, params, kparams)</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>                return self.cursor.callproc(procname, params, kparams)</pre></li>
                 
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>    def execute(self, sql, params=None):</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>    def execute(self, sql, params=None):</pre></li>
                 
                 </ol>
               
               <ol start="79" class="context-line">
-                <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>        return self._execute_with_wrappers(
+                <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>        return self._execute_with_wrappers(
                    </pre> <span>…</span></li>
               </ol>
               
-                <ol start='80' class="post-context" id="post140499701879488">
+                <ol start='80' class="post-context" id="post140409384241472">
                   
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>            sql, params, many=False, executor=self._execute</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>            sql, params, many=False, executor=self._execute</pre></li>
                   
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>        )</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>        )</pre></li>
                   
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre></pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>    def executemany(self, sql, param_list):</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>    def executemany(self, sql, param_list):</pre></li>
                   
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>        return self._execute_with_wrappers(</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>        return self._execute_with_wrappers(</pre></li>
                   
-                  <li onclick="toggle('pre140499701879488', 'post140499701879488')"><pre>            sql, param_list, many=True, executor=self._executemany</pre></li>
+                  <li onclick="toggle('pre140409384241472', 'post140409384241472')"><pre>            sql, param_list, many=True, executor=self._executemany</pre></li>
                   
               </ol>
               
@@ -2198,7 +2192,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140499701879488">
+            <table class="vars" id="v140409384241472">
               <thead>
                 <tr>
                   <th>Variable</th>
@@ -2209,20 +2203,20 @@
                 
                   <tr>
                     <td>params</td>
-                    <td class="code"><pre>(6,
- &quot;(&#x27;56555&#x27;,)&quot;,
- &quot;(&#x27;GA&#x27;,)&quot;,
- &quot;(&#x27;55555&#x27;,)&quot;,
- &quot;(&#x27;hhhgtfg&#x27;,)&quot;,
- &quot;(&#x27;hhtrthrhtr&#x27;,)&quot;,
- &quot;(&#x27;hrthrthrthr&#x27;,)&quot;,
- &quot;(&#x27;htrthrhtrthr&#x27;,)&quot;,
- 6)</pre></td>
+                    <td class="code"><pre>(7,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;AF&#x27;,)&quot;,
+ &quot;(&#x27;42424&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ &quot;(&#x27;test&#x27;,)&quot;,
+ 7)</pre></td>
                   </tr>
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fc8a2df2c30&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.db.backends.postgresql.base.CursorDebugWrapper object at 0x7fb39bde7fe0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -2242,4 +2236,9 @@
         
         <li class="frame django">
           
-            <code class...
+            <code class="fname">/app/.heroku/python/lib/python3.12/site-packages/django/db/backends/utils.py</code>, line 92, in _execute_with_wrappers
+          
+          
+            <div class="context" id="c140409384240000">
+              
+                <ol start="85...

@@ -1,0 +1,17 @@
+Hello {{ ticket.email }}, 
+
+Thanks for getting in touch with Animeasy. A representative with be in touch with you as soon as we can. 
+
+
+Regards, 
+Animeasy Team. 
+
+-------------------------------------------------------------
+
+You wrote: 
+
+Subject: {{ ticket.title }}
+
+Content:
+
+{{ ticket.content }}
