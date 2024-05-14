@@ -92,12 +92,11 @@ In my animation career, I starte out using plugins purchased or developed by the
 - Non registered users can access this information from their order confirmation email in their inbox 
 
 
-### Admin panel: Allow administrators to manage users, products, and system settings.
+### Admin permissions: Admins can control the site from the frontend.
+
 - If the logged in user is a superuser, the admin panel will appear in the navigation bar
-- From here admin can send a newsletter to subcribers
-- They can also see an archive of all newsletters 
 - Admin can use this panel to add products
-- Admin can use this panel to access contact form tickets sent from Animeasy users 
+
 
 ### Newsletter 
 
