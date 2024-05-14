@@ -9,7 +9,9 @@ This README provides an overview of the ecommerce app, including its purpose, fe
 ## Purpose
 The purpose of the ecommerce app is to provide users with a platform to browse, purchase, and manage digital products online. It aims to streamline the shopping experience for customers and simplify product management for sellers.
 Animation is a costly and time consuming business. With the advent of digital animation it is largely created using computer programmes. This means that professionals can browse the web for plugins that may help them. 
-In my animation career, I starte out using plugins purchased or developed by the studio, but over time I started to develop my own for more specific uses. 
+In my animation career, I started out using plugins purchased or developed by the studio, but over time I started to develop my own for more specific uses. 
+
+Animeasy is intended to be a B2B solution for freelancers and small studios. Animation studios never truly recovered from the pandemic, the majority of work is dome remotely online now. This makes an e commerce solution the ideal model for purchasing plugins for animation software. 
 
 ## Features
 ### User authentication: Allow users to register, login, and manage their accounts.
@@ -72,30 +74,40 @@ In my animation career, I starte out using plugins purchased or developed by the
 ### Shopping cart: Allow users to add and remove items from their cart.
 
 - Users can add a product to their bag
+![Add a product](readme-images/readme-bag-add-product.png)
+
 - The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
+![The items in the cart](readme-images/readme-bag-cart-nav.png)
 
 - Users can view their bag and see the items inside 
-- Users can add or remove items from their bag from the cart view 
+![Items in the bag](readme-images/readme-bag.png)
+
+- Users can remove items from their bag from the cart view 
 - If there's more than one of an item in the cart, users can see the subtotal of that item
 - Users can see the total of their bag 
 - Users can proceed to the checkout form from the bag view 
+![The total ](readme-images/readme-bag-total.png)
 
 
 ### Checkout process: Guide users through a secure checkout process.
+
 - Users can securely checkout  items in their bag 
 - Billing information is collected 
 - Registered users can choose to save their details from next time 
-- A secure checkout using Stripe 
+![The checkout form](readme-images/readme-checkout-form.png)
+- A secure checkout using Stripe (use this fake number - it's not set up for real cards yet )
+![Fake stripe number ](readme-images/readme-bag-fake-card.png)
 - On comfirmation of order, users are directed to a success page, showing them their details, charge and what they ordered
 
 ### Order management: Enable users to track their orders and view order history.
 - From their profile, users can see their order history 
-![]()
+![Order section on profile](readme-images/readme-order-past.png)
 
 - Clicking on the order number brings them to the original checkout success page, with a message saying that this is an old order they are viewing 
-![]()
+![Old order notification](readme-images/readme-order-past.png)
 
 - Non registered users can access this information from their order confirmation email in their inbox 
+![The email from an order](readme-images/readme-order-confirm.png)
 
 
 ### Admin permissions: Product management from the frontend.
@@ -326,6 +338,8 @@ I added the following user stories to my kanban board
 
 ## GDPR 
 
+I do not run ads on my page or use user data for marketing. I added a GDPR statement anyway. 
+![Privacy policy](readme-images/readme-privacy-policy.png)
 
 ## Marketing 
 ### Email marketing 
@@ -531,15 +545,19 @@ Contact Ticket Detail
 - This could then be accessed from an extra tab labelled "My Tickets" in the user profile
 - I had to remove the country dropdown as django-countries was breaking my webhook. After talking to tutor support for hours, it was removed. The user now has to enter their country by typing a two letter code. 
 - If there's more that 5 items in their bag, the list will be truncated and an " ... & more" will be displayed
+- The update link is broken in the bag 
 
 ### Webhooks 
 - Webhooks sometimes don't send right away, and deliver overnight. 
-- They don't play nicely with browser and cookie cache, so if you're having issues clear them and try again 
-## Contact
-For any questions, feedback, or support issues, please contact me at carlalennon@gmail.com .
+- They don't play nicely with browser and cookie cache, so if you're having issues clear them and try again!
+- The country field is causing errors with Stripe, I have deleted my order database before submission to give it the best chance possible of succeeding during grading.
+ 
 
 ## Sources: 
-https://www.youtube.com/watch?v=hWtlskOaFNI newsletter
-https://www.grokcode.com/819/one-click-unsubscribes-for-django-apps/ Unsubscribe
-Linter HTML https://validator.w3.org/
-#
+[Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI)
+[Creating an unsubscribe form for the newsletter](https://www.grokcode.com/819/one-click-unsubscribes-for-django-apps/) 
+[HTML Linter](https://validator.w3.org/)
+[Custom 404 Page](https://learndjango.com/tutorials/customizing-django-404-and-500-error-pages#:~:text=Customizing%20the%20Default%20404%20Page&text=This%20detailed%20message%20exists%20because,in%20the%20settings.py%20file)
+
+## Thanks 
+Thanks to the amazing Laura Mayock for the weekly pep talk, and tutor support for trying to find out what's wrong with my webhooks.
