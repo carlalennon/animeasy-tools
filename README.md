@@ -84,15 +84,27 @@ In my animation career, I starte out using plugins purchased or developed by the
 - Admin can use this panel to add products
 - Admin can use this panel to access contact form tickets sent from Animeasy users 
 - 
+
 ### Contact form: Allows customers to send complaints and tracks them in an admin panel 
 - Users can contact Animeasy with any queries or complaints using this form 
-- The form collects the subject, content and email address of the ticket 
+![The contact form](readme-images/readme-contact-form.png)
+- The form collects the subject, content and email address of the ticket. The user is directed to a success page and a copy of the complaint is sent to their email 
+![The contact success page](readme-images/readme-contact-success.png)
 - The ticket is passed into a view that only the admin can see, where all tickets are stored and their status is displayed 
+![The admin ticket view](readme-images/readme-contact-overview.png)
 - Admin can choose a ticket to reply to  
+- Tickets can be filtered by their characteristics 
+![Ticket sorting](readme-images/readme-contact-filter.png)
 - In the ticket detail view, admin can see the content of the ticket and write a reply 
+![Replying to a ticket](readme-images/readme-contact-reply.png)
 - Once a reply is sent, the ticket status changes from "pending" to "resolved" 
+![The status is changed!](readme-images/readme-contact-resolved.png)
+- The reply and any susequent replies are displayed in the ticket detail page 
+![Reply chain](readme-images/readme-contact-reply-chain.png)
+- Emails and replies chain up in the inbox of the person who sent the contact form 
+![Emails in inbox](readme-images/readme-contact-email-chain.png)
 
-## Installation
+## Deployment
 
 To install and run the app locally, follow these steps:
 
@@ -439,6 +451,7 @@ Contact Ticket Detail
 ### User Experience 
 - If a user submits a ticket, the site should check for a matching email in users and attach the ticket to their account 
 - This could then be accessed from an extra tab labelled "My Tickets" in the user profile
+- I had to remove the country dropdown as django-countries was breaking my webhook. After talking to tutor support for hours, it was removed. The user now has to enter their country by typing a two letter code. 
 ## Contact
 For any questions, feedback, or support issues, please contact me at carlalennon@gmail.com .
 
