@@ -92,10 +92,28 @@ In my animation career, I starte out using plugins purchased or developed by the
 - Non registered users can access this information from their order confirmation email in their inbox 
 
 
-### Admin permissions: Admins can control the site from the frontend.
+### Admin permissions: Product management from the frontend.
 
 - If the logged in user is a superuser, the admin panel will appear in the navigation bar
+![The admin panel only appears if a superuser is logged in](readme-images/readme-admin-panel.png)
+
 - Admin can use this panel to add products
+![The add product page](readme-images/readme-admin-add-product.png)
+
+- If the user forgets to upload an image, the default image is displayed
+![No image product](readme-images/readme-admin-noimage.png)
+
+- Superusers can edit a product from the all products page
+![The edit button on the product card](readme-images/readme-admin-edit-products-page.png)
+
+- Superusers have access to the product management panel from the product detail page 
+![The product management panel](readme-images/readme-admin-product-management.png)
+
+- Products can be edited from the edit product view
+![The edit product view](readme-images/readme-admin-edit-page.png)
+
+- Products can be deleted. On clicking the delete button, a modal confirms that this is the action you want to take before deleting the product
+![The unstyled delete modal](readme-images/readme-admin-delete.png)
 
 
 ### Newsletter 
