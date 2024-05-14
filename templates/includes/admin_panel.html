@@ -17,36 +17,3 @@
     </li>
 </ul>
 </li>
-<!--
-<li class="nav-item dropdown">
-    <a href="{% url 'view_bag' %}" class="nav-link px-2 dropdown-toggle text-white" id="cartDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-      Cart
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="cartDropdown">
-      {% for item in bag_items|slice:":5" %}
-      <li class="dropdown-item mb-4">
-        <div class="container">
-            <table class="table table-borderless">
-                <tbody>
-                    <tr>
-                        <td><a href="{% url 'product_detail' item.product.id %}" class="text-black text-decoration-none"><strong>{{ item.product.name }}</strong></a></td>
-                        <td>{{ item.quantity }}</td>
-                        <td><a href="{% url 'product_detail' item.product.id %}"><img class="thumbnail" style="object-fit: cover;" width="50" height="50" src="{{ item.product.image.url }}"></a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </li>
-      {% endfor %}
-    
-      {% if total %}
-      €{{ total}}
-      <a class="btn btn-danger" href="{% url 'checkout' %}">Checkout</a>
-      {% else %}
-      <div class="container m-2">
-      <p class="mt-2">Your cart is empty</p>
-  </div>
-      {% endif %}
-    </ul>                     
-</li>
--->

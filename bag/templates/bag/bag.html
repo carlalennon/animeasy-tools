@@ -18,7 +18,11 @@
             {% for item in bag_items %}
                 <tr>
                     <td class="text-center">
+                        {% if item.product.image %}
                         <img class="img-fluid" src="{{ item.product.image.url }}" alt="{{item.product.name}}" style="height: 200px; object-fit: cover;">
+                        {% else%}
+                        <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{item.product.name}}" style="height: 200px; object-fit: cover;">
+                        {% endif %}
                         <p>{{ item.product.name }}</p>
                     </td>
                     <td>

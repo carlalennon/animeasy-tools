@@ -70,8 +70,9 @@ In my animation career, I starte out using plugins purchased or developed by the
 
 
 ### Shopping cart: Allow users to add and remove items from their cart.
+
 - The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
-- If there's more that 5 items in their bag, the list will be truncated and an " ... & more" will be displayed
+
 - Users can view their bag and see the items inside 
 - Users can add or remove items from their bag from the cart view 
 - If there's more than one of an item in the cart, users can see the subtotal of that item
@@ -528,6 +529,7 @@ Contact Ticket Detail
 - If a user submits a ticket, the site should check for a matching email in users and attach the ticket to their account 
 - This could then be accessed from an extra tab labelled "My Tickets" in the user profile
 - I had to remove the country dropdown as django-countries was breaking my webhook. After talking to tutor support for hours, it was removed. The user now has to enter their country by typing a two letter code. 
+- If there's more that 5 items in their bag, the list will be truncated and an " ... & more" will be displayed
 ## Contact
 For any questions, feedback, or support issues, please contact me at carlalennon@gmail.com .
 

@@ -17,7 +17,11 @@
                             <tr>
                                 <td><a href="{% url 'product_detail' item.product.id %}" class="text-black text-decoration-none"><strong>{{ item.product.name }}</strong></a></td>
                                 <td>{{ item.quantity }}</td>
+                                {% if item.product.image %}
                                 <td><a href="{% url 'product_detail' item.product.id %}"><img class="thumbnail" style="object-fit: cover;" width="50" height="50" src="{{ item.product.image.url }}" alt="{{item.product.name}}"></a></td>
+                                {% else %}
+                                <td><a href="{% url 'product_detail' item.product.id %}"><img class="thumbnail" style="object-fit: cover;" width="50" height="50" src="{{ MEDIA_URL }}noimage.png" alt="{{item.product.name}}"></a></td>
+                                {% endif %}
                             </tr>
                         </tbody>
                     </table>
