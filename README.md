@@ -88,7 +88,11 @@ In my animation career, I starte out using plugins purchased or developed by the
 
 ### Order management: Enable users to track their orders and view order history.
 - From their profile, users can see their order history 
+![]()
+
 - Clicking on the order number brings them to the original checkout success page, with a message saying that this is an old order they are viewing 
+![]()
+
 - Non registered users can access this information from their order confirmation email in their inbox 
 
 
@@ -138,6 +142,7 @@ In my animation career, I starte out using plugins purchased or developed by the
 
 - Newsletters arrive in the inbox of emails that are subscribed to the newsletter 
 ![An email in an inbox](readme-images/readme-newsletter-in-inbox.png)
+
 
 ### Contact form: Allows customers to send complaints and tracks them in an admin panel 
 - Users can contact Animeasy with any queries or complaints using this form 

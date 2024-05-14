@@ -65,7 +65,7 @@ Products
                                 <img src="{{ product.image.url }}" class="img card-img-top img-fluid" alt='{{product.description}}'>
                             </a>
                             {% else %}
-                            <a href="">
+                            <a href="{% url 'product_detail' product.id %}" target="_blank">
                                 <img src="{{ MEDIA_URL }}noimage.png" class="img card-img-top img-fluid" alt='{{product.description}}'>
                             </a>
                             {% endif %}
