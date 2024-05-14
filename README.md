@@ -71,6 +71,7 @@ In my animation career, I starte out using plugins purchased or developed by the
 
 ### Shopping cart: Allow users to add and remove items from their cart.
 
+- Users can add a product to their bag
 - The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
 
 - Users can view their bag and see the items inside 
@@ -530,6 +531,10 @@ Contact Ticket Detail
 - This could then be accessed from an extra tab labelled "My Tickets" in the user profile
 - I had to remove the country dropdown as django-countries was breaking my webhook. After talking to tutor support for hours, it was removed. The user now has to enter their country by typing a two letter code. 
 - If there's more that 5 items in their bag, the list will be truncated and an " ... & more" will be displayed
+
+### Webhooks 
+- Webhooks sometimes don't send right away, and deliver overnight. 
+- They don't play nicely with browser and cookie cache, so if you're having issues clear them and try again 
 ## Contact
 For any questions, feedback, or support issues, please contact me at carlalennon@gmail.com .
 
