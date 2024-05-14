@@ -16,6 +16,7 @@ In my animation career, I starte out using plugins purchased or developed by the
 
 - Users can make purchases without making an account, but they can make an account if they want to
 ![The registration form](readme-images/readme-reg-signup-form.png)
+
 - Returning users can log into their account 
 ![Log in form](readme-images/readme-reg-signup-login.png)
 
@@ -28,31 +29,42 @@ In my animation career, I starte out using plugins purchased or developed by the
 ### Profiles 
 - Users can view their information from their profile page 
 ![Information in user profile](readme-images/readme-profile-user-info-updated.png)
+
 - If no user information exists yet, the information section reads "none"
 ![Empty information](readme-images/readme-profile-user-info-empty.png)
+
 - Users can change their information from their profile page 
 ![User information form](readme-images/readme-profile-user-info-form.png)
+
 - User's order history is saved at the bottom of their profile 
 - If the user has no order history, this is reflected back to them 
 ![The empty order section](readme-images/readme-profile-user-order-none.png)
+
 - User's support tickets and the replies can be accessed from the profile page 
+
 
 ### Product browsing: Enable users to search, filter, and view products.
 
 - Users can see all products in Animeasy store in one place 
 ![All Products page](readme-images/readme-products-products-page.png)
+
 - Users can sort products by category, depending on which software they're looking for 
 ![Sorting by cateogry from the nav bar](readme-images/readme-products-sort-cat-01.png)
 ![Sorting by category from the search bar](readme-images/readme-products-sort-cat-02.png)
+
 - Users can search for products by title or key word 
 ![Searching by key word](readme-images/readme-products-search.png)
+
 - A product detail page is available for each product 
 - The product detail page displays a product description, the software category and any user reviews 
 ![Product detail page](readme-images/readme-products-detial.png)
+
 - Users can add multiples of a product to their bag from the product detail page 
 ![Adding multiple products](readme-images/readme-products-add-multiples-02.png)
+
 - Users can sort returned products by certain characteristics using the filter dropdown 
 ![Filter dropdown for sort order ](readme-images/readme-products-sort-cat-03.png)
+
 - A back to top button scrolls the user back to the top of the page when clicked 
 ![Back to top button ](readme-images/readme-products-btt-button.png)
 
@@ -83,7 +95,7 @@ In my animation career, I starte out using plugins purchased or developed by the
 - They can also see an archive of all newsletters 
 - Admin can use this panel to add products
 - Admin can use this panel to access contact form tickets sent from Animeasy users 
-- 
+
 
 ### Contact form: Allows customers to send complaints and tracks them in an admin panel 
 - Users can contact Animeasy with any queries or complaints using this form 
@@ -92,7 +104,8 @@ In my animation career, I starte out using plugins purchased or developed by the
 ![The contact success page](readme-images/readme-contact-success.png)
 - The ticket is passed into a view that only the admin can see, where all tickets are stored and their status is displayed 
 ![The admin ticket view](readme-images/readme-contact-overview.png)
-- Admin can choose a ticket to reply to  
+- Admins can access a dashboard to views tickets and choose one to reply to 
+![The contact link in the admin panel](readme-images/readme-contact-admin.png)
 - Tickets can be filtered by their characteristics 
 ![Ticket sorting](readme-images/readme-contact-filter.png)
 - In the ticket detail view, admin can see the content of the ticket and write a reply 
