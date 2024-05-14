@@ -30,6 +30,7 @@ def profile(request):
         'form': form,
         'profile': profile,
         'orders' : orders,
+        'has_orders': has_orders,   
     }
     
     return render(request, template, context)   
