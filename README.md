@@ -307,8 +307,16 @@ I added the following user stories to my kanban board
 
 
 ## AWS Integration
-- This project uses Amazon Web Services to serve static files and images 
+- This project uses Amazon Web Services to serve static files and images
 - I used S3 for serving static files and images to the Heroku app. 
+![The S3 bucket](readme-images/readme-aws-s3.png)
+
+- An IAM allows the site to post into the database 
+![The IAM](readme-images/readme-aws-iam.png)
+
+- I went over my usage costs when I had automatic deployments on 
+![My 2c charge](readme-images/readme-aws-usage.png)
+
 ## GDPR 
 
 
