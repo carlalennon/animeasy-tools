@@ -41,9 +41,11 @@ class OrderAdmin(admin.ModelAdmin):
         'full_name',
         'order_total',
         'grand_total',
+        'country',
     )
     
     ordering = ('-date',)
 
 
 admin.site.register(Order, OrderAdmin)
+
