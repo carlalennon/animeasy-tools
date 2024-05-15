@@ -21,10 +21,11 @@ def contact(request):
         if form.is_valid():
             ticket = form.save()
             title = form.cleaned_data.get('title')
-            subject = render_to_string('contact/contact_emails/contact_email_subject.txt', {'title': title})
+            email = form.cleaned_data.get('email')  
             content = form.cleaned_data.get('content')
-            body = render_to_string('contact/contact_emails/contact_email_body.txt', {'content': content})
-            email = form.cleaned_data.get('email')      
+            subject = render_to_string('contact/contact_emails/contact_email_subject.txt', {'title': title})
+            body = render_to_string('contact/contact_emails/contact_email_body.txt', {'content': content, 'email': email,})
+                
             send_mail(
                 subject,
                 body,
