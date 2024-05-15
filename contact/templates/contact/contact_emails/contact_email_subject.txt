@@ -1,1 +1,1 @@
-Support Ticket for Animeasy #{{ ticket.id }}
+Support Ticket for Animeasy : "{{ title }}"
