@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     'storages',
     'sorl.thumbnail',
     'newsletter.apps.NewsletterConfig',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
