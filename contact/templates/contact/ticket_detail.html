@@ -23,9 +23,9 @@ Support Ticket #{{ ticket.id}}
     </div>
     <div class="card-body">
         <p>
-            {{ card.content }}
+            {{ ticket.content }}
         </p>
-</div> 
+    </div> 
 
     {% for reply in ticket.ticketreply_set.all %}
     <div class="card my-4">
