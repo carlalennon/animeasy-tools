@@ -71,7 +71,7 @@ def contact_tickets(request):
     A view to show all tickets
     """
     if request.user.is_superuser:
-        tickets = Ticket.objects.all()
+        tickets = Ticket.objects.all().order_by('-date_received')
         
         # Filter by unresolved status
         unresolved = request.GET.get('unresolved')
