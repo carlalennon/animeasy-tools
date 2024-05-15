@@ -80,7 +80,7 @@ def newsletter_archive(request):
     A view to show all newsletters that have been created
     """
     if request.user.is_superuser:
-        newsletters = Newsletter.objects.all()
+        newsletters = Newsletter.objects.all().order_by('-date_created')
         context = {
             'newsletters': newsletters,
         }
