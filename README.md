@@ -1,6 +1,8 @@
 
 # Animeasy Tools E-commerce Site
 
+![Animeasy home](readme-images/readme-splash.png)
+
 ## Overview
 
 Animeasy is an e-commerce store that provides small software plugins for animation production. 
