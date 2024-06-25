@@ -72,6 +72,9 @@ Products
                             <div class="card-body">
                                 <h4 class="card-title">{{product.name}}</h4>
                                 <p class="card-text">{{product.description}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                </div>
                             <h3>€{{product.price}}</h3>
                         </div>
                         {% if request.user.is_superuser %}
