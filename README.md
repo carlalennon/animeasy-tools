@@ -328,6 +328,7 @@ I added the following user stories to my kanban board
 ![The Kanban Board](readme-images/readme-kanban-board.png)
 ![The Checklist](readme-images/readme-kanban-checklist.png)
 
+The board can be viewed [here](https://github.com/users/carlalennon/projects/5)
 
 ## AWS Integration
 - This project uses Amazon Web Services to serve static files and images
@@ -581,7 +582,8 @@ Contact Ticket Detail
 ## Updates 
 - Broken link in order confirmation page is fixed 
 - Detail button removed from product search page
-- 
+- Clicking a pproduct no longer opens a new tab
+- Added link to Kanban board   
 
 ## Sources: 
 [Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI)
