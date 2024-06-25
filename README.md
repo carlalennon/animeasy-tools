@@ -576,7 +576,12 @@ Contact Ticket Detail
 - Webhooks sometimes don't send right away, and deliver overnight. 
 - They don't play nicely with browser and cookie cache, so if you're having issues clear them and try again!
 - The country field is causing errors with Stripe, I have deleted my order database before submission to give it the best chance possible of succeeding during grading.
- 
+
+
+## Updates 
+- Broken link in order confirmation page is fixed 
+- Detail button removed from product search page
+- 
 
 ## Sources: 
 [Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI)
