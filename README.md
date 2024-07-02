@@ -212,6 +212,15 @@ Once the app is running, users can access it through a web browser. They can per
 - Administrators can access the admin panel to manage users and system settings.
 
 ## Agile method
+
+## Epics 
+
+The following are epics for animeasy: 
+#### Finding Products 
+- Users should be able to find a tool that suits their needs on Animeasy using a search engine 
+- Products should be sorted by software to cater for users of either TV Paint or After Effects 
+#### Purchasing 
+#### Admin Features 
 ###  User Stories 
 
 I added the following user stories to my kanban board
