@@ -213,14 +213,116 @@ Once the app is running, users can access it through a web browser. They can per
 
 ## Agile method
 
-## Epics 
+### Epics and User Stories
 
-The following are epics for animeasy: 
-#### Finding Products 
-- Users should be able to find a tool that suits their needs on Animeasy using a search engine 
-- Products should be sorted by software to cater for users of either TV Paint or After Effects 
-#### Purchasing 
-#### Admin Features 
+#### Epics
+
+##### 1. User Authentication and Profiles
+- **Epic:** Allow users to register, log in, manage their accounts, and view profiles.
+  - **User Stories:**
+    - As a customer, I want to be able to create an account where I can access information about my previous purchases and opt-in to promotional emails and updates about projects, along with special offers. (User Story 1)
+    - As a user, I can create a profile that allows me to purchase items easily. (User Story 5)
+    - As a user, I want to be able to reset my password if I forget it.
+    - As a user, I want to be able to delete my account.
+
+##### 2. Product Browsing and Searching
+- **Epic:** Enable users to search, filter, and view products.
+  - **User Stories:**
+    - As a potential customer of Animeasy, I want to see what products are available to purchase. (User Story 2)
+    - As a potential customer of Animeasy, I want to easily explore and find products on the site. (User Story 4)
+    - As a potential customer, I want to search for products by title or keyword.
+    - As a potential customer, I want to sort products by category and filter by characteristics.
+
+##### 3. Shopping Cart and Checkout
+- **Epic:** Allow users to add and remove items from their cart and guide them through a secure checkout process.
+  - **User Stories:**
+    - As a customer, I can purchase items from Animeasy. (User Story 3)
+    - As a customer, I want to add products to my cart.
+    - As a customer, I want to remove items from my cart.
+    - As a customer, I want to see the subtotal and total in my cart.
+    - As a customer, I want a secure checkout experience using Stripe.
+
+##### 4. Order Management
+- **Epic:** Enable users to track their orders and view order history.
+  - **User Stories:**
+    - As a user, I want to see my order history from my profile.
+    - As a non-registered user, I want to access my order details from an order confirmation email.
+
+##### 5. Admin Features
+- **Epic:** Provide admins with tools to manage products, orders, and customer support.
+  - **User Stories:**
+    - As a store owner, I can add, edit, or delete products. (User Story 7)
+    - As a seller, I would like a place to handle any issues from my customers. (User Story 9)
+    - As a seller, I want to access and manage customer support tickets.
+    - As a seller, I want to filter support tickets by characteristics.
+
+##### 6. Reviews and Feedback
+- **Epic:** Enable users to leave and view reviews on products.
+  - **User Stories:**
+    - As a customer of Animeasy, I want to be able to leave reviews on products I have purchased to share my experience with other users. (User Story 6)
+
+##### 7. Newsletter
+- **Epic:** Allow users to subscribe to and receive newsletters, and enable admins to manage newsletter content.
+  - **User Stories:**
+    - As a marketer of Animeasy, I want to be able to reach out to my interested leads with offers and announcements of new products via email. (User Story 8)
+    - As a user, I want to subscribe to the Animeasy newsletter.
+    - As a user, I want to unsubscribe from the newsletter.
+
+##### 8. Contact and Support
+- **Epic:** Provide a contact form for customer queries and track them in an admin panel.
+  - **User Stories:**
+    - As a customer, I would like a place to contact the seller should the need arise. (User Story 9)
+    - As a seller, I want to view and reply to customer support tickets.
+
+##### 9. SEO and Marketing
+- **Epic:** Improve visibility and reach of Animeasy through SEO and marketing efforts.
+  - **User Stories:**
+    - As a potential customer, I would like to be able to find Animeasy when I search for ways to make my animation workflow faster. (User Story 10)
+    - As a seller, I would like to reach more people who might benefit from using my products. (User Story 10)
+
+##### 10. Help and FAQs
+- **Epic:** Provide customers with access to help guides and FAQs.
+  - **User Stories:**
+    - As a customer of Animeasy, I would like to be able to access an install guide for my new products. (User Story 11)
+
+### User Stories
+
+1. **User Story 1: User Registration**
+   - As a customer of Animeasy, I want to be able to create an account where I can access information about my previous purchases and opt-in to promotional emails and updates about projects, along with special offers.
+
+2. **User Story 2: Products**
+   - As a potential customer of Animeasy, I want to see what products are available to purchase.
+
+3. **User Story 3: Purchasing/Cart**
+   - As a customer, I can purchase items from Animeasy.
+
+4. **User Story 4: Navigation**
+   - As a potential customer of Animeasy, I want to easily explore and find products on the site.
+
+5. **User Story 5: User Profile**
+   - As a user, I can create a profile that allows me to purchase items easily.
+
+6. **User Story 6: Review**
+   - As a customer of Animeasy, I want to be able to leave reviews on products I have purchased to share my experience with other users.
+
+7. **User Story 7: Admin Permissions**
+   - As a store owner, I can add, edit, or delete products.
+
+8. **User Story 8: Newsletter**
+   - As a marketer of Animeasy, I want to be able to reach out to my interested leads with offers and announcements of new products via email.
+
+9. **User Story 9: Contact Form**
+   - As a seller, I would like a place to handle any issues from my customers.
+   - As a customer, I would like a place to contact the seller should the need arise.
+
+10. **User Story 10: SEO & Marketing**
+    - As a potential customer, I would like to be able to find Animeasy when I search for ways to make my animation workflow faster.
+    - As a seller, I would like to reach more people who might benefit from using my products.
+
+11. **User Story 11: Help and FAQs**
+    - As a customer of Animeasy, I would like to be able to access an install guide for my new products. 
+
+
 ###  User Stories 
 
 I added the following user stories to my kanban board
