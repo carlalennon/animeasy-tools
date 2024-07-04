@@ -193,6 +193,29 @@ Animeasy works by digital download. Although I have not implemented digital down
 
 ## Deployment
 
+### Github 
+- You must fork or clone the repository to run Animeasy
+- Log into Github or create a new account 
+- Navigate to [the project repository](https://github.com/carlalennon/animeasy-tools)
+To fork: 
+- Locate the fork button on the page
+- The forked repository will now be in your account repositories
+To clone: 
+- On the top of the repo, click "Code"
+- Copy the URL to the repo
+- Enter "git clone" into git bash followed by the URL
+
+### Django 
+- You will need to install Django to run the project locally 
+- I recommend installing the version of Django I used during development 
+- <code>pip install Django~=5.0.6</code>
+
+### Dependencies
+- The project has depedencies that must be installed 
+- These are stored in requirements.txt 
+- The project will not work correctly without dependencies installed 
+- <code>pip install -r requirements.txt</code>
+
 To install and run the app locally, follow these steps:
 
 - Clone the repository: git clone [repository-url]
