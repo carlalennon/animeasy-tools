@@ -247,15 +247,6 @@ To clone:
 - To give Animeasy access to the database where all its info is stored, you can add the database link to env.py 
 - <code>os.environ["DATABASE_URL"] = 'postgres://super-secret-database-location'</code>
 
-
-To install and run the app locally, follow these steps:
-
-- Clone the repository: git clone [repository-url]
-- Navigate to the project directory: cd animeasy
-- Install dependencies: <code> pip install -r requirements.txt  </code>
-- Set up environment variables: Create a .env file and add necessary configuration variables. 
-- Run the app: <code> python3 manage.py runserver</code >
-
 ### Usage
 Once the app is running, users can access it through a web browser. They can perform the following actions:
 
@@ -265,6 +256,11 @@ Once the app is running, users can access it through a web browser. They can per
 - View and manage orders in the user account dashboard.
 - Sellers can log in to the seller dashboard to manage products and orders.
 - Administrators can access the admin panel to manage users and system settings.
+
+
+### Heroku 
+- The project is also deployed on Heroku, using AWS. 
+- This can be viewed [here](https://animeasy-40dca18e887f.herokuapp.com/)
 
 ## Agile method
 
@@ -708,6 +704,8 @@ Terms and Conditions
 Contact Ticket Detail 
 ![Contact Ticket results](readme-images/readme-linting-ticket-details.png)
 
+### Pylint 
+I installed Pylint to help find errors in my python files.
 
 
 ## Future Features 
