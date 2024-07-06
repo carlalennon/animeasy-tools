@@ -204,7 +204,7 @@ To clone:
 - On the top of the repo, click "Code"
 - Copy the URL to the repo
 - Enter "git clone" into git bash followed by the URL
-
+ 
 ### Django 
 - You will need to install Django to run the project locally 
 - I recommend installing the version of Django I used during development 
@@ -212,9 +212,41 @@ To clone:
 
 ### Dependencies
 - The project has depedencies that must be installed 
-- These are stored in requirements.txt 
+- These are stored in requirements.txt  
 - The project will not work correctly without dependencies installed 
 - <code>pip install -r requirements.txt</code>
+
+- Type <code>python manage.py runserver</code> in the terminal to run the project
+- Fromm here you can create sueruser to access all of the project
+
+### Create Superuser
+- In the terminal, put <code>python manage.py createuser</code>
+- Follow the instructions to create a new admin username and password
+- This will allow you to log into Animeasy as an admin
+- This will give you access to Animeasy's admin features 
+
+### Add env.py
+- The project will not run locally without a database, secret key and debug set.
+- To get it to run, these things can be added to env.py 
+- Create a file called env.py in the project directory
+- Set the debug using
+    <code>os.environ["DEBUG"] = 'True'/'False'</code>
+- Generate a secret key using a random string generator.
+- Set the secret key using
+    <code>os.environ["SECRET_KEY"] = 'Your secret key here'
+
+### Cloudinary
+- To work locally, Animeasy needs a database to store images in 
+- Animeasy is set up to use Cloudinary
+- Add the cloudinary URL for the animeasy database to env.py
+- <code>os.environ["CLOUDINARY_URL"] = 'cloudinary://top-secret-url'</code>
+
+### Database
+- The last thing needed in env.py to run Animesy locally is a database to store information in. 
+- I used elephantSQL to develop Animeasy
+- To give Animeasy access to the database where all its info is stored, you can add the database link to env.py 
+- <code>os.environ["DATABASE_URL"] = 'postgres://super-secret-database-location'</code>
+
 
 To install and run the app locally, follow these steps:
 
