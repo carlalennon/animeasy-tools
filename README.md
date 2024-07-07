@@ -233,7 +233,7 @@ To clone:
     <code>os.environ["DEBUG"] = 'True'/'False'</code>
 - Generate a secret key using a random string generator.
 - Set the secret key using
-    <code>os.environ["SECRET_KEY"] = 'Your secret key here'
+    <code>os.environ["SECRET_KEY"] = 'Your secret key here'</code>
 
 ### Cloudinary
 - To work locally, Animeasy needs a database to store images in 
