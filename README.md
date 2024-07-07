@@ -472,7 +472,6 @@ I added the following user stories to my kanban board
         </li>
     </ul>
 </ul>
-
 ### Kanban Board 
 - Created an issue for each user story 
 - Created issues for other tasks, like "Extras" and "Testing"
@@ -491,6 +490,12 @@ I added the following user stories to my kanban board
 ![The Checklist](readme-images/readme-kanban-checklist.png)
 
 The board can be viewed [here](https://github.com/users/carlalennon/projects/5)
+
+## ER Diagram 
+
+The models used in Animeasy have been drawn in to the chart below and their relationships indicated using coloured lines 
+
+![ERD for Animeasy](readme-images/readme-erd.png)
 
 ## AWS Integration
 - This project uses Amazon Web Services to serve static files and images
