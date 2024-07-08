@@ -1,5 +1,6 @@
-
-from django.contrib import admin
+"""
+URL patterns for the bag app
+"""
 from django.urls import path
 from . import views
 
