@@ -711,7 +711,23 @@ Contact Ticket Detail
 
 ### Pylint 
 I installed Pylint to help find errors in my python files.
+I added a pylintrc file and installed pylint_django to lint the python files in a way that adheres to django rules
+[Screen shot of pylint rc ]
 
+Animeasy Asgi - Pass
+![animeasy/asgi pass 10/10](readme-images/readme-pylint-0001-animeasy-asgi.png)
+
+Animeasy Settings - 9.85/10. The 0.15 score is deducted for an import statement. This statement needs to stay in, as it checks to see if the project is running in a development environmet, and if so, looks for env.py which contains the secret key and other sensitive information.
+![animeasy/settings 9.85/10](readme-images/readme-pylint-0002-animeasy-settings.png)
+
+Animeasy URLS - Pass. I added a docstring to the file to bring it up to a score of 10
+![animeasy/urls 10/10](readme-images/readme-pylint-0003-animeasy-urls.png)
+
+Animeasy WSGI - Pass
+![animeasy/wsgi 10/10](readme-images/readme-pylint-0004-animeasy-wsgi.png)
+
+Bag/TemplateTags/Bag_Tools - Pass. I added doctrings to the start of the file and inside the function itself to describe the operation. I also removed a trailing whitespace and added a final newline to the end of the file 
+![bag/templatetools/bag_tools 10/10](readme-images/readme-pylint-0005-bag-templatetags-bagtools.png)
 
 ## Future Features 
 ### Reviews 
