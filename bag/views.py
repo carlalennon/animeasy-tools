@@ -1,6 +1,8 @@
 """
 Views for the animeasy bag app
 """
+import logging
+from django.http import Http404
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from products.models import Product # Import Product model from products app
@@ -56,6 +58,13 @@ def remove_from_bag(request, item_id):
         request.session['bag'] = bag
         return HttpResponse(status=200)
 
+    except KeyError:
+        messages.error(request, 'Error removing item: Item not found in bag')
+        return HttpResponse(status=400)
+    except Http404:
+        messages.error(request, 'Error removing item: Product not found')
+        return HttpResponse(status=404)
     except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
+        logging.exception('Unexpected error removing item from bag: %s', e)
+        messages.error(request, 'An unexpected error occurred. Please try again.')
         return HttpResponse(status=500)
