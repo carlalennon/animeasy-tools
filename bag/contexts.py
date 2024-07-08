@@ -2,7 +2,7 @@
 Returns the bag contents and calculates the total and product count
 """
 
-# from django.conf import settings ## Left in to add free shipping or threshold discounts later 
+# from django.conf import settings ## Left in to add free shipping or threshold discounts later
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
