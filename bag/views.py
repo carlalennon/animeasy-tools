@@ -1,3 +1,6 @@
+"""
+Views for the animeasy bag app
+"""
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from products.models import Product # Import Product model from products app
@@ -6,7 +9,7 @@ def view_bag(request):
     """ Returns user bag """
     return render(request, 'bag/bag.html')
 
-## From Boutique Ado 
+## From Boutique Ado
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
     product = get_object_or_404(Product, pk=item_id)
@@ -24,7 +27,7 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(redirect_url)
 
- 
+
 def adjust_bag(request, item_id):
     """ Adjust quantity of product from bag.html """
     product = get_object_or_404(Product, pk=item_id)
@@ -49,10 +52,10 @@ def remove_from_bag(request, item_id):
         if item_id in bag:
             bag.pop(item_id)
         messages.success(request, f'Removed {product.name} from your bag')
-            
+
         request.session['bag'] = bag
         return HttpResponse(status=200)
-    
-    except Exception as e: 
+
+    except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
