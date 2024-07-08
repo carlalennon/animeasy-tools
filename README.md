@@ -730,10 +730,21 @@ Bag/TemplateTags/Bag_Tools - Pass. I added doctrings to the start of the file an
 ![bag/templatetools/bag_tools 10/10](readme-images/readme-pylint-0005-bag-templatetags-bagtools.png)
 
 Bag Admin - Removed text within the file causing these errors, leaving a blank file.
-![bag/admin 0/10]()
+![bag/admin 0/10](readme-images/readme-pylint-0006-bag-admin.png)
 
 Bag Apps - Pass. Added docstrings to get the score up 
-![bag/apps 10/10]
+![bag/apps 10/10](readme-images/readme-pylint-0007-bag-apps.png)
+
+Bag Contexts - Pass. Removed whitespaces, added doctring. Commented out unused import but left it in for addition of threshold/bulk discounts in the future
+![bag/contexts 10/10](readme-images/readme-pylint-0008-bag-contexts.png)
+
+Bag URLS - Pass. Removed whitespaces and redundant import statement. Added docstring.
+![bag/urls 10/10](readme-images/readme-pylint-0009-bag-urls.png)
+
+Bag Views - Pass. Removed whitespaces, added docstring. Added more specific error catching to 2 scenarios. 
+![bag/views 10/10](readme-images/readme-pylint-0010-bag-views.png)
+
+
 ## Future Features 
 ### Reviews 
 - In the future, I would like to let users enter reviews of the product. The product model is set up with a rating system in anticipation of adding this in the future.
