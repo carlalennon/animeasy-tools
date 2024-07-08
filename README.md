@@ -760,6 +760,8 @@ I installed Pylint to help find errors in my python files.
 [HTML Linter](https://validator.w3.org/)
 [Custom 404 Page](https://learndjango.com/tutorials/customizing-django-404-and-500-error-pages#:~:text=Customizing%20the%20Default%20404%20Page&text=This%20detailed%20message%20exists%20because,in%20the%20settings.py%20file)
 
+[Linting django python with pylint plugin](https://web.archive.org/web/20141008054046/http://blog.landscape.io/using-pylint-on-django-projects-with-pylint-django.html)
+
 ## Thanks 
 Thanks to the amazing Laura Mayock for the weekly pep talk, and tutor support for trying to find out what's wrong with my webhooks.
 
