@@ -11,4 +11,4 @@ def calc_subtotal(price, quantity):
     """
     Calculate the subtotal of the item by multiplying the price by the quantity
     """
-    return price * quantity#
+    return price * quantity
