@@ -1,6 +1,10 @@
-from django.conf import settings 
+"""
+Returns the bag contents and calculates the total and product count
+"""
+
+from django.conf import settings
 from django.shortcuts import get_object_or_404
-from products.models import Product 
+from products.models import Product
 
 def bag_contents(request):
     """ Returns bag contents """
@@ -8,7 +12,7 @@ def bag_contents(request):
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
-    
+
     for item_id, quantity in bag.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
@@ -17,8 +21,8 @@ def bag_contents(request):
             'item_id': item_id,
             'quantity': quantity,
             'product': product,
-        })   
-        
+        })
+
     context = {
         'bag_items': bag_items,
         'total': total,
