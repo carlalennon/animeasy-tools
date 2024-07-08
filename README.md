@@ -729,6 +729,11 @@ Animeasy WSGI - Pass
 Bag/TemplateTags/Bag_Tools - Pass. I added doctrings to the start of the file and inside the function itself to describe the operation. I also removed a trailing whitespace and added a final newline to the end of the file 
 ![bag/templatetools/bag_tools 10/10](readme-images/readme-pylint-0005-bag-templatetags-bagtools.png)
 
+Bag Admin - Removed text within the file causing these errors, leaving a blank file.
+![bag/admin 0/10]()
+
+Bag Apps - Pass. Added docstrings to get the score up 
+![bag/apps 10/10]
 ## Future Features 
 ### Reviews 
 - In the future, I would like to let users enter reviews of the product. The product model is set up with a rating system in anticipation of adding this in the future.
