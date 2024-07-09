@@ -1,15 +1,17 @@
+"""
+Sets up the forms for the contact app
+"""
 from django import forms
 from .models import Ticket, TicketReply
-from django.core.exceptions import ValidationError
 
 class TicketForm(forms.ModelForm):
-    """"
+    """
     Creates contact form ticket
     """
     class Meta:
         model = Ticket
         fields = ['title', 'content', 'email', ]
-        
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['title'].widget.attrs.update({
@@ -17,7 +19,7 @@ class TicketForm(forms.ModelForm):
             'autocomplete': 'off',
             'class' : 'form-control my-1',
         })
-        self.fields['email'].label = False 
+        self.fields['email'].label = False
         self.fields['email'].widget.attrs.update({
             'placeholder': 'Email Address',
             'autocomplete': 'off',
@@ -30,7 +32,7 @@ class TicketForm(forms.ModelForm):
             'class' : 'form-control my-1',
         })
         self.fields['content'].label = False
-        
+
 class TicketReplyForm(forms.ModelForm):
     """
     Creates replies and attaches them to ticket
@@ -38,7 +40,7 @@ class TicketReplyForm(forms.ModelForm):
     class Meta:
         model = TicketReply
         fields = [ 'reply',]
-        
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['reply'].widget.attrs.update({
@@ -47,4 +49,3 @@ class TicketReplyForm(forms.ModelForm):
             'class' : 'form-control m',
         })
         self.fields['reply'].label = False
-        
