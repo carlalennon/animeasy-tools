@@ -8,12 +8,12 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 # from .webhook_handler import StripeWH_Handler goes with emergency email call
-from .forms import OrderForm
-from products.models import Product
-from .models import Order, OrderLineItem
 from bag.contexts import bag_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from products.models import Product
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
 @require_POST
 def cache_checkout_data(request):
