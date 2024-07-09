@@ -1,3 +1,6 @@
+"""
+Defines the order and order line item models
+"""
 import uuid
 from django.db import models
 from django.db.models import Sum
@@ -5,6 +8,9 @@ from products.models import Product
 from profiles.models import UserProfile
 
 class Order(models.Model):
+    """
+    Defines the fields in the order model
+    """
     order_number = models.CharField(max_length=254, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile,
                                     on_delete=models.SET_NULL,
@@ -53,13 +59,16 @@ class Order(models.Model):
         return self.order_number
 
 class OrderLineItem(models.Model):
+    """
+    Defines the fields in the order line item model
+    """
     order = models.ForeignKey(
         Order,
         null=False,
         blank=False,
         on_delete=models.CASCADE,
         related_name='lineitems'
-        )
+    )
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
@@ -68,7 +77,7 @@ class OrderLineItem(models.Model):
         null=False,
         blank=False,
         editable=False
-        )
+    )
 
     def save(self, *args, **kwargs):
         """ Override the original save method to set the lineitem total 
