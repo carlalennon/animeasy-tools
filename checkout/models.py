@@ -9,7 +9,7 @@ class Order(models.Model):
     user_profile = models.ForeignKey(UserProfile,
                                     on_delete=models.SET_NULL,
                                     null=True,
-                                    blank=True, 
+                                    blank=True,
                                     related_name='orders'
                                     )
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -76,5 +76,5 @@ class OrderLineItem(models.Model):
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
 
-        def __str__(self):
-            return f'SKU {self.product.sku} on order {self.order.order_number}'
+    def __str__(self):
+        return f'SKU {self.product.sku} on order {self.order.order_number}'
