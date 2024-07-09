@@ -1,3 +1,6 @@
+"""
+Handles the views for the contact app (complaint form, ticket list and replies)
+"""
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Ticket, TicketReply
 from .forms import TicketForm, TicketReplyForm
