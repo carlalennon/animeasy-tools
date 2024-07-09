@@ -23,8 +23,14 @@ def contact(request):
             title = form.cleaned_data.get('title')
             email = form.cleaned_data.get('email')
             content = form.cleaned_data.get('content')
-            subject = render_to_string('contact/contact_emails/contact_email_subject.txt', {'title': title})
-            body = render_to_string('contact/contact_emails/contact_email_body.txt', {'content': content, 'email': email,})
+            subject = render_to_string(
+                'contact/contact_emails/contact_email_subject.txt', 
+                {'title': title}
+            )
+            body = render_to_string(
+                'contact/contact_emails/contact_email_body.txt', 
+                {'content': content, 'email': email,}
+            )
 
             send_mail(
                 subject,
