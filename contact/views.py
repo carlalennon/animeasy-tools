@@ -45,8 +45,8 @@ def contact(request):
             messages.success(request, 'Your ticket has been submitted')
             ticket_id = ticket.id
             return redirect('contact_success', ticket_id=ticket.id)
-        else:
-            form = TicketForm()
+        
+        form = TicketForm()
 
     context = {
         'form': form,
