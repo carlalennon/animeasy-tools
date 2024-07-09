@@ -3,29 +3,29 @@ from .models import Ticket, TicketReply
 from .forms import TicketForm, TicketReplyForm
 from profiles.models import UserProfile
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required  
-from django.core.mail import send_mail 
-from django.template.loader import render_to_string 
+from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 def contact(request):
     """
-    User can submit a ticket 
+    User can submit a ticket
     """
     form = TicketForm()
     template = 'contact/contact_form.html'
     email = Ticket.email
 
-    """ Allows a user to create a ticket """ 
+    """ Allows a user to create a ticket """
     if request.method == 'POST':
         form = TicketForm(request.POST)
         if form.is_valid():
             ticket = form.save()
             title = form.cleaned_data.get('title')
-            email = form.cleaned_data.get('email')  
+            email = form.cleaned_data.get('email')
             content = form.cleaned_data.get('content')
             subject = render_to_string('contact/contact_emails/contact_email_subject.txt', {'title': title})
             body = render_to_string('contact/contact_emails/contact_email_body.txt', {'content': content, 'email': email,})
-                
+
             send_mail(
                 subject,
                 body,
@@ -34,35 +34,34 @@ def contact(request):
                 fail_silently=False,
             )
             messages.success(request, 'Your ticket has been submitted')
-            ticket_id = ticket.id 
+            ticket_id = ticket.id
             return redirect('contact_success', ticket_id=ticket.id)
-        else: 
+        else:
             form = TicketForm()
 
     context = {
         'form': form,
-        
     }
     return render(request, template, context)
 
-   
+
 def contact_success(request, ticket_id):
     """
-    Users are redirected here when a ticket is sent 
+    Users are redirected here when a ticket is sent
     """
     ticket = get_object_or_404(Ticket, pk=ticket_id)
- 
-    """
-    Could attach tickets to account later 
-    if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)
-        #Attach user to order 
-        order.user_profile = profile
-        order.save()
-    """        
+
+    #"""
+    #Could attach tickets to account later
+    #if request.user.is_authenticated:
+    #    profile = UserProfile.objects.get(user=request.user)
+    #    #Attach user to order
+    #    order.user_profile = profile
+    #    order.save()
+    #"""
     context = {
         'ticket': ticket,
-    }  
+    }
     return render(request, "contact/contact_success.html", context)
 
 @login_required
@@ -72,7 +71,7 @@ def contact_tickets(request):
     """
     if request.user.is_superuser:
         tickets = Ticket.objects.all().order_by('-date_received')
-        
+
         # Filter by unresolved status
         unresolved = request.GET.get('unresolved')
         if unresolved == 'true':
@@ -96,7 +95,7 @@ def contact_tickets(request):
             tickets = tickets.order_by('id')
         elif sort_by_id == 'desc':
             tickets = tickets.order_by('-id')
-        
+
         admin = TicketReply.objects.all()
         context = {
             'tickets': tickets,
@@ -107,32 +106,30 @@ def contact_tickets(request):
     else:
         messages.error(request, 'You do not have permission to view this page')
         return redirect('home')
-    
-    
-    
+
 def ticket_detail(request, ticket_id):
     """ Returns page with all ticket information """
     ticket = get_object_or_404(Ticket, pk=ticket_id)
     """
-    Allows admin to reply to a ticket 
+    Allows admin to reply to a ticket
     """
     template = 'contact/ticket_detail.html'
     email = ticket.email
     reply = None
-    if request.user.is_superuser:  
+    if request.user.is_superuser: 
         if request.method == 'POST':
             form = TicketReplyForm(request.POST)
             if form.is_valid():
                 reply = TicketReply()
                 reply.ticket = ticket
-                reply.reply = form.cleaned_data.get('reply')  
+                reply.reply = form.cleaned_data.get('reply')
                 email_body = reply.reply
                 reply.admin = UserProfile.objects.get(user=request.user)
                 reply.save()
-                title = ticket.title   
+                title = ticket.title 
                 send_mail(
                     title,
-                    email_body,  # Use reply.reply instead of reply
+                    email_body,
                     'support@animeasy.com',
                     [email],
                     fail_silently=False,
@@ -141,10 +138,10 @@ def ticket_detail(request, ticket_id):
                 ticket.status = 'resolved'
                 ticket.save()
                 return redirect('contact_tickets')
-        else: 
+        else:
             form = TicketReplyForm()
         return render(request, template, {'form': form, 'ticket': ticket})
-    else: 
+    else:
         messages.error(request, 'You do not have permission to reply to tickets')
         return redirect('home')
 
