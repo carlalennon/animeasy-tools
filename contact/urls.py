@@ -1,5 +1,6 @@
-
-from django.contrib import admin
+"""
+URLS for the contact app
+"""
 from django.urls import path
 from . import views
 
