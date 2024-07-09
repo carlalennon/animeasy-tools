@@ -11,7 +11,9 @@ class TicketReplyAdmin(admin.ModelAdmin):
     """
     Label replies by ticket in admin view
     """
-    def __str__(self):
-        return f"Reply to {self.ticket.name}"
+    list_display = ('ticket', 'reply_text', 'created_at') 
+    list_filter = ('ticket', 'created_at')
+    search_fields = ('ticket__name', 'reply_text')
+    date_hierarchy = 'created_at'
 
 admin.site.register(TicketReply, TicketReplyAdmin)
