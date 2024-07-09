@@ -16,7 +16,7 @@ class Ticket(models.Model):
     status = models.CharField(max_length=10, choices=[
             ('pending', 'Pending'),
             ('resolved', 'Resolved')
-        ], 
+        ],
         default='pending'
     )
 
