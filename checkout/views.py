@@ -1,19 +1,19 @@
 """
 Views for the checkout app
 """
+import stripe
+import json
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from .webhook_handler import StripeWH_Handler
+# from .webhook_handler import StripeWH_Handler goes with emergency email call
 from .forms import OrderForm
 from products.models import Product
 from .models import Order, OrderLineItem
 from bag.contexts import bag_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
-import stripe
-import json
 
 @require_POST
 def cache_checkout_data(request):
@@ -80,10 +80,6 @@ def checkout(request):
                     return redirect(reverse('view_bag'))
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
-
-        else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
