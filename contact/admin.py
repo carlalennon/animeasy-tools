@@ -1,3 +1,7 @@
+"""
+Sets up the admin view for the contact app
+"""
+
 from django.contrib import admin
 from .models import Ticket, TicketReply
 
