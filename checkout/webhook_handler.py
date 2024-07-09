@@ -2,23 +2,20 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
-
 from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
 from django.views.decorators.csrf import csrf_exempt
-
 import stripe
 import json
 import time
-
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
     def __init__(self, request):
         self.request = request
-        
+
     def _send_confirmation_email(self, order):
         """
         Send confirmation email on order
@@ -38,8 +35,6 @@ class StripeWH_Handler:
             [cust_email],
             fail_silently = False,
     )
-    
-        
 
     def handle_event(self, event):
         """
@@ -57,19 +52,18 @@ class StripeWH_Handler:
         pid = intent.id
         bag = intent.metadata.bag
         save_info = intent.metadata.save_info
-        
-        # Charge object 
+
+        # Charge object
         stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
-        
         billing_details = stripe_charge.billing_details
         grand_total = round(stripe_charge.amount / 100, 2)
         print(intent)
-        
-        # Handle empty strings in billing details   
+
+        # Handle empty strings in billing details
         for field, value in billing_details.address.items():
             if value == "":
                 billing_details.address[field] = None
-                
+
         # Update profile information if save_info was on
         profile = None
         username = intent.metadata.username
@@ -84,10 +78,10 @@ class StripeWH_Handler:
                 profile.default_street_address2 = billing_details.address.line2,
                 profile.default_county = billing_details.address.state,
                 profile.save()
-                    
+
         order_exists = False
         attempt = 1
-        while attempt <= 5: 
+        while attempt <= 5:
             try:
                 order = Order.objects.get(
                     full_name__iexact=billing_details.name,
@@ -104,17 +98,20 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 order_exists = True
-                break 
+                break
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=(
+                    f'Webhook received: {event["type"]} | SUCCESS: '
+                    'Verified order already in database'
+                ),
                 status=200)
         else:
-            order = None 
+            order = None
             try:
                 order = Order.objects.create(
                     full_name=billing_details.name,
@@ -156,3 +153,4 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
+        
