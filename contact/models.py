@@ -13,7 +13,12 @@ class Ticket(models.Model):
     date_received = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100)
     content = models.TextField(null=True)
-    status = models.CharField(max_length=10, choices=[('pending', 'Pending'), ('resolved', 'Resolved')], default='pending')
+    status = models.CharField(max_length=10, choices=[
+            ('pending', 'Pending'),
+            ('resolved', 'Resolved')
+        ], 
+        default='pending'
+    )
 
     def __str__(self):
         return self.title
