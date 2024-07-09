@@ -70,13 +70,13 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_phone_number = billing_details.phone,
+                profile.default_phone_number = billing_details.phone
                 #profile.default_country = billing_details.address.country, ####Causing WH to fail
-                profile.default_postcode = billing_details.address.postal_code,
-                profile.default_town_or_city = billing_details.address.city,
-                profile.default_street_address1 = billing_details.address.line1,
-                profile.default_street_address2 = billing_details.address.line2,
-                profile.default_county = billing_details.address.state,
+                profile.default_postcode = billing_details.address.postal_code
+                profile.default_town_or_city = billing_details.address.city
+                profile.default_street_address1 = billing_details.address.line1
+                profile.default_street_address2 = billing_details.address.line2
+                profile.default_county = billing_details.address.state
                 profile.save()
 
         order_exists = False
@@ -140,7 +140,9 @@ class StripeWH_Handler:
             except Exception as e:
                 if order:
                     order.delete()
-                return HttpResponse(content=f'Webhook received: {event["type"]} | ERROR: {e}', status=500)
+                return HttpResponse(content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                                    status=500
+                )
             self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
@@ -153,4 +155,3 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
-        
