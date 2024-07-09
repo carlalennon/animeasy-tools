@@ -744,6 +744,17 @@ Bag URLS - Pass. Removed whitespaces and redundant import statement. Added docst
 Bag Views - Pass. Removed whitespaces, added docstring. Added more specific error catching to 2 scenarios. 
 ![bag/views 10/10](readme-images/readme-pylint-0010-bag-views.png)
 
+Checkout Admin - Pass. Added docstring to start of file and into classes. Removed whitespaces and removed trailing newlines.
+![checkout/admin 10/10]()
+
+Checkout Apps - Problematic result at 6.67. This is caused by the "Import outside toplevel" and "Unused import checkout.signals" errors. However, this should only be imported when the ready method is called to make sure the signal handlers are working correctly and timed right. Importing the signal at the top causes a circular import. Leaving it in the ready method makes sure it's not called until all models are loaded. It also functions as is, so I'll be accepting the lower score for now. 
+![checkout/apps 6.67/10]()
+
+Checkout Forms - Pass. Added docstrings to top of file and within a class and removed whitespace
+![checkout/forms 10/10]()
+
+Checkout Models - Pass. Added docstrings, removed whitespaces. Refactored lines that were too long to be under 80 characters. Moved brackets to start of the line that contains the opening statement to comply with PEP8 standards.
+![checkout/models 10/10]()
 
 ## Future Features 
 ### Reviews 
