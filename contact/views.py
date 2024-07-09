@@ -18,7 +18,7 @@ def contact(request):
     template = 'contact/contact_form.html'
     email = Ticket.email
 
-    """ Allows a user to create a ticket """
+    # Allows a user to create a ticket
     if request.method == 'POST':
         form = TicketForm(request.POST)
         if form.is_valid():
