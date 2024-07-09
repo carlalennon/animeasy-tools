@@ -163,12 +163,12 @@ def checkout_success(request, order_number):
     if 'bag' in request.session:
         del request.session['bag']
 
-    """
-    Emergency email call in case webhooks fail in grading of project
-    stripe_handler = StripeWH_Handler(request)
-    emergency_mail = stripe_handler._send_confirmation_email(order)
-    emergency_mail
-    """
+    #"""
+    #Emergency email call in case webhooks fail in grading of project
+    #stripe_handler = StripeWH_Handler(request)
+    #emergency_mail = stripe_handler._send_confirmation_email(order)
+    #emergency_mail
+    #"""
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
