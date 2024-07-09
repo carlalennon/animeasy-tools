@@ -745,19 +745,32 @@ Bag Views - Pass. Removed whitespaces, added docstring. Added more specific erro
 ![bag/views 10/10](readme-images/readme-pylint-0010-bag-views.png)
 
 Checkout Admin - Pass. Added docstring to start of file and into classes. Removed whitespaces and removed trailing newlines.
-![checkout/admin 10/10]()
+![checkout/admin 10/10](readme-images/readme-pylint-0011-checkout-admin.png)
 
 Checkout Apps - Problematic result at 6.67. This is caused by the "Import outside toplevel" and "Unused import checkout.signals" errors. However, this should only be imported when the ready method is called to make sure the signal handlers are working correctly and timed right. Importing the signal at the top causes a circular import. Leaving it in the ready method makes sure it's not called until all models are loaded. It also functions as is, so I'll be accepting the lower score for now. 
-![checkout/apps 6.67/10]()
+![checkout/apps 6.67/10](readme-images/readme-pylint-0012-checkout-apps.png)
 
 Checkout Forms - Pass. Added docstrings to top of file and within a class and removed whitespace
-![checkout/forms 10/10]()
+![checkout/forms 10/10](readme-images/readme-pylint-0013-checkout-forms.png)
 
 Checkout Models - Pass. Added docstrings, removed whitespaces. Refactored lines that were too long to be under 80 characters. Moved brackets to start of the line that contains the opening statement to comply with PEP8 standards.
-![checkout/models 10/10]()
+![checkout/models 10/10](readme-images/readme-pylint-0014-checkout-models.png)
 
 Checkout Signals - Pass. Added underscores to arguments that are unused.
-![checkout/signals 10/10]
+![checkout/signals 10/10](readme-images/readme-pylint-0015-checkout-signals.png)
+
+Checkout URLs - Pass. Removed whitespaces and newlines. Removed unused import.
+![checkout/urls 10/10](readme-images/readme-pylint-0016-checkout-urls.png)
+
+Checkout Views -  Removed whitespaces. Change general exception to a stripe specific error. Reorder imports. Left with one error, "Too many local variables" in the checkout function. Could potentially refactor this into two smaller functions with more time. 
+![checkout/views](readme-images/readme-pylint-0017-checkout-views.png)
+
+Checkout Webhook Handler 9.59/10 Removed whitespaces and trailing commas. Re-oredered imports. Restructured payment intent function to get rid of extra else. Removed unessecary string statement. REmoved unused import. Decided to to address the following errors: The class name "StripeWH_Handler" does not conform to camel case. Too many local variables. Catching too general an exception. I am leaving these as is as messing around with this webhook is causing it to break, and the score is very close to 10. In the future I can come back to address this again. 
+![checkout/webhook_handler.py 10/10](readme-images/readme-pylint-0018-checkout-webhook-handler.png)
+
+Checkout Webhooks - Pass. Removed whitespaces. Reordered imports. Remove unused variable e and exception that was too broad.
+![checkout/webhooks 10/10](readme-images/readme-pylint-0019-checkout-webhooks.png)
+
 
 ## Future Features 
 ### Reviews 
