@@ -1,17 +1,19 @@
 """
 Webhook haandler for Stripe
 """
+import time
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
-from .models import Order, OrderLineItem
-from products.models import Product
-from profiles.models import UserProfile
-from django.views.decorators.csrf import csrf_exempt
+
+
 import stripe
 import json
-import time
+
+from products.models import Product
+from profiles.models import UserProfile
+from .models import Order, OrderLineItem
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
