@@ -115,43 +115,42 @@ class StripeWH_Handler:
                     'Verified order already in database'
                 ),
                 status=200)
-        else:
-            order = None
-            try:
-                order = Order.objects.create(
-                    full_name=billing_details.name,
-                    user_profile=profile,
-                    email=billing_details.email,
-                    phone_number=billing_details.phone,
-                    country=billing_details.address.country,
-                    postcode=billing_details.address.postal_code,
-                    town_or_city=billing_details.address.city,
-                    street_address1=billing_details.address.line1,
-                    street_address2=billing_details.address.line2,
-                    county=billing_details.address.state,
-                    grand_total=grand_total,
-                    original_bag=bag,
-                    stripe_pid=pid,
-                )
-                for item_id, item_data in json.loads(bag).items():
-                    product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
-            except Exception as e:
-                if order:
-                    order.delete()
-                return HttpResponse(content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                                    status=500
-                )
-            self._send_confirmation_email(order)
-            return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
-                status=200)
+        order = None
+        try:
+            order = Order.objects.create(
+                full_name=billing_details.name,
+                user_profile=profile,
+                email=billing_details.email,
+                phone_number=billing_details.phone,
+                country=billing_details.address.country,
+                postcode=billing_details.address.postal_code,
+                town_or_city=billing_details.address.city,
+                street_address1=billing_details.address.line1,
+                street_address2=billing_details.address.line2,
+                county=billing_details.address.state,
+                grand_total=grand_total,
+                original_bag=bag,
+                stripe_pid=pid,
+            )
+            for item_id, item_data in json.loads(bag).items():
+                product = Product.objects.get(id=item_id)
+                if isinstance(item_data, int):
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
+        except Exception as e:
+            if order:
+                order.delete()
+            return HttpResponse(content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                                status=500
+            )
+        self._send_confirmation_email(order)
+        return HttpResponse(
+            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            status=200)
 
     def handle_payment_intent_payment_failed(self, event):
         """
