@@ -756,6 +756,9 @@ Checkout Forms - Pass. Added docstrings to top of file and within a class and re
 Checkout Models - Pass. Added docstrings, removed whitespaces. Refactored lines that were too long to be under 80 characters. Moved brackets to start of the line that contains the opening statement to comply with PEP8 standards.
 ![checkout/models 10/10]()
 
+Checkout Signals - Pass. Added underscores to arguments that are unused.
+![checkout/signals 10/10]
+
 ## Future Features 
 ### Reviews 
 - In the future, I would like to let users enter reviews of the product. The product model is set up with a rating system in anticipation of adding this in the future.
