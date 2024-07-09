@@ -122,7 +122,7 @@ def ticket_detail(request, ticket_id):
     template = 'contact/ticket_detail.html'
     email = ticket.email
     reply = None
-    if request.user.is_superuser: 
+    if request.user.is_superuser:
         if request.method == 'POST':
             form = TicketReplyForm(request.POST)
             if form.is_valid():
@@ -132,7 +132,7 @@ def ticket_detail(request, ticket_id):
                 email_body = reply.reply
                 reply.admin = UserProfile.objects.get(user=request.user)
                 reply.save()
-                title = ticket.title 
+                title = ticket.title
                 send_mail(
                     title,
                     email_body,
