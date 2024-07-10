@@ -501,6 +501,11 @@ The models used in Animeasy have been drawn in to the chart below and their rela
 
 ## Wireframes 
 
+Wireframes for animeasy can be viewed in the collapsed section below
+
+<details>
+    <summary>Wireframes</summary>
+
 ### Bag
 ![Bag](readme-images/readme-wireframes-bag.png)
 
@@ -534,7 +539,7 @@ The models used in Animeasy have been drawn in to the chart below and their rela
 ### Profile
 ![Profile](readme-images/readme-wireframes-profile.png)
 
-
+</details>
 
 ## AWS Integration
 - This project uses Amazon Web Services to serve static files and images
