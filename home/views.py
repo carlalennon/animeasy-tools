@@ -13,7 +13,6 @@ def index(request):
     View and forms on the home page, newsletter subscriber box
     """
     form = SubscriberForm()
-    """ Returns index page """
     if request.method == 'POST':
         form = SubscriberForm(request.POST)
         print(request.POST)
@@ -30,7 +29,7 @@ def index(request):
             form = SubscriberForm()
     context = {
         'form': form,
-    }    
+    }
     return render(request, 'home/index.html', context)
 
 def about(request):
@@ -49,5 +48,5 @@ def install_guide(request):
 def faq(request):
     """
     View for the frequently asked questions page
-    """ 
+    """
     return render(request, 'home/faq.html')
