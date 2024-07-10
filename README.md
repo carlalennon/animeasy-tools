@@ -472,6 +472,8 @@ I added the following user stories to my kanban board
         </li>
     </ul>
 </ul>
+
+
 ### Kanban Board 
 - Created an issue for each user story 
 - Created issues for other tasks, like "Extras" and "Testing"
@@ -496,6 +498,43 @@ The board can be viewed [here](https://github.com/users/carlalennon/projects/5)
 The models used in Animeasy have been drawn in to the chart below and their relationships indicated using coloured lines 
 
 ![ERD for Animeasy](readme-images/readme-erd.png)
+
+## Wireframes 
+
+### Bag
+![Bag](readme-images/readme-wireframes-bag.png)
+
+### Bag (Small)
+![Bag (Small)](readme-images/readme-wireframes-bag-MOBILE.png)
+
+### Checkout
+![Checkout](readme-images/readme-wireframes-checkout.png)
+
+### Checkout (Small)
+![Checkout (Small)](readme-images/readme-wireframes-checkout-MOBILE.png)
+
+### Contact
+![Contact](readme-images/readme-wireframes-contact-form.png)
+
+### Contact (Small)
+![Contact (Small)](readme-images/readme-wireframes-contact-form-MOBILE.png)
+
+### Home
+![Home](readme-images/readme-wireframes-home.png)
+
+### Home (Small)
+![Home (Small)](readme-images/readme-wireframes-home-MOBILE.png)
+
+### Navbar
+![Navbar](readme-images/readme-wireframes-navbar-closeup-MOBILE.png)
+
+### Navbar (Small)
+![Navbar (Small)](readme-images/readme-wireframes-navbar-closeup-MOBILE.png)
+
+### Profile
+![Profile](readme-images/readme-wireframes-profile.png)
+
+
 
 ## AWS Integration
 - This project uses Amazon Web Services to serve static files and images
