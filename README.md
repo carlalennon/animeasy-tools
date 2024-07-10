@@ -1,5 +1,291 @@
 
 # Animeasy Tools E-commerce Site
+<img src="readme-images/readme-splash.png" alt="Animeasy home" style="border: 2px solid grey;">
+
+## Overview
+
+Animeasy is an e-commerce store that provides small software plugins for animation production. 
+This README provides an overview of the ecommerce app, including its purpose, features, installation instructions, usage guidelines, and contact information.
+
+## Purpose
+The purpose of the ecommerce app is to provide users with a platform to browse, purchase, and manage digital products online. It aims to streamline the shopping experience for customers and simplify product management for sellers.
+Animation is a costly and time consuming business. With the advent of digital animation it is largely created using computer programmes. This means that professionals can browse the web for plugins that may help them. 
+In my animation career, I started out using plugins purchased or developed by the studio, but over time I started to develop my own for more specific uses. 
+
+Animeasy is intended to be a B2B solution for freelancers and small studios. Animation studios never truly recovered from the pandemic, the majority of work is done remotely online now. This makes an e-commerce solution the ideal model for purchasing plugins for animation software. 
+
+Animeasy works by digital download. Although I have not implemented digital downloads in this project (as many of the products are fake and it's more like a to-do list of products to make in the future) this model works really well. I have both purchased and sold plugins for animation over the internet before. Professionals will often Google a problem they are having and find the solution in the form of a Gumroad download or in Adobe Marketplace. 
+
+## Features
+### User authentication: Allow users to register, login, and manage their accounts.
+
+- Users can make purchases without making an account, but they can make an account if they want to
+<img src="readme-images/readme-reg-signup-form.png" alt="The registration form" style="border: 2px solid grey;">
+
+- Returning users can log into their account 
+<img src="readme-images/readme-reg-signup-login.png" alt="Login form" style="border: 2px solid grey;">
+
+- Users can reset their password to recover their account if they forget 
+- Users can delete their account. The initial click disables the button and confirms the action, in case they clicked it by accident 
+<img src="readme-images/readme-reg-delete-button.png" alt="Delete your account section" style="border: 2px solid grey;">
+<img src="readme-images/readme-reg-delete-modal.png" alt="Delete your account modal" style="border: 2px solid grey;">
+
+
+### Profiles 
+- Users can view their information from their profile page 
+<img src="readme-images/readme-profile-user-info-updated.png" alt="Information in user profile" style="border: 2px solid grey;">
+
+- If no user information exists yet, the information section reads "none"
+<img src="readme-images/readme-profile-user-info-empty.png" alt="Empty information" style="border: 2px solid grey;">
+
+- Users can change their information from their profile page 
+<img src="readme-images/readme-profile-user-info-form.png" alt="User information form" style="border: 2px solid grey;">
+
+- User's order history is saved at the bottom of their profile 
+- If the user has no order history, this is reflected back to them 
+<img src="readme-images/readme-profile-user-order-none.png" alt="The empty order section" style="border: 2px solid grey;">
+
+- User's support tickets and the replies can be accessed from the profile page 
+
+
+### Product browsing: Enable users to search, filter, and view products.
+
+- Users can see all products in Animeasy store in one place 
+<img src="readme-images/readme-products-products-page.png" alt="All Products page" style="border: 2px solid grey;">
+
+- Users can sort products by category, depending on which software they're looking for 
+<img src="readme-images/readme-products-sort-cat-01.png" alt="Sorting by category from the nav bar" style="border: 2px solid grey;">
+<img src="readme-images/readme-products-sort-cat-02.png" alt="Sorting by category from the search bar" style="border: 2px solid grey;">
+
+- Users can search for products by title or key word 
+<img src="readme-images/readme-products-search.png" alt="Searching by keyword" style="border: 2px solid grey;">
+
+- A product detail page is available for each product 
+- The product detail page displays a product description, the software category and any user reviews 
+<img src="readme-images/readme-products-detial.png" alt="Product detail page" style="border: 2px solid grey;">
+
+- Users can add multiples of a product to their bag from the product detail page 
+<img src="readme-images/readme-products-add-multiples-02.png" alt="Adding multiple products" style="border: 2px solid grey;">
+
+- Users can sort returned products by certain characteristics using the filter dropdown 
+<img src="readme-images/readme-products-sort-cat-03.png" alt="Filter dropdown for sort order" style="border: 2px solid grey;">
+
+- A back to top button scrolls the user back to the top of the page when clicked 
+<img src="readme-images/readme-products-btt-button.png" alt="Back to top button" style="border: 2px solid grey;">
+
+
+### Shopping cart: Allow users to add and remove items from their cart.
+
+- Users can add a product to their bag
+<img src="readme-images/readme-bag-add-product.png" alt="Add a product" style="border: 2px solid grey;">
+
+- The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
+<img src="readme-images/readme-bag-cart-nav.png" alt="The items in the cart" style="border: 2px solid grey;">
+
+- Users can view their bag and see the items inside 
+<img src="readme-images/readme-bag.png" alt="Items in the bag" style="border: 2px solid grey;">
+
+- Users can remove items from their bag from the cart view 
+- If there's more than one of an item in the cart, users can see the subtotal of that item
+- Users can see the total of their bag 
+- Users can proceed to the checkout form from the bag view 
+<img src="readme-images/readme-bag-total.png" alt="The total" style="border: 2px solid grey;">
+
+
+### Checkout process: Guide users through a secure checkout process.
+
+- Users can securely checkout  items in their bag 
+- Billing information is collected 
+- Registered users can choose to save their details from next time 
+<img src="readme-images/readme-checkout-form.png" alt="The checkout form" style="border: 2px solid grey;">
+- A secure checkout using Stripe (use this fake number - it's not set up for real cards yet )
+<img src="readme-images/readme-bag-fake-card.png" alt="Fake stripe number" style="border: 2px solid grey;">
+- On confirmation of order, users are directed to a success page, showing them their details, charge and what they ordered
+
+### Order management: Enable users to track their orders and view order history.
+- From their profile, users can see their order history 
+<img src="readme-images/readme-order-past.png" alt="Order section on profile" style="border: 2px solid grey;">
+
+- Clicking on the order number brings them to the original checkout success page, with a message saying that this is an old order they are viewing 
+<img src="readme-images/readme-order-past.png" alt="Old order notification" style="border: 2px solid grey;">
+
+- Non registered users can access this information from their order confirmation email in their inbox 
+<img src="readme-images/readme-order-confirm.png" alt="The email from an order" style="border: 2px solid grey;">
+
+
+### Admin permissions: Product management from the frontend.
+
+- If the logged in user is a superuser, the admin panel will appear in the navigation bar
+<img src="readme-images/readme-admin-panel.png" alt="The admin panel only appears if a superuser is logged in" style="border: 2px solid grey;">
+
+- Admin can use this panel to add products
+<img src="readme-images/readme-admin-add-product.png" alt="The add product page" style="border: 2px solid grey;">
+
+- If the user forgets to upload an image, the default image is displayed
+<img src="readme-images/readme-admin-noimage.png" alt="No image product" style="border: 2px solid grey;">
+
+- Superusers can edit a product from the all products page
+<img src="readme-images/readme-admin-edit-products-page.png" alt="The edit button on the product card" style="border: 2px solid grey;">
+
+- Superusers have access to the product management panel from the product detail page 
+<img src="readme-images/readme-admin-product-management.png" alt="The product management panel" style="border: 2px solid grey;">
+
+- Products can be edited from the edit product view
+<img src="readme-images/readme-admin-edit-page.png" alt="The edit product view" style="border: 2px solid grey;">
+
+- Products can be deleted. On clicking the delete button, a modal confirms that this is the action you want to take before deleting the product
+<img src="readme-images/readme-admin-delete.png" alt="The unstyled delete modal" style="border: 2px solid grey;">
+
+
+### Newsletter 
+
+- Users can subscribe to the Animeasy newsletter from the home page. This email collector also checks if an email is already registered and will not collect duplicates 
+<img src="readme-images/readme-newsletter-subscribe.png" alt="The newsletter subscribe form" style="border: 2px solid grey;"> 
+
+- Users can unsubscribe by entering the email they wish to unsubscribe into this form. The form can be accessed in the footer and in future versions will be included at the end of each newsletter 
+<img src="readme-images/readme-newsletter-unsubscribe.png" alt="The unsubscribe form" style="border: 2px solid grey;">
+
+- Admins can create a newsletter from the admin panel 
+<img src="readme-images/readme-newsletter-admin-panel.png" alt="Newsletter Create in the admin panel" style="border: 2px solid grey;">
+
+- Admins can create a newsletter using the newsletter form 
+<img src="readme-images/readme-newsletter-create.png" alt="The create a newsletter form" style="border: 2px solid grey;">
+
+- On creation of newsletter, the admin is brought to a newsletter success page. This shows them the content of the email and a list of current subscribers at the bottom of the page 
+<img src="readme-images/readme-newsletter-success-subscribers.png" alt="The newsletter success page and subscriber list" style="border: 2px solid grey;">
+
+- Admins can access an archive of past newsletters using the newsletter archive in the admin panel 
+<img src="readme-images/readme-newsletter-archive.png" alt="The newsletter archive" style="border: 2px solid grey;">
+
+![Animeasy home](readme-images/readme-splash.png)
+
+## Overview
+
+Animeasy is an e-commerce store that provides small software plugins for animation production. 
+This README provides an overview of the ecommerce app, including its purpose, features, installation instructions, usage guidelines, and contact information.
+
+## Purpose
+The purpose of the ecommerce app is to provide users with a platform to browse, purchase, and manage digital products online. It aims to streamline the shopping experience for customers and simplify product management for sellers.
+Animation is a costly and time consuming business. With the advent of digital animation it is largely created using computer programmes. This means that professionals can browse the web for plugins that may help them. 
+In my animation career, I started out using plugins purchased or developed by the studio, but over time I started to develop my own for more specific uses. 
+
+Animeasy is intended to be a B2B solution for freelancers and small studios. Animation studios never truly recovered from the pandemic, the majority of work is done remotely online now. This makes an e-commerce solution the ideal model for purchasing plugins for animation software. 
+
+Animeasy works by digital download. Although I have not implemented digital downloads in this project (as many of the products are fake and it's more like a to-do list of products to make in the future) this model works really well. I have both purchased and sold plugins for animation over the internet before. Professionals will often Google a problem they are having and find the solution in the form of a Gumroad download or in Adobe Marketplace. 
+
+## Features
+### User authentication: Allow users to register, login, and manage their accounts.
+
+- Users can make purchases without making an account, but they can make an account if they want to
+<img src="readme-images/readme-reg-signup-form.png" alt="Registration and signup form" style="border: 2px solid grey;">
+
+- Returning users can log into their account 
+<img src="readme-images/readme-reg-signup-login.png" alt="Login form" style="border: 2px solid grey;">
+
+- Users can reset their password to recover their account if they forget 
+- Users can delete their account. The initial click disables the button and confirms the action, in case they clicked it by accident 
+
+### Animeasy Tools E-commerce Site
+
+<img src="readme-images/readme-products-search.png" alt="Searching by keyword" style="border: 2px solid grey;">
+
+- A product detail page is available for each product 
+- The product detail page displays a product description, the software category and any user reviews 
+<img src="readme-images/readme-products-detial.png" alt="Product detail page" style="border: 2px solid grey;">
+
+- Users can add multiples of a product to their bag from the product detail page 
+<img src="readme-images/readme-products-add-multiples-02.png" alt="Adding multiple products" style="border: 2px solid grey;">
+
+- Users can sort returned products by certain characteristics using the filter dropdown 
+<img src="readme-images/readme-products-sort-cat-03.png" alt="Filter dropdown for sort order" style="border: 2px solid grey;">
+
+- A back to top button scrolls the user back to the top of the page when clicked 
+<img src="readme-images/readme-products-btt-button.png" alt="Back to top button" style="border: 2px solid grey;">
+
+
+### Shopping cart: Allow users to add and remove items from their cart.
+
+- Users can add a product to their bag
+<img src="readme-images/readme-bag-add-product.png" alt="Add a product" style="border: 2px solid grey;">
+
+- The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
+<img src="readme-images/readme-bag-cart-nav.png" alt="The items in the cart" style="border: 2px solid grey;">
+
+- Users can view their bag and see the items inside 
+<img src="readme-images/readme-bag.png" alt="Items in the bag" style="border: 2px solid grey;">
+
+- Users can remove items from their bag from the cart view 
+- If there's more than one of an item in the cart, users can see the subtotal of that item
+- Users can see the total of their bag 
+- Users can proceed to the checkout form from the bag view 
+<img src="readme-images/readme-bag-total.png" alt="The total" style="border: 2px solid grey;">
+
+
+### Checkout process: Guide users through a secure checkout process.
+
+- Users can securely checkout  items in their bag 
+- Billing information is collected 
+- Registered users can choose to save their details from next time 
+<img src="readme-images/readme-checkout-form.png" alt="The checkout form" style="border: 2px solid grey;">
+- A secure checkout using Stripe (use this fake number - it's not set up for real cards yet )
+<img src="readme-images/readme-bag-fake-card.png" alt="Fake stripe number" style="border: 2px solid grey;">
+- On confirmation of order, users are directed to a success page, showing them their details, charge and what they ordered
+
+### Order management: Enable users to track their orders and view order history.
+- From their profile, users can see their order history 
+<img src="readme-images/readme-order-past.png" alt="Order section on profile" style="border: 2px solid grey;">
+
+- Clicking on the order number brings them to the original checkout success page, with a message saying that this is an old order they are viewing 
+<img src="readme-images/readme-order-past.png" alt="Old order notification" style="border: 2px solid grey;">
+
+- Non registered users can access this information from their order confirmation email in their inbox 
+<img src="readme-images/readme-order-confirm.png" alt="The email from an order" style="border: 2px solid grey;">
+
+
+### Admin permissions: Product management from the frontend.
+
+- If the logged in user is a superuser, the admin panel will appear in the navigation bar
+<img src="readme-images/readme-admin-panel.png" alt="The admin panel only appears if a superuser is logged in" style="border: 2px solid grey;">
+
+- Admin can use this panel to add products
+<img src="readme-images/readme-admin-add-product.png" alt="The add product page" style="border: 2px solid grey;">
+
+- If the user forgets to upload an image, the default image is displayed
+<img src="readme-images/readme-admin-noimage.png" alt="No image product" style="border: 2px solid grey;">
+
+- Superusers can edit a product from the all products page
+<img src="readme-images/readme-admin-edit-products-page.png" alt="The edit button on the product card" style="border: 2px solid grey;">
+
+- Superusers have access to the product management panel from the product detail page 
+<img src="readme-images/readme-admin-product-management.png" alt="The product management panel" style="border: 2px solid grey;">
+
+- Products can be edited from the edit product view
+<img src="readme-images/readme-admin-edit-page.png" alt="The edit product view" style="border: 2px solid grey;">
+
+- Products can be deleted. On clicking the delete button, a modal confirms that this is the action you want to take before deleting the product
+<img src="readme-images/readme-admin-delete.png" alt="The unstyled delete modal" style="border: 2px solid grey;">
+
+
+### Newsletter 
+
+- Users can subscribe to the Animeasy newsletter from the home page. This email collector also checks if an email is already registered and will not collect duplicates 
+<img src="readme-images/readme-newsletter-subscribe.png" alt="The newsletter subscribe form" style="border: 2px solid grey;"> 
+
+- Users can unsubscribe by entering the email they wish to unsubscribe into this form. The form can be accessed in the footer and in future versions will be included at the end of each newsletter 
+<img src="readme-images/readme-newsletter-unsubscribe.png" alt="The unsubscribe form" style="border: 2px solid grey;">
+
+- Admins can create a newsletter from the admin panel 
+<img src="readme-images/readme-newsletter-admin-panel.png" alt="Newsletter Create in the admin panel" style="border: 2px solid grey;">
+
+- Admins can create a newsletter using the newsletter form 
+<img src="readme-images/readme-newsletter-create.png" alt="The create a newsletter form" style="border: 2px solid grey;">
+
+- On creation of newsletter, the admin is brought to a newsletter success page. This shows them the content of the email and a list of current subscribers at the bottom of the page 
+<img src="readme-images/readme-newsletter-success-subscribers.png" alt="The newsletter success page and subscriber list" style="border: 2px solid grey;">
+
+- Admins can access an archive of past newsletters using the newsletter archive in the admin panel 
+<img src="readme-images/readme-newsletter-archive.png" alt="The newsletter archive" style="border: 2px solid grey;">
+
 
 ![Animeasy home](readme-images/readme-splash.png)
 
