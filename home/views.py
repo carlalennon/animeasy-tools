@@ -1,3 +1,7 @@
+"""
+Handles the views for the home app, newlstter form, about, install guide and FAQ pages
+"""
+
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from newsletter.forms import SubscriberForm
