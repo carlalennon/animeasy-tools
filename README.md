@@ -754,139 +754,140 @@ I added a pylintrc file and installed pylint_django to lint the python files in 
 ![Pylintrc file](readme-images/readme-pylintrc.png)
 
 Animeasy Asgi - Pass
-![animeasy/asgi pass 10/10](readme-images/readme-pylint-0001-animeasy-asgi.png) \
+![animeasy/asgi pass 10/10](readme-images/readme-pylint-0001-animeasy-asgi.png) <br>
 
 Animeasy Settings - 9.85/10. The 0.15 score is deducted for an import statement. This statement needs to stay in, as it checks to see if the project is running in a development environmet, and if so, looks for env.py which contains the secret key and other sensitive information.
-![animeasy/settings 9.85/10](readme-images/readme-pylint-0002-animeasy-settings.png) \
+![animeasy/settings 9.85/10](readme-images/readme-pylint-0002-animeasy-settings.png) <br>
 
 Animeasy URLS - Pass. I added a docstring to the file to bring it up to a score of 10
-![animeasy/urls 10/10](readme-images/readme-pylint-0003-animeasy-urls.png) \
+![animeasy/urls 10/10](readme-images/readme-pylint-0003-animeasy-urls.png) <br>
 
 Animeasy WSGI - Pass
-![animeasy/wsgi 10/10](readme-images/readme-pylint-0004-animeasy-wsgi.png) \
+![animeasy/wsgi 10/10](readme-images/readme-pylint-0004-animeasy-wsgi.png) <br>
 
 Bag/TemplateTags/Bag_Tools - Pass. I added doctrings to the start of the file and inside the function itself to describe the operation. I also removed a trailing whitespace and added a final newline to the end of the file 
-![bag/templatetools/bag_tools 10/10](readme-images/readme-pylint-0005-bag-templatetags-bagtools.png) \
+![bag/templatetools/bag_tools 10/10](readme-images/readme-pylint-0005-bag-templatetags-bagtools.png) <br>
 
 Bag Admin - Removed text within the file causing these errors, leaving a blank file.
-![bag/admin 0/10](readme-images/readme-pylint-0006-bag-admin.png) \
+![bag/admin 0/10](readme-images/readme-pylint-0006-bag-admin.png) <br>
 
 Bag Apps - Pass. Added docstrings to get the score up 
-![bag/apps 10/10](readme-images/readme-pylint-0007-bag-apps.png) \
+![bag/apps 10/10](readme-images/readme-pylint-0007-bag-apps.png) <br>
 
 Bag Contexts - Pass. Removed whitespaces, added doctring. Commented out unused import but left it in for addition of threshold/bulk discounts in the future
-![bag/contexts 10/10](readme-images/readme-pylint-0008-bag-contexts.png) \
+![bag/contexts 10/10](readme-images/readme-pylint-0008-bag-contexts.png) <br>
 
 Bag URLS - Pass. Removed whitespaces and redundant import statement. Added docstring.
-![bag/urls 10/10](readme-images/readme-pylint-0009-bag-urls.png) \
+![bag/urls 10/10](readme-images/readme-pylint-0009-bag-urls.png) <br>
 
 Bag Views - Pass. Removed whitespaces, added docstring. Added more specific error catching to 2 scenarios. 
-![bag/views 10/10](readme-images/readme-pylint-0010-bag-views.png) \
+![bag/views 10/10](readme-images/readme-pylint-0010-bag-views.png) <br>
 
 Checkout Admin - Pass. Added docstring to start of file and into classes. Removed whitespaces and removed trailing newlines.
-![checkout/admin 10/10](readme-images/readme-pylint-0011-checkout-admin.png) \
+![checkout/admin 10/10](readme-images/readme-pylint-0011-checkout-admin.png) <br>
 
 Checkout Apps - Problematic result at 6.67. This is caused by the "Import outside toplevel" and "Unused import checkout.signals" errors. However, this should only be imported when the ready method is called to make sure the signal handlers are working correctly and timed right. Importing the signal at the top causes a circular import. Leaving it in the ready method makes sure it's not called until all models are loaded. It also functions as is, so I'll be accepting the lower score for now. 
-![checkout/apps 6.67/10](readme-images/readme-pylint-0012-checkout-apps.png) \
+![checkout/apps 6.67/10](readme-images/readme-pylint-0012-checkout-apps.png) <br>
 
 Checkout Forms - Pass. Added docstrings to top of file and within a class and removed whitespace
-![checkout/forms 10/10](readme-images/readme-pylint-0013-checkout-forms.png) \
+![checkout/forms 10/10](readme-images/readme-pylint-0013-checkout-forms.png) <br>
 
 Checkout Models - Pass. Added docstrings, removed whitespaces. Refactored lines that were too long to be under 80 characters. Moved brackets to start of the line that contains the opening statement to comply with PEP8 standards.
-![checkout/models 10/10](readme-images/readme-pylint-0014-checkout-models.png) \
+![checkout/models 10/10](readme-images/readme-pylint-0014-checkout-models.png) <br>
 
 Checkout Signals - Pass. Added underscores to arguments that are unused.
-![checkout/signals 10/10](readme-images/readme-pylint-0015-checkout-signals.png) \
+![checkout/signals 10/10](readme-images/readme-pylint-0015-checkout-signals.png) <br>
 
 Checkout URLs - Pass. Removed whitespaces and newlines. Removed unused import.
-![checkout/urls 10/10](readme-images/readme-pylint-0016-checkout-urls.png) \
+![checkout/urls 10/10](readme-images/readme-pylint-0016-checkout-urls.png) <br>
 
 Checkout Views -  Removed whitespaces. Change general exception to a stripe specific error. Reorder imports. Left with one error, "Too many local variables" in the checkout function. Could potentially refactor this into two smaller functions with more time. 
-![checkout/views](readme-images/readme-pylint-0017-checkout-views.png) \
+![checkout/views](readme-images/readme-pylint-0017-checkout-views.png) <br>
 
 Checkout Webhook Handler 9.59/10 Removed whitespaces and trailing commas. Re-oredered imports. Restructured payment intent function to get rid of extra else. Removed unessecary string statement. REmoved unused import. Decided to to address the following errors: The class name "StripeWH_Handler" does not conform to camel case. Too many local variables. Catching too general an exception. I am leaving these as is as messing around with this webhook is causing it to break, and the score is very close to 10. In the future I can come back to address this again. 
-![checkout/webhook_handler.py 10/10](readme-images/readme-pylint-0018-checkout-webhook-handler.png) \
+![checkout/webhook_handler.py 10/10](readme-images/readme-pylint-0018-checkout-webhook-handler.png) <br>
 
 Checkout Webhooks - Pass. Removed whitespaces. Reordered imports. Remove unused variable e and exception that was too broad.
-![checkout/webhooks 10/10](readme-images/readme-pylint-0019-checkout-webhooks.png) \
+![checkout/webhooks 10/10](readme-images/readme-pylint-0019-checkout-webhooks.png) <br>
 
 Contact Admin - PASS 
-![contact/admin 10/10](readme-images/readme-pylint-0020-contact-admin.png) \
+![contact/admin 10/10](readme-images/readme-pylint-0020-contact-admin.png) <br>
 
 Contact Forms - PASS. Removed whitespace, unused immport
-![conact/forms 10/10](readme-images/readme-pylint-0021-contact-forms.png)  \
+![conact/forms 10/10](readme-images/readme-pylint-0021-contact-forms.png)  <br>
 
 Contact Models - PASS 
-![contact/models 10/10](readme-images/readme-pylint-0022-contact-models.png) \
+![contact/models 10/10](readme-images/readme-pylint-0022-contact-models.png) <br>
 
 Contact URLS - PASS. Added docstring. 
-![contact/urls 10.10](readme-images/readme-pylint-0023-contact-urls.png) \
+![contact/urls 10.10](readme-images/readme-pylint-0023-contact-urls.png) <br>
 
 Contact Views - Pass. Reordered imports, added docstrings. Changed string to comment. 
-![contact/views 10/10](readme-images/readme-pylint-0023-contact-views.png) \
+![contact/views 10/10](readme-images/readme-pylint-0023-contact-views.png) <br>
 
 Home Apps - PASS 
-![home/apps 10/10](readme-images/readme-pylint-0024-home-apps.png) \
+![home/apps 10/10](readme-images/readme-pylint-0024-home-apps.png) <br>
 
 Home URLS = PASS 
- ![home/urls 10/10](readme-images/readme-pylint-0025-home-urls.png) \
+ ![home/urls 10/10](readme-images/readme-pylint-0025-home-urls.png) <br>
 
 Home views - Pass. Refactored function to remove unecesary else statement, added docstrings 
-![home/views 10/10](readme-images/readme-pylint-0026-home-viewss.png) \
+![home/views 10/10](readme-images/readme-pylint-0026-home-viewss.png) <br>
 
 Newsletter Admin - PASS
-![newsletter/admin 10/10](readme-images/readme-pylint-0027-newsletter-admin.png) \
+![newsletter/admin 10/10](readme-images/readme-pylint-0027-newsletter-admin.png) <br>
 
 Newsletter Apps - Pass 
-![newsletter/apps 10/10](readme-images/readme-pylint-0028-newsletter-apps.png) \
+![newsletter/apps 10/10](readme-images/readme-pylint-0028-newsletter-apps.png) <br>
 
 Newsletter Forms - Pass. Added docstrings. 
-![newsletter/forms 10/10](readme-images/readme-pylint-0029-newsletter-forms.png) \
+![newsletter/forms 10/10](readme-images/readme-pylint-0029-newsletter-forms.png) <br>
 
 Newsletter Models - Pass
-![newsletter/models 10/10](readme-images/readme-pylint-0030-newsletter-models.png) \
+![newsletter/models 10/10](readme-images/readme-pylint-0030-newsletter-models.png) <br>
 
 Newsletter URLs - Pass 
-![newsletter/urls 10/10](readme-images/readme-pylint-0031-newsletter-urls.png) \
+![newsletter/urls 10/10](readme-images/readme-pylint-0031-newsletter-urls.png) <br>
 
 Newsletter Views - Pass. Refactored to remove unecessary else blocks. Added docstrings. Reordered imports.
-![newsletter/views 10/10](readme-images/readme-pylint-0032-newsletter-views.png) \
+![newsletter/views 10/10](readme-images/readme-pylint-0032-newsletter-views.png) <br>
 
 Product Admin - PASS 
-![products/admin 10/10](readme-images/readme-pylint-0033-product-admin.png) \
+![products/admin 10/10](readme-images/readme-pylint-0033-product-admin.png) <br>
 
 Product Apps = PASS
-![products/apps 10/10](readme-images/readme-pylint-0034-product-apps.png) \
+![products/apps 10/10](readme-images/readme-pylint-0034-product-apps.png) <br>
 
 Product Forms - Pass. Replaced unused variable with _. 
-![products/forms 10/10](readme-images/readme-pylint-0035-product-forms.png) \
+![products/forms 10/10](readme-images/readme-pylint-0035-product-forms.png) <br>
 
 Product Models - PASS 
-![product/models 10/10](readme-images/readme-pylint-0036-product-models.png) \
+![product/models 10/10](readme-images/readme-pylint-0036-product-models.png) <br>
 
 Product URLs - Pass 
-![product/urls 10/10](readme-images/readme-pylint-0037-product-urls.png) \
+![product/urls 10/10](readme-images/readme-pylint-0037-product-urls.png) <br>
 
 Product Views - Pass. Reorder imports. Refactor to remove unecessary else blocks and lines that are too long"
-![product/views 10/10](readme-images/readme-pylint-0038-product-views.png) \
+![product/views 10/10](readme-images/readme-pylint-0038-product-views.png) <br>
 
 Product Widgets - PASS
-![product/widgets 10/10](readme-images/readme-pylint-0039-product-widgets.png) \
+![product/widgets 10/10](readme-images/readme-pylint-0039-product-widgets.png) <br>
 
 Profile Admin - PASS
-![profile/admin 10/10](readme-images/readme-pylint-0040-profile-admin.png) \
+![profile/admin 10/10](readme-images/readme-pylint-0040-profile-admin.png) <br>
 
 Profile Apps - PASS
-![profile/admin 10/10](readme-images/readme-pylint-0041-profile-apps.png) \
+![profile/admin 10/10](readme-images/readme-pylint-0041-profile-apps.png) <br>
 
 Profile Forms - 9.44 Decided to leave the exclude as using an include instead with everything except user was causing a string of errors. Could fix this by following the error rabbit hole when I have more time.
-![profile/forms 10/10](readme-images/readme-pylint-0042-profile-forms.png) \
+![profile/forms 10/10](readme-images/readme-pylint-0042-profile-forms.png) <br>
 
 Profile URLs - PASS 
-![profile/urls 10/10](readme-images/readme-pylint-0043-profile-urls.png) \
+![profile/urls 10/10](readme-images/readme-pylint-0043-profile-urls.png) <br>
 
 Profile Views - Pass
-![profile/views 10/10](readme-images/readme-pylint-0044-profile-views.png) \
+![profile/views 10/10](readme-images/readme-pylint-0044-profile-views.png) <br>
+
 ## Future Features 
 ### Reviews 
 - In the future, I would like to let users enter reviews of the product. The product model is set up with a rating system in anticipation of adding this in the future.
