@@ -771,6 +771,41 @@ Checkout Webhook Handler 9.59/10 Removed whitespaces and trailing commas. Re-ore
 Checkout Webhooks - Pass. Removed whitespaces. Reordered imports. Remove unused variable e and exception that was too broad.
 ![checkout/webhooks 10/10](readme-images/readme-pylint-0019-checkout-webhooks.png)
 
+Contact Admin - PASS
+![contact/admin 10/10](readme-images/readme-pylint-0020-contact-admin.png)
+
+Contact Forms - PASS. Removed whitespace, unused immport
+![conact/forms 10/10](readme-images/readme-pylint-0021-contact-forms.png) 
+
+Contact Models - PASS 
+![contact/models 10/10](readme-images/readme-pylint-0022-contact-models.png)
+
+Contact URLS - PASS. Added docstring. 
+![contact/urls 10.10](readme-images/readme-pylint-0023-contact-urls.png)
+
+Contact Views - Pass. Reordered imports, added docstrings. Changed string to comment. 
+![contact/views 10/10](readme-images/readme-pylint-0023-contact-views.png)
+
+Home Apps - PASS 
+![home/apps 10/10](readme-images/readme-pylint-0024-home-apps.png)
+
+Home URLS = PASS 
+ ![home/urls 10/10](readme-images/readme-pylint-0025-home-urls.png)
+
+Home views - Pass. Refactored function to remove unecesary else statement, added docstrings 
+![home/views 10/10](readme-images/readme-pylint-0026-home-viewss.png)
+
+Newsletter Admin - PASS
+![newsletter/admin 10/10](readme-images/readme-pylint-0027-newsletter-admin.png)
+
+Newsletter Apps - Pass 
+![newsletter/apps 10/10]()
+
+
+
+
+
+
 
 ## Future Features 
 ### Reviews 
