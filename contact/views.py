@@ -152,9 +152,15 @@ def ticket_detail(request, ticket_id):
     return redirect('home')
 
 def privacy_policy(request):
+    """
+    Shows the privacy policy page
+    """
     template = 'contact/privacy_policy.html'
     return render(request, template)
 
 def terms_and_conditions(request):
+    """
+    Shows the terms and conditions page
+    """
     template = 'contact/terms_and_conditions.html'
     return render(request, template)
