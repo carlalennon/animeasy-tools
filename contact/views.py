@@ -149,9 +149,8 @@ def ticket_detail(request, ticket_id):
         else:
             form = TicketReplyForm()
         return render(request, template, {'form': form, 'ticket': ticket})
-    else:
-        messages.error(request, 'You do not have permission to reply to tickets')
-        return redirect('home')
+    messages.error(request, 'You do not have permission to reply to tickets')
+    return redirect('home')
 
 def privacy_policy(request):
     template = 'contact/privacy_policy.html'
