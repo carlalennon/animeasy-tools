@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-# from .webhook_handler import StripeWH_Handler goes with emergency email call
+from .webhook_handler import StripeWH_Handler # goes with emergency email call
 from bag.contexts import bag_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -163,12 +163,13 @@ def checkout_success(request, order_number):
     if 'bag' in request.session:
         del request.session['bag']
 
-    #"""
-    #Emergency email call in case webhooks fail in grading of project
-    #stripe_handler = StripeWH_Handler(request)
-    #emergency_mail = stripe_handler._send_confirmation_email(order)
-    #emergency_mail
-    #"""
+    """
+    Emergency email call in case webhooks fail in grading of project
+    """
+    stripe_handler = StripeWH_Handler(request)
+    emergency_mail = stripe_handler._send_confirmation_email(order)
+    emergency_mail
+    
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
