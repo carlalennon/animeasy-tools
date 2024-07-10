@@ -1,23 +1,24 @@
 """
-Views for profiles app
+View for profile app
 """
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import get_user_model
+from checkout.models import Order
 from .models import UserProfile
 from .forms import UserProfileForm
-from checkout.models import Order
-from django.contrib.auth.models import User
+
 
 User = get_user_model()
 
 @login_required
 def profile(request):
     """ Display user profile """
-    profile = get_object_or_404(UserProfile, user=request.user)
+    user_profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
-        form = UserProfileForm(request.POST, instance=profile)
+        form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your profile was updated')
@@ -26,20 +27,18 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
 
-    form = UserProfileForm(instance=profile)
     template = 'profiles/profile.html'
     orders = profile.orders.all()
-    has_orders = profile.orders.all().exists()
+    has_orders = orders.exists()
 
     context = {
         'form': form,
         'profile': profile,
-        'orders' : orders,
+        'orders': orders,
         'has_orders': has_orders,
     }
 
     return render(request, template, context)
-
 
 def order_history(request, order_number):
     """ Display order history """
@@ -53,7 +52,7 @@ def order_history(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-        # from_profile: True,
+        #'from_profile': True,
     }
 
     return render(request, template, context)
