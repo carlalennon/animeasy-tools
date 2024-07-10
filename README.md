@@ -1,291 +1,5 @@
 
 # Animeasy Tools E-commerce Site
-<img src="readme-images/readme-splash.png" alt="Animeasy home" style="border: 2px solid grey;">
-
-## Overview
-
-Animeasy is an e-commerce store that provides small software plugins for animation production. 
-This README provides an overview of the ecommerce app, including its purpose, features, installation instructions, usage guidelines, and contact information.
-
-## Purpose
-The purpose of the ecommerce app is to provide users with a platform to browse, purchase, and manage digital products online. It aims to streamline the shopping experience for customers and simplify product management for sellers.
-Animation is a costly and time consuming business. With the advent of digital animation it is largely created using computer programmes. This means that professionals can browse the web for plugins that may help them. 
-In my animation career, I started out using plugins purchased or developed by the studio, but over time I started to develop my own for more specific uses. 
-
-Animeasy is intended to be a B2B solution for freelancers and small studios. Animation studios never truly recovered from the pandemic, the majority of work is done remotely online now. This makes an e-commerce solution the ideal model for purchasing plugins for animation software. 
-
-Animeasy works by digital download. Although I have not implemented digital downloads in this project (as many of the products are fake and it's more like a to-do list of products to make in the future) this model works really well. I have both purchased and sold plugins for animation over the internet before. Professionals will often Google a problem they are having and find the solution in the form of a Gumroad download or in Adobe Marketplace. 
-
-## Features
-### User authentication: Allow users to register, login, and manage their accounts.
-
-- Users can make purchases without making an account, but they can make an account if they want to
-<img src="readme-images/readme-reg-signup-form.png" alt="The registration form" style="border: 2px solid grey;">
-
-- Returning users can log into their account 
-<img src="readme-images/readme-reg-signup-login.png" alt="Login form" style="border: 2px solid grey;">
-
-- Users can reset their password to recover their account if they forget 
-- Users can delete their account. The initial click disables the button and confirms the action, in case they clicked it by accident 
-<img src="readme-images/readme-reg-delete-button.png" alt="Delete your account section" style="border: 2px solid grey;">
-<img src="readme-images/readme-reg-delete-modal.png" alt="Delete your account modal" style="border: 2px solid grey;">
-
-
-### Profiles 
-- Users can view their information from their profile page 
-<img src="readme-images/readme-profile-user-info-updated.png" alt="Information in user profile" style="border: 2px solid grey;">
-
-- If no user information exists yet, the information section reads "none"
-<img src="readme-images/readme-profile-user-info-empty.png" alt="Empty information" style="border: 2px solid grey;">
-
-- Users can change their information from their profile page 
-<img src="readme-images/readme-profile-user-info-form.png" alt="User information form" style="border: 2px solid grey;">
-
-- User's order history is saved at the bottom of their profile 
-- If the user has no order history, this is reflected back to them 
-<img src="readme-images/readme-profile-user-order-none.png" alt="The empty order section" style="border: 2px solid grey;">
-
-- User's support tickets and the replies can be accessed from the profile page 
-
-
-### Product browsing: Enable users to search, filter, and view products.
-
-- Users can see all products in Animeasy store in one place 
-<img src="readme-images/readme-products-products-page.png" alt="All Products page" style="border: 2px solid grey;">
-
-- Users can sort products by category, depending on which software they're looking for 
-<img src="readme-images/readme-products-sort-cat-01.png" alt="Sorting by category from the nav bar" style="border: 2px solid grey;">
-<img src="readme-images/readme-products-sort-cat-02.png" alt="Sorting by category from the search bar" style="border: 2px solid grey;">
-
-- Users can search for products by title or key word 
-<img src="readme-images/readme-products-search.png" alt="Searching by keyword" style="border: 2px solid grey;">
-
-- A product detail page is available for each product 
-- The product detail page displays a product description, the software category and any user reviews 
-<img src="readme-images/readme-products-detial.png" alt="Product detail page" style="border: 2px solid grey;">
-
-- Users can add multiples of a product to their bag from the product detail page 
-<img src="readme-images/readme-products-add-multiples-02.png" alt="Adding multiple products" style="border: 2px solid grey;">
-
-- Users can sort returned products by certain characteristics using the filter dropdown 
-<img src="readme-images/readme-products-sort-cat-03.png" alt="Filter dropdown for sort order" style="border: 2px solid grey;">
-
-- A back to top button scrolls the user back to the top of the page when clicked 
-<img src="readme-images/readme-products-btt-button.png" alt="Back to top button" style="border: 2px solid grey;">
-
-
-### Shopping cart: Allow users to add and remove items from their cart.
-
-- Users can add a product to their bag
-<img src="readme-images/readme-bag-add-product.png" alt="Add a product" style="border: 2px solid grey;">
-
-- The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
-<img src="readme-images/readme-bag-cart-nav.png" alt="The items in the cart" style="border: 2px solid grey;">
-
-- Users can view their bag and see the items inside 
-<img src="readme-images/readme-bag.png" alt="Items in the bag" style="border: 2px solid grey;">
-
-- Users can remove items from their bag from the cart view 
-- If there's more than one of an item in the cart, users can see the subtotal of that item
-- Users can see the total of their bag 
-- Users can proceed to the checkout form from the bag view 
-<img src="readme-images/readme-bag-total.png" alt="The total" style="border: 2px solid grey;">
-
-
-### Checkout process: Guide users through a secure checkout process.
-
-- Users can securely checkout  items in their bag 
-- Billing information is collected 
-- Registered users can choose to save their details from next time 
-<img src="readme-images/readme-checkout-form.png" alt="The checkout form" style="border: 2px solid grey;">
-- A secure checkout using Stripe (use this fake number - it's not set up for real cards yet )
-<img src="readme-images/readme-bag-fake-card.png" alt="Fake stripe number" style="border: 2px solid grey;">
-- On confirmation of order, users are directed to a success page, showing them their details, charge and what they ordered
-
-### Order management: Enable users to track their orders and view order history.
-- From their profile, users can see their order history 
-<img src="readme-images/readme-order-past.png" alt="Order section on profile" style="border: 2px solid grey;">
-
-- Clicking on the order number brings them to the original checkout success page, with a message saying that this is an old order they are viewing 
-<img src="readme-images/readme-order-past.png" alt="Old order notification" style="border: 2px solid grey;">
-
-- Non registered users can access this information from their order confirmation email in their inbox 
-<img src="readme-images/readme-order-confirm.png" alt="The email from an order" style="border: 2px solid grey;">
-
-
-### Admin permissions: Product management from the frontend.
-
-- If the logged in user is a superuser, the admin panel will appear in the navigation bar
-<img src="readme-images/readme-admin-panel.png" alt="The admin panel only appears if a superuser is logged in" style="border: 2px solid grey;">
-
-- Admin can use this panel to add products
-<img src="readme-images/readme-admin-add-product.png" alt="The add product page" style="border: 2px solid grey;">
-
-- If the user forgets to upload an image, the default image is displayed
-<img src="readme-images/readme-admin-noimage.png" alt="No image product" style="border: 2px solid grey;">
-
-- Superusers can edit a product from the all products page
-<img src="readme-images/readme-admin-edit-products-page.png" alt="The edit button on the product card" style="border: 2px solid grey;">
-
-- Superusers have access to the product management panel from the product detail page 
-<img src="readme-images/readme-admin-product-management.png" alt="The product management panel" style="border: 2px solid grey;">
-
-- Products can be edited from the edit product view
-<img src="readme-images/readme-admin-edit-page.png" alt="The edit product view" style="border: 2px solid grey;">
-
-- Products can be deleted. On clicking the delete button, a modal confirms that this is the action you want to take before deleting the product
-<img src="readme-images/readme-admin-delete.png" alt="The unstyled delete modal" style="border: 2px solid grey;">
-
-
-### Newsletter 
-
-- Users can subscribe to the Animeasy newsletter from the home page. This email collector also checks if an email is already registered and will not collect duplicates 
-<img src="readme-images/readme-newsletter-subscribe.png" alt="The newsletter subscribe form" style="border: 2px solid grey;"> 
-
-- Users can unsubscribe by entering the email they wish to unsubscribe into this form. The form can be accessed in the footer and in future versions will be included at the end of each newsletter 
-<img src="readme-images/readme-newsletter-unsubscribe.png" alt="The unsubscribe form" style="border: 2px solid grey;">
-
-- Admins can create a newsletter from the admin panel 
-<img src="readme-images/readme-newsletter-admin-panel.png" alt="Newsletter Create in the admin panel" style="border: 2px solid grey;">
-
-- Admins can create a newsletter using the newsletter form 
-<img src="readme-images/readme-newsletter-create.png" alt="The create a newsletter form" style="border: 2px solid grey;">
-
-- On creation of newsletter, the admin is brought to a newsletter success page. This shows them the content of the email and a list of current subscribers at the bottom of the page 
-<img src="readme-images/readme-newsletter-success-subscribers.png" alt="The newsletter success page and subscriber list" style="border: 2px solid grey;">
-
-- Admins can access an archive of past newsletters using the newsletter archive in the admin panel 
-<img src="readme-images/readme-newsletter-archive.png" alt="The newsletter archive" style="border: 2px solid grey;">
-
-![Animeasy home](readme-images/readme-splash.png)
-
-## Overview
-
-Animeasy is an e-commerce store that provides small software plugins for animation production. 
-This README provides an overview of the ecommerce app, including its purpose, features, installation instructions, usage guidelines, and contact information.
-
-## Purpose
-The purpose of the ecommerce app is to provide users with a platform to browse, purchase, and manage digital products online. It aims to streamline the shopping experience for customers and simplify product management for sellers.
-Animation is a costly and time consuming business. With the advent of digital animation it is largely created using computer programmes. This means that professionals can browse the web for plugins that may help them. 
-In my animation career, I started out using plugins purchased or developed by the studio, but over time I started to develop my own for more specific uses. 
-
-Animeasy is intended to be a B2B solution for freelancers and small studios. Animation studios never truly recovered from the pandemic, the majority of work is done remotely online now. This makes an e-commerce solution the ideal model for purchasing plugins for animation software. 
-
-Animeasy works by digital download. Although I have not implemented digital downloads in this project (as many of the products are fake and it's more like a to-do list of products to make in the future) this model works really well. I have both purchased and sold plugins for animation over the internet before. Professionals will often Google a problem they are having and find the solution in the form of a Gumroad download or in Adobe Marketplace. 
-
-## Features
-### User authentication: Allow users to register, login, and manage their accounts.
-
-- Users can make purchases without making an account, but they can make an account if they want to
-<img src="readme-images/readme-reg-signup-form.png" alt="Registration and signup form" style="border: 2px solid grey;">
-
-- Returning users can log into their account 
-<img src="readme-images/readme-reg-signup-login.png" alt="Login form" style="border: 2px solid grey;">
-
-- Users can reset their password to recover their account if they forget 
-- Users can delete their account. The initial click disables the button and confirms the action, in case they clicked it by accident 
-
-### Animeasy Tools E-commerce Site
-
-<img src="readme-images/readme-products-search.png" alt="Searching by keyword" style="border: 2px solid grey;">
-
-- A product detail page is available for each product 
-- The product detail page displays a product description, the software category and any user reviews 
-<img src="readme-images/readme-products-detial.png" alt="Product detail page" style="border: 2px solid grey;">
-
-- Users can add multiples of a product to their bag from the product detail page 
-<img src="readme-images/readme-products-add-multiples-02.png" alt="Adding multiple products" style="border: 2px solid grey;">
-
-- Users can sort returned products by certain characteristics using the filter dropdown 
-<img src="readme-images/readme-products-sort-cat-03.png" alt="Filter dropdown for sort order" style="border: 2px solid grey;">
-
-- A back to top button scrolls the user back to the top of the page when clicked 
-<img src="readme-images/readme-products-btt-button.png" alt="Back to top button" style="border: 2px solid grey;">
-
-
-### Shopping cart: Allow users to add and remove items from their cart.
-
-- Users can add a product to their bag
-<img src="readme-images/readme-bag-add-product.png" alt="Add a product" style="border: 2px solid grey;">
-
-- The items in a user's cart are displayed in a dropdown from the nav bar, so users can see what's in their cart and the total at all times 
-<img src="readme-images/readme-bag-cart-nav.png" alt="The items in the cart" style="border: 2px solid grey;">
-
-- Users can view their bag and see the items inside 
-<img src="readme-images/readme-bag.png" alt="Items in the bag" style="border: 2px solid grey;">
-
-- Users can remove items from their bag from the cart view 
-- If there's more than one of an item in the cart, users can see the subtotal of that item
-- Users can see the total of their bag 
-- Users can proceed to the checkout form from the bag view 
-<img src="readme-images/readme-bag-total.png" alt="The total" style="border: 2px solid grey;">
-
-
-### Checkout process: Guide users through a secure checkout process.
-
-- Users can securely checkout  items in their bag 
-- Billing information is collected 
-- Registered users can choose to save their details from next time 
-<img src="readme-images/readme-checkout-form.png" alt="The checkout form" style="border: 2px solid grey;">
-- A secure checkout using Stripe (use this fake number - it's not set up for real cards yet )
-<img src="readme-images/readme-bag-fake-card.png" alt="Fake stripe number" style="border: 2px solid grey;">
-- On confirmation of order, users are directed to a success page, showing them their details, charge and what they ordered
-
-### Order management: Enable users to track their orders and view order history.
-- From their profile, users can see their order history 
-<img src="readme-images/readme-order-past.png" alt="Order section on profile" style="border: 2px solid grey;">
-
-- Clicking on the order number brings them to the original checkout success page, with a message saying that this is an old order they are viewing 
-<img src="readme-images/readme-order-past.png" alt="Old order notification" style="border: 2px solid grey;">
-
-- Non registered users can access this information from their order confirmation email in their inbox 
-<img src="readme-images/readme-order-confirm.png" alt="The email from an order" style="border: 2px solid grey;">
-
-
-### Admin permissions: Product management from the frontend.
-
-- If the logged in user is a superuser, the admin panel will appear in the navigation bar
-<img src="readme-images/readme-admin-panel.png" alt="The admin panel only appears if a superuser is logged in" style="border: 2px solid grey;">
-
-- Admin can use this panel to add products
-<img src="readme-images/readme-admin-add-product.png" alt="The add product page" style="border: 2px solid grey;">
-
-- If the user forgets to upload an image, the default image is displayed
-<img src="readme-images/readme-admin-noimage.png" alt="No image product" style="border: 2px solid grey;">
-
-- Superusers can edit a product from the all products page
-<img src="readme-images/readme-admin-edit-products-page.png" alt="The edit button on the product card" style="border: 2px solid grey;">
-
-- Superusers have access to the product management panel from the product detail page 
-<img src="readme-images/readme-admin-product-management.png" alt="The product management panel" style="border: 2px solid grey;">
-
-- Products can be edited from the edit product view
-<img src="readme-images/readme-admin-edit-page.png" alt="The edit product view" style="border: 2px solid grey;">
-
-- Products can be deleted. On clicking the delete button, a modal confirms that this is the action you want to take before deleting the product
-<img src="readme-images/readme-admin-delete.png" alt="The unstyled delete modal" style="border: 2px solid grey;">
-
-
-### Newsletter 
-
-- Users can subscribe to the Animeasy newsletter from the home page. This email collector also checks if an email is already registered and will not collect duplicates 
-<img src="readme-images/readme-newsletter-subscribe.png" alt="The newsletter subscribe form" style="border: 2px solid grey;"> 
-
-- Users can unsubscribe by entering the email they wish to unsubscribe into this form. The form can be accessed in the footer and in future versions will be included at the end of each newsletter 
-<img src="readme-images/readme-newsletter-unsubscribe.png" alt="The unsubscribe form" style="border: 2px solid grey;">
-
-- Admins can create a newsletter from the admin panel 
-<img src="readme-images/readme-newsletter-admin-panel.png" alt="Newsletter Create in the admin panel" style="border: 2px solid grey;">
-
-- Admins can create a newsletter using the newsletter form 
-<img src="readme-images/readme-newsletter-create.png" alt="The create a newsletter form" style="border: 2px solid grey;">
-
-- On creation of newsletter, the admin is brought to a newsletter success page. This shows them the content of the email and a list of current subscribers at the bottom of the page 
-<img src="readme-images/readme-newsletter-success-subscribers.png" alt="The newsletter success page and subscriber list" style="border: 2px solid grey;">
-
-- Admins can access an archive of past newsletters using the newsletter archive in the admin panel 
-<img src="readme-images/readme-newsletter-archive.png" alt="The newsletter archive" style="border: 2px solid grey;">
-
 
 ![Animeasy home](readme-images/readme-splash.png)
 
@@ -1037,142 +751,142 @@ Contact Ticket Detail
 ### Pylint 
 I installed Pylint to help find errors in my python files.
 I added a pylintrc file and installed pylint_django to lint the python files in a way that adheres to django rules
-[Screen shot of pylint rc ]
+![Pylintrc file](readme-images/readme-pylintrc.png)
 
 Animeasy Asgi - Pass
-![animeasy/asgi pass 10/10](readme-images/readme-pylint-0001-animeasy-asgi.png)
+![animeasy/asgi pass 10/10](readme-images/readme-pylint-0001-animeasy-asgi.png) \
 
 Animeasy Settings - 9.85/10. The 0.15 score is deducted for an import statement. This statement needs to stay in, as it checks to see if the project is running in a development environmet, and if so, looks for env.py which contains the secret key and other sensitive information.
-![animeasy/settings 9.85/10](readme-images/readme-pylint-0002-animeasy-settings.png)
+![animeasy/settings 9.85/10](readme-images/readme-pylint-0002-animeasy-settings.png) \
 
 Animeasy URLS - Pass. I added a docstring to the file to bring it up to a score of 10
-![animeasy/urls 10/10](readme-images/readme-pylint-0003-animeasy-urls.png)
+![animeasy/urls 10/10](readme-images/readme-pylint-0003-animeasy-urls.png) \
 
 Animeasy WSGI - Pass
-![animeasy/wsgi 10/10](readme-images/readme-pylint-0004-animeasy-wsgi.png)
+![animeasy/wsgi 10/10](readme-images/readme-pylint-0004-animeasy-wsgi.png) \
 
 Bag/TemplateTags/Bag_Tools - Pass. I added doctrings to the start of the file and inside the function itself to describe the operation. I also removed a trailing whitespace and added a final newline to the end of the file 
-![bag/templatetools/bag_tools 10/10](readme-images/readme-pylint-0005-bag-templatetags-bagtools.png)
+![bag/templatetools/bag_tools 10/10](readme-images/readme-pylint-0005-bag-templatetags-bagtools.png) \
 
 Bag Admin - Removed text within the file causing these errors, leaving a blank file.
-![bag/admin 0/10](readme-images/readme-pylint-0006-bag-admin.png)
+![bag/admin 0/10](readme-images/readme-pylint-0006-bag-admin.png) \
 
 Bag Apps - Pass. Added docstrings to get the score up 
-![bag/apps 10/10](readme-images/readme-pylint-0007-bag-apps.png)
+![bag/apps 10/10](readme-images/readme-pylint-0007-bag-apps.png) \
 
 Bag Contexts - Pass. Removed whitespaces, added doctring. Commented out unused import but left it in for addition of threshold/bulk discounts in the future
-![bag/contexts 10/10](readme-images/readme-pylint-0008-bag-contexts.png)
+![bag/contexts 10/10](readme-images/readme-pylint-0008-bag-contexts.png) \
 
 Bag URLS - Pass. Removed whitespaces and redundant import statement. Added docstring.
-![bag/urls 10/10](readme-images/readme-pylint-0009-bag-urls.png)
+![bag/urls 10/10](readme-images/readme-pylint-0009-bag-urls.png) \
 
 Bag Views - Pass. Removed whitespaces, added docstring. Added more specific error catching to 2 scenarios. 
-![bag/views 10/10](readme-images/readme-pylint-0010-bag-views.png)
+![bag/views 10/10](readme-images/readme-pylint-0010-bag-views.png) \
 
 Checkout Admin - Pass. Added docstring to start of file and into classes. Removed whitespaces and removed trailing newlines.
-![checkout/admin 10/10](readme-images/readme-pylint-0011-checkout-admin.png)
+![checkout/admin 10/10](readme-images/readme-pylint-0011-checkout-admin.png) \
 
 Checkout Apps - Problematic result at 6.67. This is caused by the "Import outside toplevel" and "Unused import checkout.signals" errors. However, this should only be imported when the ready method is called to make sure the signal handlers are working correctly and timed right. Importing the signal at the top causes a circular import. Leaving it in the ready method makes sure it's not called until all models are loaded. It also functions as is, so I'll be accepting the lower score for now. 
-![checkout/apps 6.67/10](readme-images/readme-pylint-0012-checkout-apps.png)
+![checkout/apps 6.67/10](readme-images/readme-pylint-0012-checkout-apps.png) \
 
 Checkout Forms - Pass. Added docstrings to top of file and within a class and removed whitespace
-![checkout/forms 10/10](readme-images/readme-pylint-0013-checkout-forms.png)
+![checkout/forms 10/10](readme-images/readme-pylint-0013-checkout-forms.png) \
 
 Checkout Models - Pass. Added docstrings, removed whitespaces. Refactored lines that were too long to be under 80 characters. Moved brackets to start of the line that contains the opening statement to comply with PEP8 standards.
-![checkout/models 10/10](readme-images/readme-pylint-0014-checkout-models.png)
+![checkout/models 10/10](readme-images/readme-pylint-0014-checkout-models.png) \
 
 Checkout Signals - Pass. Added underscores to arguments that are unused.
-![checkout/signals 10/10](readme-images/readme-pylint-0015-checkout-signals.png)
+![checkout/signals 10/10](readme-images/readme-pylint-0015-checkout-signals.png) \
 
 Checkout URLs - Pass. Removed whitespaces and newlines. Removed unused import.
-![checkout/urls 10/10](readme-images/readme-pylint-0016-checkout-urls.png)
+![checkout/urls 10/10](readme-images/readme-pylint-0016-checkout-urls.png) \
 
 Checkout Views -  Removed whitespaces. Change general exception to a stripe specific error. Reorder imports. Left with one error, "Too many local variables" in the checkout function. Could potentially refactor this into two smaller functions with more time. 
-![checkout/views](readme-images/readme-pylint-0017-checkout-views.png)
+![checkout/views](readme-images/readme-pylint-0017-checkout-views.png) \
 
 Checkout Webhook Handler 9.59/10 Removed whitespaces and trailing commas. Re-oredered imports. Restructured payment intent function to get rid of extra else. Removed unessecary string statement. REmoved unused import. Decided to to address the following errors: The class name "StripeWH_Handler" does not conform to camel case. Too many local variables. Catching too general an exception. I am leaving these as is as messing around with this webhook is causing it to break, and the score is very close to 10. In the future I can come back to address this again. 
-![checkout/webhook_handler.py 10/10](readme-images/readme-pylint-0018-checkout-webhook-handler.png)
+![checkout/webhook_handler.py 10/10](readme-images/readme-pylint-0018-checkout-webhook-handler.png) \
 
 Checkout Webhooks - Pass. Removed whitespaces. Reordered imports. Remove unused variable e and exception that was too broad.
-![checkout/webhooks 10/10](readme-images/readme-pylint-0019-checkout-webhooks.png)
+![checkout/webhooks 10/10](readme-images/readme-pylint-0019-checkout-webhooks.png) \
 
-Contact Admin - PASS
-![contact/admin 10/10](readme-images/readme-pylint-0020-contact-admin.png)
+Contact Admin - PASS 
+![contact/admin 10/10](readme-images/readme-pylint-0020-contact-admin.png) \
 
 Contact Forms - PASS. Removed whitespace, unused immport
-![conact/forms 10/10](readme-images/readme-pylint-0021-contact-forms.png) 
+![conact/forms 10/10](readme-images/readme-pylint-0021-contact-forms.png)  \
 
 Contact Models - PASS 
-![contact/models 10/10](readme-images/readme-pylint-0022-contact-models.png)
+![contact/models 10/10](readme-images/readme-pylint-0022-contact-models.png) \
 
 Contact URLS - PASS. Added docstring. 
-![contact/urls 10.10](readme-images/readme-pylint-0023-contact-urls.png)
+![contact/urls 10.10](readme-images/readme-pylint-0023-contact-urls.png) \
 
 Contact Views - Pass. Reordered imports, added docstrings. Changed string to comment. 
-![contact/views 10/10](readme-images/readme-pylint-0023-contact-views.png)
+![contact/views 10/10](readme-images/readme-pylint-0023-contact-views.png) \
 
 Home Apps - PASS 
-![home/apps 10/10](readme-images/readme-pylint-0024-home-apps.png)
+![home/apps 10/10](readme-images/readme-pylint-0024-home-apps.png) \
 
 Home URLS = PASS 
- ![home/urls 10/10](readme-images/readme-pylint-0025-home-urls.png)
+ ![home/urls 10/10](readme-images/readme-pylint-0025-home-urls.png) \
 
 Home views - Pass. Refactored function to remove unecesary else statement, added docstrings 
-![home/views 10/10](readme-images/readme-pylint-0026-home-viewss.png)
+![home/views 10/10](readme-images/readme-pylint-0026-home-viewss.png) \
 
 Newsletter Admin - PASS
-![newsletter/admin 10/10](readme-images/readme-pylint-0027-newsletter-admin.png)
+![newsletter/admin 10/10](readme-images/readme-pylint-0027-newsletter-admin.png) \
 
 Newsletter Apps - Pass 
-![newsletter/apps 10/10](readme-images/readme-pylint-0028-newsletter-apps.png)
+![newsletter/apps 10/10](readme-images/readme-pylint-0028-newsletter-apps.png) \
 
 Newsletter Forms - Pass. Added docstrings. 
-![newsletter/forms 10/10](readme-images/readme-pylint-0029-newsletter-forms.png)
+![newsletter/forms 10/10](readme-images/readme-pylint-0029-newsletter-forms.png) \
 
 Newsletter Models - Pass
-![newsletter/models 10/10](readme-images/readme-pylint-0030-newsletter-models.png)
+![newsletter/models 10/10](readme-images/readme-pylint-0030-newsletter-models.png) \
 
 Newsletter URLs - Pass 
-![newsletter/urls 10/10](readme-images/readme-pylint-0031-newsletter-urls.png)
+![newsletter/urls 10/10](readme-images/readme-pylint-0031-newsletter-urls.png) \
 
 Newsletter Views - Pass. Refactored to remove unecessary else blocks. Added docstrings. Reordered imports.
-![newsletter/views 10/10](readme-images/readme-pylint-0032-newsletter-views.png)
+![newsletter/views 10/10](readme-images/readme-pylint-0032-newsletter-views.png) \
 
 Product Admin - PASS 
-![products/admin 10/10](readme-images/readme-pylint-0033-product-admin.png)
+![products/admin 10/10](readme-images/readme-pylint-0033-product-admin.png) \
 
 Product Apps = PASS
-![products/apps 10/10](readme-images/readme-pylint-0034-product-apps.png)
+![products/apps 10/10](readme-images/readme-pylint-0034-product-apps.png) \
 
 Product Forms - Pass. Replaced unused variable with _. 
-![products/forms 10/10](readme-images/readme-pylint-0035-product-forms.png)
+![products/forms 10/10](readme-images/readme-pylint-0035-product-forms.png) \
 
 Product Models - PASS 
-![product/models 10/10](readme-images/readme-pylint-0036-product-models.png)
+![product/models 10/10](readme-images/readme-pylint-0036-product-models.png) \
 
 Product URLs - Pass 
-![product/urls 10/10](readme-images/readme-pylint-0037-product-urls.png)
+![product/urls 10/10](readme-images/readme-pylint-0037-product-urls.png) \
 
 Product Views - Pass. Reorder imports. Refactor to remove unecessary else blocks and lines that are too long"
-![product/views 10/10](readme-images/readme-pylint-0038-product-views.png)
+![product/views 10/10](readme-images/readme-pylint-0038-product-views.png) \
 
 Product Widgets - PASS
-![product/widgets 10/10](readme-images/readme-pylint-0039-product-widgets.png)
+![product/widgets 10/10](readme-images/readme-pylint-0039-product-widgets.png) \
 
 Profile Admin - PASS
-![profile/admin 10/10](readme-images/readme-pylint-0040-profile-admin.png)
+![profile/admin 10/10](readme-images/readme-pylint-0040-profile-admin.png) \
 
 Profile Apps - PASS
-![profile/admin 10/10](readme-images/readme-pylint-0041-profile-apps.png)
+![profile/admin 10/10](readme-images/readme-pylint-0041-profile-apps.png) \
 
 Profile Forms - 9.44 Decided to leave the exclude as using an include instead with everything except user was causing a string of errors. Could fix this by following the error rabbit hole when I have more time.
-![profile/forms 10/10](readme-images/readme-pylint-0042-profile-forms.png)
+![profile/forms 10/10](readme-images/readme-pylint-0042-profile-forms.png) \
 
 Profile URLs - PASS 
-![profile/urls 10/10](readme-images/readme-pylint-0043-profile-urls.png)
+![profile/urls 10/10](readme-images/readme-pylint-0043-profile-urls.png) \
 
 Profile Views - Pass
-![profile/views 10/10](readme-images/readme-pylint-0044-profile-views.png)
+![profile/views 10/10](readme-images/readme-pylint-0044-profile-views.png) \
 ## Future Features 
 ### Reviews 
 - In the future, I would like to let users enter reviews of the product. The product model is set up with a rating system in anticipation of adding this in the future.
@@ -1217,12 +931,11 @@ Profile Views - Pass
 - Added wireframes to readme.
 
 ## Sources: 
-[Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI)
-[Creating an unsubscribe form for the newsletter](https://www.grokcode.com/819/one-click-unsubscribes-for-django-apps/) 
-[HTML Linter](https://validator.w3.org/)
-[Custom 404 Page](https://learndjango.com/tutorials/customizing-django-404-and-500-error-pages#:~:text=Customizing%20the%20Default%20404%20Page&text=This%20detailed%20message%20exists%20because,in%20the%20settings.py%20file)
-
-[Linting django python with pylint plugin](https://web.archive.org/web/20141008054046/http://blog.landscape.io/using-pylint-on-django-projects-with-pylint-django.html)
+[Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI) \
+[Creating an unsubscribe form for the newsletter](https://www.grokcode.com/819/one-click-unsubscribes-for-django-apps/)  \
+[HTML Linter](https://validator.w3.org/) \
+[Custom 404 Page](https://learndjango.com/tutorials/customizing-django-404-and-500-error-pages#:~:text=Customizing%20the%20Default%20404%20Page&text=This%20detailed%20message%20exists%20because,in%20the%20settings.py%20file) \
+[Linting django python with pylint plugin](https://web.archive.org/web/20141008054046/http://blog.landscape.io/using-pylint-on-django-projects-with-pylint-django.html) \
 
 ## Thanks 
 Thanks to the amazing Laura Mayock for the weekly pep talk, and tutor support for trying to find out what's wrong with my webhooks.
