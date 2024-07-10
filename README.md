@@ -674,9 +674,13 @@ I did the following manual testing of Animeasy:
 |                   | Order is attached to user profile                                              | After ordering, the order is saved to the user profile if authenticated                                                        | Order while signed in and check the user profile                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | The order is attached to the user profile                                        | PASS |
 |                   | Stripe Webhooks succeed                                                        | Stripe webhooks are successful                                                                                                 | Check out and check the Stripe dashboard for webhook results                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | The webhooks succeed                                                             | PASS |
 </details>
+
 ### Linting 
 
 The following is the results from the [W3 Schools HTML validation service](https://validator.w3.org/)
+
+<details>
+    <summary>Testing results</summary>
 
 About Page
 ![About Page results](readme-images/readme-linting-about.png)
@@ -752,10 +756,15 @@ Terms and Conditions
 Contact Ticket Detail 
 ![Contact Ticket results](readme-images/readme-linting-ticket-details.png)
 
+</details>
+
 ### Pylint 
 I installed Pylint to help find errors in my python files.
 I added a pylintrc file and installed pylint_django to lint the python files in a way that adheres to django rules
 ![Pylintrc file](readme-images/readme-pylintrc.png)
+
+<details>
+    <summary>Pylint testing results</summary>
 
 Animeasy Asgi - Pass<br>
 ![animeasy/asgi pass 10/10](readme-images/readme-pylint-0001-animeasy-asgi.png) <br>
@@ -891,6 +900,8 @@ Profile URLs - PASS <br>
 
 Profile Views - Pass<br>
 ![profile/views 10/10](readme-images/readme-pylint-0044-profile-views.png) <br>
+
+</details>
 
 ## Future Features 
 ### Reviews 
