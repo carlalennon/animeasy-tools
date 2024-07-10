@@ -43,7 +43,6 @@ def contact(request):
                 fail_silently=False,
             )
             messages.success(request, 'Your ticket has been submitted')
-            ticket_id = ticket.id
             return redirect('contact_success', ticket_id=ticket.id)
 
         form = TicketForm()
