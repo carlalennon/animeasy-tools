@@ -9,6 +9,9 @@ from newsletter.forms import SubscriberForm
 # Create your views here.
 
 def index(request):
+    """
+    View and forms on the home page, newsletter subscriber box
+    """
     form = SubscriberForm()
     """ Returns index page """
     if request.method == 'POST':
@@ -31,11 +34,20 @@ def index(request):
     return render(request, 'home/index.html', context)
 
 def about(request):
+    """
+    View for the about page
+    """
     return render(request, 'home/about.html')
 
 
 def install_guide(request):
+    """
+    View for the install guide page
+    """
     return render(request, 'home/install_guide.html')
 
 def faq(request):
+    """
+    View for the frequently asked questions page
+    """ 
     return render(request, 'home/faq.html')
