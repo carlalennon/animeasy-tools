@@ -25,15 +25,15 @@ def profile(request):
         else:
             messages.error(request, 'Update failed. Please ensure the form is valid')
     else:
-        form = UserProfileForm(instance=profile)
+        form = UserProfileForm(instance=user_profile)
 
     template = 'profiles/profile.html'
-    orders = profile.orders.all()
+    orders = user_profile.orders.all()
     has_orders = orders.exists()
 
     context = {
         'form': form,
-        'profile': profile,
+        'profile': user_profile,
         'orders': orders,
         'has_orders': has_orders,
     }
@@ -61,7 +61,6 @@ def order_history(request, order_number):
 def delete_profile(request):
     """Delete user profile."""
     user_profile = get_object_or_404(UserProfile, user=request.user)
-    profile.delete()
     user_profile.delete()
     messages.success(request, 'Your profile has been deleted. Come back any time.')
     return redirect('home')
