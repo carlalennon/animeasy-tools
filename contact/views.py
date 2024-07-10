@@ -117,9 +117,7 @@ def contact_tickets(request):
 def ticket_detail(request, ticket_id):
     """ Returns page with all ticket information """
     ticket = get_object_or_404(Ticket, pk=ticket_id)
-    """
-    Allows admin to reply to a ticket
-    """
+    # Allows admin to reply to a ticket
     template = 'contact/ticket_detail.html'
     email = ticket.email
     reply = None
