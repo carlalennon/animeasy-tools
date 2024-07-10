@@ -23,4 +23,3 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for _, field in self.fields.items():
             field.widget.attrs['class'] = 'stripe-style'
-            
