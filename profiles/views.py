@@ -9,6 +9,8 @@ from .forms import UserProfileForm
 from checkout.models import Order
 from django.contrib.auth.models import User
 
+User = get_user_model()
+
 @login_required
 def profile(request):
     """ Display user profile """
@@ -59,8 +61,8 @@ def order_history(request, order_number):
 @login_required
 def delete_profile(request):
     """Delete user profile."""
-    user = profile.user
     profile = get_object_or_404(UserProfile, user=request.user)
+    user = profile.user
     profile.delete()
     user.delete()
     messages.success(request, 'Your profile has been deleted. Come back any time.')
