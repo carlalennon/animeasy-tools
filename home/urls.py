@@ -1,7 +1,6 @@
 """
 URLS for home, install guide, about and FAQ pages
 """
-from django.contrib import admin
 from django.urls import path
 from . import views
 
