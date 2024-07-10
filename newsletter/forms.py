@@ -1,6 +1,6 @@
 from django import forms
-from .models import Subscriber, Newsletter
 from django.core.exceptions import ValidationError
+from .models import Subscriber, Newsletter
 
 class SubscriberForm(forms.ModelForm):
     class Meta:
