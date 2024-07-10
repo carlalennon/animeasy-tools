@@ -16,6 +16,9 @@ class Category(models.Model):
         return self.name
 
     def get_friendly_name(self):
+        """
+        Returns friendly name
+        """
         return self.friendly_name
 
 class Product(models.Model):
