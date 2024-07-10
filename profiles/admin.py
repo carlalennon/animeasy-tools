@@ -1,3 +1,6 @@
+"""
+Setup admin for user profile app
+"""
 from django.contrib import admin
 from .models import UserProfile
 
