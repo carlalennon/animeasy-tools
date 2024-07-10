@@ -39,8 +39,7 @@ def newsletter_create(request):
                 )
                 messages.success(request, 'Newsletter created successfully')
                 return redirect('newsletter_success')
-        else:
-            form = NewsletterForm()
+        form = NewsletterForm()
     else:
         messages.error(request, 'You do not have permission to create a newsletter')
         return redirect('home')
@@ -64,9 +63,8 @@ def newsletter_success(request):
         }
 
         return render(request, 'newsletter/newsletter_success.html', context)
-    else:
-        messages.error(request, 'You do not have permission to view this page')
-        return redirect('home')
+    messages.error(request, 'You do not have permission to view this page')
+    return redirect('home')
 
 
 def add_subscribers(email_list):
@@ -88,9 +86,9 @@ def newsletter_archive(request):
         }
 
         return render(request, 'newsletter/newsletter_archive.html', context)
-    else:
-        messages.error(request, 'You do not have permission to view this page')
-        return redirect('home')
+
+    messages.error(request, 'You do not have permission to view this page')
+    return redirect('home')
 
 
 @login_required
