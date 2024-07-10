@@ -23,6 +23,9 @@ class SubscriberForm(forms.ModelForm):
         self.fields['email'].label = False
     # Check if email already exists
     def clean_email(self):
+        """
+        Check if email already exists
+        """
         email = self.cleaned_data.get('email')
         if Subscriber.objects.filter(email=email).exists():
             raise ValidationError("Email already exists")
