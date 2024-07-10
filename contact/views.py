@@ -111,9 +111,8 @@ def contact_tickets(request):
         }
 
         return render(request, 'contact/contact_tickets.html', context)
-    else:
-        messages.error(request, 'You do not have permission to view this page')
-        return redirect('home')
+    messages.error(request, 'You do not have permission to view this page')
+    return redirect('home')
 
 def ticket_detail(request, ticket_id):
     """ Returns page with all ticket information """
