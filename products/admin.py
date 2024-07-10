@@ -1,8 +1,13 @@
+"""
+Set up admin panel for store products
+"""
 from django.contrib import admin
 from .models import Product, Category
-# Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Adds products to admin panel
+    """
     list_display = (
         'name',
         'category',
@@ -14,12 +19,14 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('category',)
 
 class CategoryAdmin(admin.ModelAdmin):
+    """
+    Adds product categories to admin panel
+    """
     list_display = (
         'friendly_name',
         'name',
     )
-    
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-
