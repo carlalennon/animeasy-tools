@@ -799,13 +799,34 @@ Newsletter Admin - PASS
 ![newsletter/admin 10/10](readme-images/readme-pylint-0027-newsletter-admin.png)
 
 Newsletter Apps - Pass 
-![newsletter/apps 10/10]()
+![newsletter/apps 10/10](readme-images/readme-pylint-0028-newsletter-apps.png)
 
+Newsletter Forms - Pass. Added docstrings. 
+![newsletter/forms 10/10](readme-images/readme-pylint-0029-newsletter-forms.png)
 
+Newsletter Models - Pass
+![newsletter/models 10/10](readme-images/readme-pylint-0030-newsletter-models.png)
 
+Newsletter URLs - Pass 
+![newsletter/urls 10/10](readme-images/readme-pylint-0031-newsletter-urls.png)
 
+Newsletter Views - Pass. Refactored to remove unecessary else blocks. Added docstrings. Reordered imports.
+![newsletter/views 10/10](readme-images/readme-pylint-0032-newsletter-views.png)
 
+Product Admin - PASS 
+![products/admin 10/10](readme-images/readme-pylint-0033-product-admin.png)
 
+Product Apps = PASS
+![products/apps 10/10](readme-images/readme-pylint-0034-product-apps.png)
+
+Product Forms - Pass. Replaced unused variable with _. 
+![products/forms 10/10](readme-images/readme-pylint-0035-product-forms.png)
+
+Product Models - PASS 
+![product/models 10/10](readme-images/readme-pylint-0036-product-models.png)
+
+Product URLs - Pass 
+![product/urls 10/10]()
 
 ## Future Features 
 ### Reviews 
@@ -847,6 +868,8 @@ Newsletter Apps - Pass
 - Detail button removed from product search page
 - Clicking a pproduct no longer opens a new tab
 - Added link to Kanban board   
+- Linted python files with Pylint and pylint_django 
+- Added wireframes to readme.
 
 ## Sources: 
 [Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI)
