@@ -2,6 +2,7 @@
 Forms for user profiles
 """
 from django import forms
+from django.core.exceptions import ValidationError
 from .models import UserProfile
 
 class UserProfileForm(forms.ModelForm):
@@ -34,3 +35,9 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+            
+    def clean_default_country(self):
+        country = self.cleaned_data.get('default_country')
+        if country and len(country) != 2:
+            raise ValidationError('Country code must be 2 letters.')
+        return country
