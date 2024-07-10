@@ -8,16 +8,9 @@ class UserProfileForm(forms.ModelForm):
     """
     Users can change their default billing information
     """
-class Meta:
-    model = UserProfile
-    fields = ('default_phone_number',
-              'default_postcode',
-              'default_town_or_city',
-              'default_street_address1',
-              'default_street_address2',
-              'default_county',
-              'default_country',
-              )
+    class Meta:
+        model =UserProfile
+        exclude = ('user', )
 
     def __init__(self, *args, **kwargs):
         #Add placeholders and classes, remove auto-generated labels and set autofocus on first field
