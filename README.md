@@ -826,8 +826,28 @@ Product Models - PASS
 ![product/models 10/10](readme-images/readme-pylint-0036-product-models.png)
 
 Product URLs - Pass 
-![product/urls 10/10]()
+![product/urls 10/10](readme-images/readme-pylint-0037-product-urls.png)
 
+Product Views - Pass. Reorder imports. Refactor to remove unecessary else blocks and lines that are too long"
+![product/views 10/10](readme-images/readme-pylint-0038-product-views.png)
+
+Product Widgets - PASS
+![product/widgets 10/10](readme-images/readme-pylint-0039-product-widgets.png)
+
+Profile Admin - PASS
+![profile/admin 10/10](readme-images/readme-pylint-0040-profile-admin.png)
+
+Profile Apps - PASS
+![profile/admin 10/10](readme-images/readme-pylint-0041-profile-apps.png)
+
+Profile Forms - 9.44 Decided to leave the exclude as using an include instead with everything except user was causing a string of errors. Could fix this by following the error rabbit hole when I have more time.
+![profile/forms 10/10](readme-images/readme-pylint-0042-profile-forms.png)
+
+Profile URLs - PASS 
+![profile/urls 10/10](readme-images/readme-pylint-0043-profile-urls.png)
+
+Profile Views - Pass
+![profile/views 10/10](readme-images/readme-pylint-0044-profile-views.png)
 ## Future Features 
 ### Reviews 
 - In the future, I would like to let users enter reviews of the product. The product model is set up with a rating system in anticipation of adding this in the future.
