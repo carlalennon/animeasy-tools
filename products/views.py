@@ -1,13 +1,13 @@
 """
 Views for the product app
 """
-from .models import Product, Category
-from .forms import ProductForm
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from .models import Product, Category
+from .forms import ProductForm
 
 def all_products(request):
     """
