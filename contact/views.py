@@ -2,13 +2,14 @@
 Handles the views for the contact app (complaint form, ticket list and replies)
 """
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Ticket, TicketReply
-from .forms import TicketForm, TicketReplyForm
-from profiles.models import UserProfile
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from profiles.models import UserProfile
+from .models import Ticket, TicketReply
+from .forms import TicketForm, TicketReplyForm
+
 
 def contact(request):
     """
