@@ -1,3 +1,6 @@
+"""
+Views for the newsletter app
+"""
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Subscriber, Newsletter
 from .forms import NewsletterForm
@@ -102,6 +105,9 @@ def newsletter_detail(request, newsletter_id):
     return render(request, 'newsletter/newsletter_detail.html', context)
 
 def newsletter_unsubscribe(request):
+    """
+    Allows people to unsubscribe from the newsletter
+    """
     if request.method == 'POST':
         email = request.POST.get('email')
         try:
@@ -113,7 +119,3 @@ def newsletter_unsubscribe(request):
         return redirect('home')
     else: 
         return render(request, 'newsletter/newsletter_unsubscribe.html')
-
-
-
-
