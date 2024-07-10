@@ -63,6 +63,7 @@ def newsletter_success(request):
         }
 
         return render(request, 'newsletter/newsletter_success.html', context)
+
     messages.error(request, 'You do not have permission to view this page')
     return redirect('home')
 
@@ -114,5 +115,5 @@ def newsletter_unsubscribe(request):
         except Subscriber.DoesNotExist:
             messages.error(request, 'You are not subscribed')
         return redirect('home')
-    else:
-        return render(request, 'newsletter/newsletter_unsubscribe.html')
+
+    return render(request, 'newsletter/newsletter_unsubscribe.html')
