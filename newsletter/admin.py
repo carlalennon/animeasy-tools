@@ -1,3 +1,7 @@
+"""
+Sets up the admin interface for the newsletter app.
+"""
+
 from django.contrib import admin
 from .models import Subscriber, Newsletter
 
