@@ -4,7 +4,7 @@ View for profile app
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, logout
 from checkout.models import Order
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -62,5 +62,6 @@ def delete_profile(request):
     """Delete user profile."""
     user_profile = get_object_or_404(UserProfile, user=request.user)
     user_profile.delete()
+    logout(request)
     messages.success(request, 'Your profile has been deleted. Come back any time.')
     return redirect('home')
