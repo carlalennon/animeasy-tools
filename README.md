@@ -950,6 +950,7 @@ Profile Views - Pass<br>
 - Added link to Kanban board   
 - Linted python files with Pylint and pylint_django 
 - Added wireframes to readme.
+- Added a function to the profile form that checks that a 2 letter country code has been entered. Enetering anything other than 2 letters previously broke the app
 
 ## Sources: 
 [Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI) \
