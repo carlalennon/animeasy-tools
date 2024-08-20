@@ -227,11 +227,8 @@ if "USE_AWS" in os.environ:
 # Stripe
 STRIPE_CURRENCY = "usd"
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY", "")
-print(f"Stripe Public Key: {STRIPE_PUBLIC_KEY}")
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "")
-print(f"Stripe Secret Key: {STRIPE_SECRET_KEY}")
 STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET", "")
-print(f"Stripe WH Key: {STRIPE_WH_SECRET}")
 
 
 if "DEVELOPMENT" in os.environ:
