@@ -42,11 +42,13 @@ ALLOWED_HOSTS = [
     "localhost",
     "8000-carlalennon-animeasytoo-4wi9e7yx140.ws-eu111.gitpod.io",
     "8000-carlalennon-animeasytoo-lor32dtxqzr.ws-eu114.gitpod.io",
+    '8000-carlalennon-animeasytoo-qogfzcgtgqv.ws.codeinstitute-ide.net'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.gitpod.io/",
     "https://carlalennon-animeasytoo-4wi9e7yx140.ws-eu111.gitpod.io/",
+    "https://8000-carlalennon-animeasytoo-qogfzcgtgqv.ws.codeinstitute-ide.net",
 ]
 
 # Application definition
