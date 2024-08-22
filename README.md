@@ -683,16 +683,19 @@ I did the following manual testing of Animeasy:
 ### Extra Manual Testing 
 
 I performed some extra testing during the resubmission process 
+
 <details>
     <summary>Extra manual testing table</summary>
-    
-    | Test                                | Expected outcome                                                                       | Testing procedure                                                                                                        | Outcome                                                   | Result |
+
+| Test                                | Expected outcome                                                                       | Testing procedure                                                                                                        | Outcome                                                   | Result |
 |-------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|--------|
 | User registration with invalid data | Profiles cannot be created without all required data, and only created with valid data | Create a profile with missing data, create a profile with invalid data eg. imcomplete email address or insecure password | Profile cannot be created with missing or incomplete data | PASS   |
 | SQL Injection                       | Putting SQL strings into login fields does nothing                                     | Add SQL strings to login form                                                                                            | Nothing happens, except for normal password errors        | PASS   |
 | User Experience on Mobile           | Website cn be accessed and used on mobile                                              | Open Animeasy on a mobile phone and use the site                                                                         | The site functions as expected on mobile device           | PASS   |
 | Email Delivery Speed                | Emails are delivered in a timely manner after purchase                                 | Make a purchase and check emails                                                                                         | Email is in inbox immediatley after purchase              | PASS   |
+
 </details>
+
 ### Linting 
 
 The following is the results from the [W3 Schools HTML validation service](https://validator.w3.org/)
