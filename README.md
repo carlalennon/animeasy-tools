@@ -951,6 +951,8 @@ Profile Views - Pass<br>
 - Linted python files with Pylint and pylint_django 
 - Added wireframes to readme.
 - Added a function to the profile form that checks that a 2 letter country code has been entered. Enetering anything other than 2 letters previously broke the app
+- Sorted a bug that created 2 orders wiith unique ideas for each order placed 
+- Fixed errors in the local server - wrong field names used in contact/admin.py 
 
 ## Sources: 
 [Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI) \
