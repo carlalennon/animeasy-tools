@@ -680,6 +680,19 @@ I did the following manual testing of Animeasy:
 |                   | Stripe Webhooks succeed                                                        | Stripe webhooks are successful                                                                                                 | Check out and check the Stripe dashboard for webhook results                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | The webhooks succeed                                                             | PASS |
 </details>
 
+### Extra Manual Testing 
+
+I performed some extra testing during the resubmission process 
+<details>
+    <summary>Extra manual testing table</summary>
+    
+    | Test                                | Expected outcome                                                                       | Testing procedure                                                                                                        | Outcome                                                   | Result |
+|-------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|--------|
+| User registration with invalid data | Profiles cannot be created without all required data, and only created with valid data | Create a profile with missing data, create a profile with invalid data eg. imcomplete email address or insecure password | Profile cannot be created with missing or incomplete data | PASS   |
+| SQL Injection                       | Putting SQL strings into login fields does nothing                                     | Add SQL strings to login form                                                                                            | Nothing happens, except for normal password errors        | PASS   |
+| User Experience on Mobile           | Website cn be accessed and used on mobile                                              | Open Animeasy on a mobile phone and use the site                                                                         | The site functions as expected on mobile device           | PASS   |
+| Email Delivery Speed                | Emails are delivered in a timely manner after purchase                                 | Make a purchase and check emails                                                                                         | Email is in inbox immediatley after purchase              | PASS   |
+</details>
 ### Linting 
 
 The following is the results from the [W3 Schools HTML validation service](https://validator.w3.org/)
@@ -942,6 +955,12 @@ Profile Views - Pass<br>
 - They don't play nicely with browser and cookie cache, so if you're having issues clear them and try again!
 - The country field is causing errors with Stripe, I have deleted my order database before submission to give it the best chance possible of succeeding during grading.
 
+### Linting 
+- Some HTML pages have a duplicate id error. This is caused by the image upload field assigning the new image's ID to the image on the page. This cannot be changed without breaking the code. 
+- Checkout has a HTML linting error where it doesn't like the "Empty" h3 heading the spinner is under. This does not affect the code function. 
+- The remove link in the bag has a duplicate ID error, but cannot be solved without breaking the remove button 
+- Settings.py has an unused import error during linting, but this import is used in production
+
 
 ## Updates 
 - Broken link in order confirmation page is fixed 
@@ -953,6 +972,8 @@ Profile Views - Pass<br>
 - Added a function to the profile form that checks that a 2 letter country code has been entered. Enetering anything other than 2 letters previously broke the app
 - Sorted a bug that created 2 orders wiith unique ideas for each order placed 
 - Fixed errors in the local server - wrong field names used in contact/admin.py 
+- Removed extra script tag on checkout success page that caused errors in the console 
+- Console errors for blocked cookies solved by disabling ad blocker 
 
 ## Sources: 
 [Creating a newsletter app](https://www.youtube.com/watch?v=hWtlskOaFNI) \
