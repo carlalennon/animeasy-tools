@@ -696,6 +696,43 @@ I performed some extra testing during the resubmission process
 
 </details>
 
+### Lighthouse Testing Results 
+
+<details> 
+    <summary>Lighthouse Result images</summary>
+
+About Page
+![About Page Lighthouse results ](readme-images/readme-lighthouse-002.png)
+
+Add Product 
+![Add Product Lighthouse results](readme-images/readme-lighthouse-003.png)
+
+Home Page
+![Home Page Lighthouse results](readme-images/readme-lighthouse-001.png)
+
+Bag Page
+![Bag Page Lighthouse results](readme-images/readme-lighthouse-004.png)
+
+Contact Form 
+![Contact Form Lighthouse results](readme-images/readme-lighthouse-005.png)
+
+FAQ 
+![FAQ Lighthouse results](readme-images/readme-lighthouse-006.png)
+
+Install guide 
+![Install guide Lighthouse results](readme-images/readme-lighthouse-007.png)
+
+All products 
+![All products Lighthouse results](readme-images/readme-lighthouse-008.png)
+
+Product Detail
+![Product Detail Lighthouse results](readme-images/readme-lighthouse-009.png)
+
+</details>
+
+
+
+
 ### Linting 
 
 The following is the results from the [W3 Schools HTML validation service](https://validator.w3.org/)
